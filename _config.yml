@@ -20,13 +20,29 @@ description: > # this means to ignore newlines until "baseurl:"
   Haskell. Also crazy about typeface rendering.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lammbda.me" # the base hostname & protocol for your site, e.g. http://example.com
+logo:               'assets/img/logo.png'
+background:         'assets/img/placeholder-big.jpg'
+tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
+locale:             en_US
 twitter_username: realOxide
 github_username:  OfficialOxide
 
 # Build settings
-markdown: kramdown
-plugins:
-  - jekyll-feed
+# Jekyll
+permalink:          /:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
+
 
 
 # Social
