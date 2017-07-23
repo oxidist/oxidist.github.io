@@ -20,7 +20,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Haskell. Also crazy about typeface rendering.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lammbda.me" # the base hostname & protocol for your site, e.g. http://example.com
-logo:               'assets/img/real.png'
+logo:               'assets/img/logo2.png'
+logo2:              'assets/img/about-photo.png'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
