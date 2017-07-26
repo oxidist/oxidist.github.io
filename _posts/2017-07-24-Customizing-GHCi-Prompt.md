@@ -2,7 +2,7 @@
 layout: post
 title:  "Customizing the GHCi prompt "
 date:   2017-07-24 00:06:32 +0530
-feature: http://i.imgur.com/WtkjfAp.png
+feature: http://i.imgur.com/Ds6S7lJ.png
 ---
 
 ## I'm going to show you how to make your GHCi prompt the Haskell logo.
@@ -16,3 +16,6 @@ feature: http://i.imgur.com/WtkjfAp.png
 ```
 
 And start up GHCi again... and there you go. Haskell logo as the prompt.
+<figure>
+<a href="http://i.imgur.com/WtkjfAp.png"><img src="http://i.imgur.com/WtkjfAp.png"></a>
+</figure>
