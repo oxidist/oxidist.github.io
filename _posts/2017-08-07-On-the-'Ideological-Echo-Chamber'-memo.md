@@ -4,15 +4,16 @@ title: "On the Google employees apparent 'anti-diversity' memo"
 date: 2017-08-07 17:42:06 +0530
 comments: true
 ---
-An anonymous Google software engineer made a memo
-<script src="https://gist.github.com/OfficialOxide/294a8393a6df362e7b0585e1d5e7a345.js"></script>
-
- about the ideological echo chamber of Google. It's being attacked by most leftist media as 'anti-diversity' and 'racist'.
+An anonymous Google software engineer made a memo about the ideological echo chamber of Google. It's being attacked by most leftist media as 'anti-diversity' and 'racist'.
 
 They're just cherry picking some of his arguments out of context, and ignoring the ones *promoting* diversity.
 
 So, I'm going to make a list of statements that were in support of diversity to show their stupidity.
 
+<details>
+  <summary> The memo (click to view) </summary>
+  <script src="https://gist.github.com/OfficialOxide/294a8393a6df362e7b0585e1d5e7a345.js"></script>
+</details>
 > We can make software engineering more people-oriented with pair programming and more collaboration.
 
 > Allow those exhibiting cooperative behavior to thrive. This doesn’t mean that we should remove all competitiveness from Google. Competitiveness and self reliance can be valuable traits and we shouldn’t necessarily disadvantage those that have them. Women on average are more prone to anxiety. Make tech and leadership less stressful.
