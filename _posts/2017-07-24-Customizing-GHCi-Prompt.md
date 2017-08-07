@@ -5,7 +5,7 @@ date:   2017-07-24 00:06:32 +0530
 feature: http://i.imgur.com/Ds6S7lJ.png
 ---
 
-## I'm going to show you how to make your GHCi prompt the Haskell logo.
+I'm going to show you how to make your GHCi prompt the Haskell logo.
 
 ### Steps:
 
