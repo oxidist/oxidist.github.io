@@ -16,7 +16,7 @@ First, we're gonna remove the comments since most of them are useless and will p
 - Install AdBlock (for [firefox](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/) or [chrome](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom)), and then, click on any video.
 - After that, right click on the comment section, click "Block this ad", and move the slider to the right till it blocks the whole comment section, it should look like this.
 <figure>
-<a href="http://i.imgur.com/FUcVnQR.png"><img src="http://i.imgur.com/FUcVnQR.png"></a>
+<a<img src="http://i.imgur.com/FUcVnQR.png"></a>
 </figure>
 
 Now, we're going to block some distracting channels.
