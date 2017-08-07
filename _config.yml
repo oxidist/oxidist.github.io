@@ -45,7 +45,6 @@ sass:
   style:            compressed
 
 
-
 # Social
 # if you don't have any of social below, comment the line.
 #google:
@@ -79,7 +78,7 @@ steam:              The_Best_1233
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
-
+disqus_shortname: lammbda-me:
 # Gems
 gems:
   - jekyll-mentions
