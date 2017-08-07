@@ -6,7 +6,7 @@ date: 2017-08-08 00:12:14 +0530
 
 Today I'm going to show you how to make your fonts look almost *exactly* like macOS on Linux.
 
-### So a little bit of background here, you can [skip right to the content if you want]().
+### So a little bit of background here,
 
 I've been obsessing over how Macs render fonts, especially Fira Mono for months. I was so obsessed that I quit programming and reading to go on a quest to one day, render Fira Mono the way Macs do.
 
