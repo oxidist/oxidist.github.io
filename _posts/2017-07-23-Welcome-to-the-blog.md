@@ -3,6 +3,7 @@ layout: post
 title:  "Welcome!"
 date:   2017-07-23 13:23:51 +0530
 permalink: /welcome/
+comments: true
 ---
 Welcome to hell.
 

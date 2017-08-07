@@ -2,6 +2,7 @@
 layout: post
 title: "How to make YouTube less distracting and more useful"
 date: 2017-08-07 17:42:06 +0530
+feature: https://i.ytimg.com/vi/s5y-4EpmfRQ/maxresdefault.jpg
 comments: true
 ---
 
