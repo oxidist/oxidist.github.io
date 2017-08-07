@@ -15,6 +15,8 @@ twitter_username: realOxide
 github_username:  OfficialOxide
 
 # Build settings
+disqus_shortname: lammbda-me
+
 # Jekyll
 permalink:          /:title/
 markdown:           kramdown
@@ -32,7 +34,6 @@ sass:
 
 reading_time: true
 
-disqus_shortname: lammbda-me
 
 # Social
 # if you don't have any of social below, comment the line.
