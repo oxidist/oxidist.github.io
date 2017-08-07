@@ -30,7 +30,7 @@ sass:
   sass_dir:         _sass
   style:            compressed
 
-reading_time: true 
+reading_time: true
 
 disqus_shortname: lammbda-me
 
@@ -38,7 +38,7 @@ disqus_shortname: lammbda-me
 # if you don't have any of social below, comment the line.
 google:
   #plus:            #username
-  analytics:        lambda
+  analytics:        UA-104078267-1
   #verify:
   #ad-client:
   #ad-slot:

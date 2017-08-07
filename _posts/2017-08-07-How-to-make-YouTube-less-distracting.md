@@ -2,6 +2,7 @@
 layout: post
 title: "How to make YouTube less distracting and more useful"
 date: 2017-08-07 17:42:06 +0530
+comments: true
 ---
 
 ### Youtube is either one of the best sources of information, or one of the world's greatest time wasters.
