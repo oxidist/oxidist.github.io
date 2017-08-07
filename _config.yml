@@ -13,6 +13,8 @@ tiled_bg:           false   # Set this true if you want to tile your background 
 locale:             en_US
 twitter_username: realOxide
 github_username:  OfficialOxide
+reading_time:       true
+words_per_minute:   200
 
 # Build settings
 disqus_shortname: lammbda-me
@@ -32,7 +34,7 @@ sass:
   sass_dir:         _sass
   style:            compressed
 
-reading_time: true
+
 
 
 # Social
