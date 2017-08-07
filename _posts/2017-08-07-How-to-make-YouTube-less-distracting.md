@@ -2,7 +2,7 @@
 layout: post
 title: "How to make YouTube less distracting and more useful"
 date: 2017-08-07 17:42:06 +0530
-feature: http://kyky.org/uploads/news/photo/2389/play-vedios.jpg
+feature: https://s-media-cache-ak0.pinimg.com/736x/2d/83/15/2d83158686a6475c9ff76703702a0761--social-media-management-social-media-icons.jpg
 comments: true
 ---
 
