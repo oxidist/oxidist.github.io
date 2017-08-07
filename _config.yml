@@ -44,6 +44,7 @@ sass:
   sass_dir:         _sass
   style:            compressed
 reading_time: true 
+disqus_shortname: lammbda-me
 
 # Social
 # if you don't have any of social below, comment the line.
@@ -78,7 +79,6 @@ steam:              The_Best_1233
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
-disqus_shortname: lammbda-me
 # Gems
 gems:
   - jekyll-mentions
