@@ -2,6 +2,7 @@
 layout: post
 title: "Font rendering exactly like macOS on Linux"
 date: 2017-08-08 00:12:14 +0530
+feature: https://ucarecdn.com/3a5af0a1-89a0-4f24-a0b5-c44eabc77963/
 ---
 
 Today I'm going to show you how to make your fonts look almost *exactly* like macOS on Linux.
