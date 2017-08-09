@@ -39,7 +39,7 @@ export INFINALITY_FT_AUTOHINT_INCREASE_GLYPH_HEIGHTS=true
 export INFINALITY_FT_AUTOHINT_SNAP_STEM_HEIGHT=0
 export INFINALITY_FT_STEM_SNAPPING_SLIDING_SCALE=0
 export INFINALITY_FT_USE_KNOWN_SETTINGS_ON_SELECTED_FONTS=false
-```
+ ```
 and either reboot, or restart the X server.
 3. (Optional) Install `fontconfig-ubuntu`<sup>AUR</sup> for an even better, and an even closer to macOS rendering (I know this sounds counter-intuitive, but trust me.)
 

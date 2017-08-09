@@ -6,7 +6,7 @@ feature: https://s-media-cache-ak0.pinimg.com/736x/2d/83/15/2d83158686a6475c9ff7
 comments: true
 ---
 
-### Youtube is either one of the best sources of information, or one of the world's greatest time wasters.
+Youtube is either one of the best sources of information, or one of the world's greatest time wasters.
 
 In this one, I'm going to show you how to make it almost free from distractions and full of useful content.
 
