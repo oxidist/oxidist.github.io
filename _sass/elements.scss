@@ -168,13 +168,13 @@ figure {
   }
 }
 svg:not(:root) {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 // keyboard tag
 kbd {
-	display: inline-block;
-	margin: 0 1px;
+  display: inline-block;
+  margin: 0 1px;
 	padding: 1px 8px;
 	@include font-rem(10);
 	font-weight: bold;
