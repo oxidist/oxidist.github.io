@@ -21,10 +21,36 @@ Now, you have just created your own studying framework, in which you study for x
 
 ## Step 2: Changing your note system.
 
-I personally recommend the [Cornell note taking system](). 
+I personally recommend the [Cornell note taking system](https://www.umfk.edu/learning-center/studying-tips/notes/). 
 When you take notes in that system, save the summary section for writing after the lecture/class. This forces you to revise the material that was taught. 
-But when you do write it, don't just write it off the top of your head. First use the [Feynman technique]() to summarize the whole lesson, and do it at least twice. And then, write the summary. What this does is exercise your understanding of the material and quickly identifies your weak spots.
+But when you do write it, don't just write it off the top of your head. First use the [Feynman technique](https://youtu.be/_f-qkGJBPts) to summarize the whole lesson, and do it at least twice. And then, write the summary. What this does is exercise your understanding of the material and quickly identifies your weak spots.
 
-Now, place these notes in your [spaced repetition]() basket, for later review. Not only will you complete your later revision faster, but you will have to study *less* than if you had normally done it, and *still understand more*, at just the expense of one experiment, a switch of a note taking system and summarizing your lectures.
+## Step 2 (Alternative):
 
+If you can't write your notes in the Cornell system, or rewrite them, still use the Feynman technique to summarize them, or draw cause-effect diagrams, and express the ideas as simply as you can. For example, for History, you can draw cause, effect and consequence diagrams, and in Mathematics, you can write down the most important formulae.
 
+## Step 3: Changing your studying system.
+
+Now, place these notes in your [spaced repetition](https://www.supermemo.com/english/princip.htm) basket, for later review. Not only will you complete your later revision faster, but you will have to study *less* than if you had normally done it, and *still understand more*, at just the expense of one experiment, a switch of a note taking system and summarizing your lectures.
+
+## Step 4: Bringing it all together.
+
+Here's how you use the aforementioned techniques to study most efficiently out of anyone you know.
+- Your sessions *must* use your own version of the pomodoro technique.
+- In said session, you must summarize your lecture notes, using the Cornell note system, as best as you can using the Feynman technique.
+- Use the notes and summaries for easy review before exams.
+
+## Step 5: Additional tips.
+
+At the end of the day, remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. If you neglect these, your cognitive ability will go down, here's an example.
+- If you sleep 6 hours a night for 7 days straight, you'll have the cognitive ability of someone who has been awake for 24 hours.
+
+So as some general guidelines, that you should always follow regardless of exams:
+- Get a good night's sleep. Don't pull all nighters. Seriously.
+- Don't cram, and don't study the last day for an exam.
+- Eat well. If you're eating crap, then you'll feel like crap. Have a healthy diet.
+- Do a form of physical exercise such as sports.
+- Keep your mind mentally stimulated, either by reading, or some other activity.
+
+But most importantly,
+- Don't let your self esteem rest on your grades.
