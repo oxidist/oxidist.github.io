@@ -12,7 +12,10 @@ Welcome to hell.
 **I have been expecting you.**
 
 But seriously though, welcome, and enjoy the future posts.
+
 I'll usually write about Linux, programming and sometimes, font rendering. I have no idea why I'm so crazy about fonts. Or anything for that matter.
 My programming languages of choice is Python, mostly. Sometimes I use Java, and oh god I've forgotten how to write Java- and I'm currently learning Haskell.
 
-I'll also write about shells (not sea shells! think bash or zsh), and how to hide your victims most effectively.
+Oh yeah, I write about self improvement too. A lot. Maybe this blog will turn into a self improvement blog.
+
+I also write about how to hide your victims most effectively.
