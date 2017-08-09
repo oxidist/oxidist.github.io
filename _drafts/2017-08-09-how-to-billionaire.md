@@ -1,9 +1,11 @@
 ---
 layout: post
 comments: true
-title: "My take on Niklas Goke's 'tutorial' on how to become a billionaire"
+title: "My take on Niklas Goke's post on what it takes to become a billionaire"
 feature: http://www.valleycovenant.org/pastorblog/wp-content/uploads/2017/03/money3.jpg
 ---
+
+Niklas Goeke made a post on Medium, on what it takes to be a billionaire. This was the top highlight:
 
 > Most importantly: Are you willing to give up being understood by every person you know?
 
