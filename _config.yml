@@ -39,13 +39,13 @@ sass:
 
 # Social
 # if you don't have any of social below, comment the line.
-google:
+#google:
   #plus:            #username
-  analytics:        UA-104078267-1
   #verify:
   #ad-client:
   #ad-slot:
 #bing-verify:
+analytics:        UA-104078267-1
 email:              developer.abdulaleem@gmail.com
 twitter:            realOxide
 # facebook:           username
