@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome!"
+title:  "Welcome to the blog!"
 date:   2017-07-23 13:23:51 +0530
 permalink: /welcome/
 comments: true
