@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "How to study more effectively by leveraging your psychology"
-feature: https://img-s1.onedio.com/id-583f16ae53d37aab3a9e6d62/rev-0/raw/s-43cf296fca5578c81ee29aec5f288e8bd23277ce.jpg 
+feature: https://img-s1.onedio.com/id-583f16ae53d37aab3a9e6d62/rev-0/raw/s-43cf296fca5578c81ee29aec5f288e8bd23277ce.jpg
 ---
 
 Using productivity techniques is great, but if you leverage your own concentration and habits, you will maximise your efficiency.
@@ -21,8 +21,8 @@ Now, you have just created your own studying framework, in which you study for x
 
 ## Step 2: Changing your note system.
 
-I personally recommend the [Cornell note taking system](https://www.umfk.edu/learning-center/studying-tips/notes/). 
-When you take notes in that system, save the summary section for writing after the lecture/class. This forces you to revise the material that was taught. 
+I personally recommend the [Cornell note taking system](https://www.umfk.edu/learning-center/studying-tips/notes/).
+When you take notes in that system, save the summary section for writing after the lecture/class. This forces you to revise the material that was taught.
 But when you do write it, don't just write it off the top of your head. First use the [Feynman technique](https://youtu.be/_f-qkGJBPts) to summarize the whole lesson, and do it at least twice. And then, write the summary. What this does is exercise your understanding of the material and quickly identifies your weak spots.
 
 ## Step 2 (Alternative):
@@ -51,6 +51,3 @@ So as some general guidelines, that you should always follow regardless of exams
 - Eat well. If you're eating crap, then you'll feel like crap. Have a healthy diet.
 - Do a form of physical exercise such as sports.
 - Keep your mind mentally stimulated, either by reading, or some other activity.
-
-But most importantly,
-- Don't let your self esteem rest on your grades.
