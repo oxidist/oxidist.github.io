@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   A hobbyist programmer. Python, Java and
   Haskell. Also crazy about typeface rendering.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://lammbda.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://officialoxide.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 logo:               'assets/img/logo2.png'
 logo2:              'assets/img/about-photo.png'
 background:         'assets/img/placeholder-big.jpg'
