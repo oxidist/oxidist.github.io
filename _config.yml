@@ -2,8 +2,7 @@
 title: Oxide
 email: warframeoxide@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A hobbyist programmer. Python, Java and
-  Haskell. Also crazy about typeface rendering.
+  Mathematics student and programming enthusiast.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://officialoxide.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 logo:               'assets/img/logo2.png'
