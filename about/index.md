@@ -8,7 +8,7 @@ Hey, you've reached the website of Oxide.
 
 I'm a student of mathematics and occasional programmer.
 
-I am interested in algebra and logic, especially different types of lambda calculi
+I am interested in algebra and logic, especially different types of lambda calculi and type theories.
 
 I mainly work in Haskell, Python and C, although I have also learnt (and loved) Scheme while reading SICP.
 
