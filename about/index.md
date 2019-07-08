@@ -7,7 +7,9 @@ permalink: /about/
 Hey, you've reached the website of Oxide.
 
 I'm a student of mathematics and occasional programmer.
+
 I am interested in algebra and logic, especially different types of lambda calculi
+
 I mainly work in Haskell, Python and C, although I have also learnt (and loved) Scheme while reading SICP.
 
 You can visit [my github profile](https://github.com/OfficialOxide) and my [other website](http://oxyde.cf).
