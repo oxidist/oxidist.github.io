@@ -43,7 +43,7 @@ Here's how you use the aforementioned techniques to study most efficiently out o
 ## Step 5: Additional tips.
 
 At the end of the day, remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. If you neglect these, your cognitive ability will go down, here's an example.
-- If you sleep 6 hours a night for 7 days straight, you'll have the cognitive ability of someone who has been awake for 24 hours.[^1]
+- If you sleep 6 hours a night for 14 days straight, you'll have the cognitive ability of someone with a blood alcohol level of 0.1%.[^1]
 
 So as some general guidelines, that you should always follow regardless of exams:
 - Get a good night's sleep. Don't pull all nighters. Seriously.
