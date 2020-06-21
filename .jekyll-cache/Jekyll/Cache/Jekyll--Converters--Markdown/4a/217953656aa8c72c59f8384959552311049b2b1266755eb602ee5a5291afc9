@@ -1,0 +1,52 @@
+I"�<p>(Note from 2020: Infinality has been deprecated for a while now. Follow the tutorial at your own risk.)</p>
+
+<p>Today I’m going to show you how to make your fonts look almost <em>exactly</em> like macOS on Linux.</p>
+
+<h3 id="some-background">Some background</h3>
+
+<p>I’ve been obsessing over how Macs render fonts, especially Fira Mono, for months. I was so obsessed that I quit programming and reading to go on a quest to one day, render Fira Mono the way Macs do.</p>
+
+<p>Yesterday I did it. And I want to share how I did it to save some of you the <em>pain</em> that I have endured for this.</p>
+
+<p>This tutorial will be aimed at Arch Linux users specifically, though the instructions can be applied to any distribution of (GNU/)Linux.</p>
+
+<h2 id="steps-for-arch-linux">Steps (for Arch Linux):</h2>
+
+<ol>
+  <li>Get freetype2 with infinality patches. For Arch Linux, the package is <code class="language-plaintext highlighter-rouge">freetype2-infinality</code><sup><a href="https://aur.archlinux.org/packages/freetype2-infinality/">AUR</a></sup>. You don’t need fontconfig with infinality patches.</li>
+  <li>Put this in your <code class="language-plaintext highlighter-rouge">infinality-settings.sh</code>. For Arch Linux, this file is located in <code class="language-plaintext highlighter-rouge">/etc/profile.d/</code>.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">INFINALITY_FT_FILTER_PARAMS</span><span class="o">=</span><span class="s2">"03 32 38 32 03"</span>
+<span class="nb">export </span><span class="nv">INFINALITY_FT_GRAYSCALE_FILTER_STRENGTH</span><span class="o">=</span>100
+<span class="nb">export </span><span class="nv">INFINALITY_FT_FRINGE_FILTER_STRENGTH</span><span class="o">=</span>0
+<span class="nb">export </span><span class="nv">INFINALITY_FT_AUTOHINT_HORIZONTAL_STEM_DARKEN_STRENGTH</span><span class="o">=</span>0
+<span class="nb">export </span><span class="nv">INFINALITY_FT_AUTOHINT_VERTICAL_STEM_DARKEN_STRENGTH</span><span class="o">=</span>0
+<span class="nb">export </span><span class="nv">INFINALITY_FT_WINDOWS_STYLE_SHARPENING_STRENGTH</span><span class="o">=</span>0
+<span class="nb">export </span><span class="nv">INFINALITY_FT_CHROMEOS_STYLE_SHARPENING_STRENGTH</span><span class="o">=</span>0
+<span class="nb">export </span><span class="nv">INFINALITY_FT_STEM_ALIGNMENT_STRENGTH</span><span class="o">=</span>0
+<span class="nb">export </span><span class="nv">INFINALITY_FT_STEM_FITTING_STRENGTH</span><span class="o">=</span>0
+<span class="nb">export </span><span class="nv">INFINALITY_FT_GAMMA_CORRECTION</span><span class="o">=</span><span class="s2">"1000 99"</span>
+<span class="nb">export </span><span class="nv">INFINALITY_FT_BRIGHTNESS</span><span class="o">=</span><span class="s2">"-10"</span>
+<span class="nb">export </span><span class="nv">INFINALITY_FT_CONTRAST</span><span class="o">=</span><span class="s2">"15"</span>
+<span class="nb">export </span><span class="nv">INFINALITY_FT_USE_VARIOUS_TWEAKS</span><span class="o">=</span><span class="nb">false
+export </span><span class="nv">INFINALITY_FT_AUTOHINT_INCREASE_GLYPH_HEIGHTS</span><span class="o">=</span><span class="nb">true
+export </span><span class="nv">INFINALITY_FT_AUTOHINT_SNAP_STEM_HEIGHT</span><span class="o">=</span>0
+<span class="nb">export </span><span class="nv">INFINALITY_FT_STEM_SNAPPING_SLIDING_SCALE</span><span class="o">=</span>0
+<span class="nb">export </span><span class="nv">INFINALITY_FT_USE_KNOWN_SETTINGS_ON_SELECTED_FONTS</span><span class="o">=</span><span class="nb">false</span>
+</code></pre></div>    </div>
+    <p>and either reboot, or restart the X server.</p>
+  </li>
+  <li>(Optional) Install <code class="language-plaintext highlighter-rouge">fontconfig-ubuntu</code><sup><a href="https://aur.archlinux.org/packages/fontconfig-ubuntu/">AUR</a></sup> for an even better, and a rendering even closer to macOS (I know this sounds counter-intuitive, but trust me.)</li>
+</ol>
+
+<h2 id="steps-for-generic-linux">Steps (for generic Linux):</h2>
+<ol>
+  <li>Follow the steps given <a href="https://github.com/bohoomil/fontconfig-ultimate">here</a> in the Quick Installation instructions.</li>
+  <li>Same as the one for Arch Linux.</li>
+  <li>If you’re on Ubuntu, you don’t need to install fontconfig for ubuntu, obviously. But I am unaware of any other ports of ubuntu font config to distributions other than Arch. If you are, please bring it to my notice.</li>
+</ol>
+
+<p>And that should do the trick. If the fonts are a bit too bold for you, you can change <code class="language-plaintext highlighter-rouge">INFINALITY_FT_USE_VARIOUS_TWEAKS</code> to <code class="language-plaintext highlighter-rouge">true</code> and that hopefully makes them lighter.</p>
+
+<p>If that still doesn’t fix it, try <a href="https://github.com/bohoomil/fontconfig-ultimate/blob/master/freetype/generic_settings/infinality-settings.sh">customizing your own configuration from this file</a>.</p>
+
+:ET

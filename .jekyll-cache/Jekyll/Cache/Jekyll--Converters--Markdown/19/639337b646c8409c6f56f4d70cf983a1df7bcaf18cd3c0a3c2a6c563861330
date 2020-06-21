@@ -1,0 +1,17 @@
+I".<p>I’m going to show you how to make your GHCi prompt the Haskell logo.</p>
+
+<h3 id="steps">Steps:</h3>
+
+<ul>
+  <li>Firstly, install and select one of the many <a href="https://github.com/ryanoasis/nerd-fonts">nerd fonts</a> as your terminal font.</li>
+  <li>Now, edit your <code class="language-plaintext highlighter-rouge">ghci.conf</code> or <code class="language-plaintext highlighter-rouge">.ghci</code> file accordingly:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:set prompt "\ESC[94m\STX\ue61f  \ESC[m\STX"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>And start up GHCi again… and there you go. Haskell logo as the prompt.</p>
+<figure>
+<a href="http://i.imgur.com/WtkjfAp.png"><img src="http://i.imgur.com/WtkjfAp.png" /></a>
+</figure>
+:ET

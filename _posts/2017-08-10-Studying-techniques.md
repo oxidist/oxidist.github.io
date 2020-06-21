@@ -9,7 +9,7 @@ Using productivity techniques is great, but if you leverage your own concentrati
 
 The most touted technique is to use the Pomodoro technique, which is effective, but not completely. So you must change it to reflect your own needs.
 
-## Changing your study sessions.
+## Changing your study sessions
 
 - First, do a study session and set a stopwatch at the start, and find out at which point (in minutes) you begin to daydream/procrastinate. Call that number x.
 - Round off x to the nearest multiple of thirty . Call this number y.
@@ -19,31 +19,32 @@ Now, you have just created your own studying framework, in which you study for x
 
 *This is your own version of the Pomodoro technique personalized for your own attention span. Try to do this experiment every 2 months, so you can increase your attention span.*
 
-## Changing your note system.
+## Changing your note system
 
 I personally recommend the [Cornell note taking system](https://www.umfk.edu/learning-center/studying-tips/notes/).
 When you take notes in that system, save the summary section for writing after the lecture/class. This forces you to revise the material that was taught.
 But when you do write it, don't just write it off the top of your head. First use the [Feynman technique](https://youtu.be/_f-qkGJBPts) to summarize the whole lesson, and do it at least twice. And then, write the summary. What this does is exercise your understanding of the material and quickly identifies your weak spots.
 
-## (Alternative):
+### Alternative
 
-If you can't write your notes in the Cornell system, or rewrite them, still use the Feynman technique to summarize them, or draw cause-effect diagrams, and express the ideas as simply as you can. For example, for History, you can draw cause, effect and consequence diagrams, and in Mathematics, you can write down the most important formulae.
+If you can't write your notes in the Cornell system, or rewrite them, you can still use the Feynman technique to summarize them, or draw cause-effect diagrams, and try to express the ideas as simply as you can. For example, for history, you can draw cause, effect and consequence diagrams, and in mathematics, you can write down the most important formulae, or the main idea behind a theorem and its proofs, &c.
 
-## Changing your studying system.
+## Changing your studying system
 
 Now, place these notes in your [spaced repetition](https://www.supermemo.com/english/princip.htm) basket, for later review. Not only will you complete your later revision faster, but you will have to study *less* than if you had normally done it, and *still understand more*, at just the expense of one experiment, a switch of a note taking system and summarizing your lectures.
 
-## Bringing it all together.
+## Bringing it all together
 
 Here's how you use the aforementioned techniques to study most efficiently out of anyone you know.
 - Your sessions *must* use your own version of the pomodoro technique.
 - In said session, you must summarize your lecture notes, using the Cornell note system, as best as you can using the Feynman technique.
 - Use the notes and summaries for easy review before exams.
 
-## Additional tips.
+## Additional tips
 
-At the end of the day, remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. If you neglect these, your cognitive ability will go down, here's an example.
-- If you sleep 6 hours a night for 14 days straight, you'll have the cognitive ability of someone with a blood alcohol level of 0.1%.[^1]
+At the end of the day, remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. If you neglect these, your cognitive ability will go down. For example, if you sleep 6 hours a night for 14 days straight, you'll have the cognitive ability of someone with a blood alcohol level of 0.1%.[^1]
+
+<span style="font-variant:small-caps;">todo</span>: add more examples of sleep deprivation and cognitive deterioration
 
 So as some general guidelines, that you should always follow regardless of exams:
 - Get a good night's sleep. Don't pull all nighters. Seriously.
@@ -54,4 +55,4 @@ So as some general guidelines, that you should always follow regardless of exams
 
 ## References.
 
-[^1]: Williamson AM, Feyer A. Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication. *Occupational and Environmental Medicine* 2000;**57**:649-655. [PDF](https://oem.bmj.com/content/oemed/57/10/649.full.pdf).
+[^1]: Williamson AM, Feyer A. [“Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication”](https://oem.bmj.com/content/oemed/57/10/649.full.pdf). *Occupational and Environmental Medicine*  2000; **57**:649-655. 
