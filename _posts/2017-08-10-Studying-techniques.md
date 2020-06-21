@@ -51,5 +51,5 @@ So as some general guidelines, that you should always follow regardless of exams
 - Eat well. If you're eating crap, then you'll feel like crap. Have a healthy diet.
 - Do a form of physical exercise such as sports.
 - Keep your mind mentally stimulated, either by reading, or some other activity.
-
+## References.
 [^1]: Williamson AM, Feyer A. Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication. *Occupational and Environmental Medicine* 2000;**57**:649-655. [PDF](https://oem.bmj.com/content/oemed/57/10/649.full.pdf).
