@@ -5,7 +5,7 @@ title: "How to study more effectively by leveraging your psychology"
 feature: https://img-s1.onedio.com/id-583f16ae53d37aab3a9e6d62/rev-0/raw/s-43cf296fca5578c81ee29aec5f288e8bd23277ce.jpg
 ---
 
-Using productivity techniques is great, but if you leverage your own concentration and habits, you will maximise your efficiency.[^1]
+Using productivity techniques is great, but if you leverage your own concentration and habits, you will maximise your efficiency.
 
 The most touted technique is to use the Pomodoro technique, which is effective, but not completely. So you must change it to reflect your own needs.
 
@@ -56,4 +56,3 @@ So as some general guidelines, that you should always follow regardless of exams
 ## References.
 
 [^2]: Williamson AM, Feyer A. [“Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication”](https://oem.bmj.com/content/oemed/57/10/649.full.pdf). *Occupational and Environmental Medicine*  2000; **57**:649-655. 
-[^1]: what's up lol
