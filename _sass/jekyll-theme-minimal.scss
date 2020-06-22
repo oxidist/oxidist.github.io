@@ -34,6 +34,9 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
+div.markdownBody {
+    text-align: justify;
+}
 a {
   color:#267CB9;
   text-decoration:none;
@@ -106,7 +109,7 @@ img {
 header {
   width:90px;
   float:left;
-  position:fixed;
+  position:absolute;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
@@ -114,17 +117,17 @@ ul.downloads {
   list-style:none;
   padding:0px 0px 0px 0px;
   background: none;
-  width:0px;
+ // width:0px;
 }
 
 .downloads a {
-  line-height:1;
+//  line-height:1;
   font-size:11px;
   color:#676767;
   display:block;
-  text-align:center;
+  text-align:left;
   padding-top:6px;
-  height:34px;
+  height:20px;
 }
 
 .downloads a:hover, .downloads a:focus {

@@ -5,7 +5,7 @@ title: "How to study more effectively by leveraging your psychology"
 feature: https://img-s1.onedio.com/id-583f16ae53d37aab3a9e6d62/rev-0/raw/s-43cf296fca5578c81ee29aec5f288e8bd23277ce.jpg
 ---
 
-Using productivity techniques is great, but if you leverage your own concentration and habits, you will maximise your efficiency.
+Using productivity techniques is great, but if you leverage your own concentration and habits, you will maximise your efficiency.[^1]
 
 The most touted technique is to use the Pomodoro technique, which is effective, but not completely. So you must change it to reflect your own needs.
 
@@ -42,7 +42,7 @@ Here's how you use the aforementioned techniques to study most efficiently out o
 
 ## Additional tips
 
-At the end of the day, remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. If you neglect these, your cognitive ability will go down. For example, if you sleep 6 hours a night for 14 days straight, you'll have the cognitive ability of someone with a blood alcohol level of 0.1%.[^1]
+At the end of the day, remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. If you neglect these, your cognitive ability will go down. For example, if you sleep 6 hours a night for 14 days straight, you'll have the cognitive ability of someone with a blood alcohol level of 0.1%.[^2]
 
 <span style="font-variant:small-caps;">todo</span>: add more examples of sleep deprivation and cognitive deterioration
 
@@ -55,4 +55,5 @@ So as some general guidelines, that you should always follow regardless of exams
 
 ## References.
 
-[^1]: Williamson AM, Feyer A. [“Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication”](https://oem.bmj.com/content/oemed/57/10/649.full.pdf). *Occupational and Environmental Medicine*  2000; **57**:649-655. 
+[^2]: Williamson AM, Feyer A. [“Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication”](https://oem.bmj.com/content/oemed/57/10/649.full.pdf). *Occupational and Environmental Medicine*  2000; **57**:649-655. 
+[^1]: what's up lol
