@@ -10,11 +10,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#000;//#222;
+  color:#222;
   margin:0 0 20px;
 }
 
-p, ul, ol, table, pre, dl {
+p, table, pre, dl {
   margin:0 0 20px;
 }
 
@@ -27,23 +27,56 @@ h1 {
 }
 
 h2 {
-    color:#000;//#393939;
+    color:#393939;
 }
 
 h3, h4, h5, h6 {
-    color:#000;//#494949;
+    color:#494949;
 }
 
 div.markdownBody {
     text-align: justify;
 }
 a {
-  color:#267CB9;
-  text-decoration:none;
+  color:#3c3c3c;
 }
+> :not(#header) a:link {
+    text-decoration: none;
+    background-image:
+        linear-gradient(#fff, #fff),
+        linear-gradient(#fff, #fff),
+        linear-gradient(#333, #333);
+    background-size:
+        0.05em 1px,
+        0.05em 1px,
+        1px 1px;
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        repeat-x;
+    background-position:
+        0% 90%,
+        100% 90%,
+        0% 90%;
+    text-shadow:
+        0.03em 0       #fff,
+        -0.03em 0       #fff,
+        0      0.03em  #fff,
+        0     -0.03em  #fff,
+        0.06em 0       #fff,
+        -0.06em 0       #fff,
+        0.09em 0       #fff,
+        -0.09em 0       #fff,
+        0.12em 0       #fff,
+        -0.12em 0       #fff,
+        0.15em 0       #fff,
+        -0.15em 0       #fff;
 
+    /*  Disable oldstyle nums in underlined links because the oldstyle nums are almost subscript-like and overlap */
+    font-variant-numeric: lining-nums;
+}
 a:hover, a:focus {
-  color:#069;
+  color:#888;
 }
 
 a small {
@@ -118,6 +151,76 @@ ul.downloads {
   padding:0px 0px 0px 0px;
   background: none;
  // width:0px;
+}
+
+#markdownBody ul,
+#markdownBody ol {
+    list-style-type: none;
+    margin: 1.25em 0 1.5em 0;
+    padding: 0 0 0 2.5em;
+    overflow: hidden;
+}
+#markdownBody li > ul,
+#markdownBody li > ol {
+    margin: 0.5em 0;
+}
+
+#markdownBody ul > li,
+#markdownBody ol > li {
+    position: relative;
+    margin: 0;
+}
+#markdownBody ul > li:nth-of-type(n+2),
+#markdownBody ol > li:nth-of-type(n+2) {
+    margin: 0.5em 0 0 0;
+}
+
+#markdownBody ul > li::before,
+#markdownBody ol > li::before {
+    position: absolute;
+    z-index: 1;
+}
+#markdownBody ul > li::before {
+    color: #888;
+    font-size: 0.875em;
+    top: 0.125em;
+    left: -1.375em;
+}
+
+#markdownBody ul > li::before, #markdownBody ul ul ul > li::before {
+    content: "\2022";
+}
+#markdownBody ul ul > li::before, #markdownBody ul ul ul ul > li::before {
+    content: "\2726";
+}
+
+#markdownBody ol {
+    counter-reset: ol;
+}
+#markdownBody ol > li {
+    counter-increment: ol;
+}
+#markdownBody ol > li::before {
+    content: counter(ol) ".";
+    width: 2em;
+    right: calc(100% + 0.5em);
+    text-align: right;
+    font-feature-settings: 'onum';
+    color: #444;
+}
+
+#markdownBody ol ol {
+    list-style-type: lower-roman;
+}
+#markdownBody ol ol > li {
+    padding: 0 0 0 0.25em;
+}
+#markdownBody ol ol > li::before {
+    content: none;
+}
+
+#markdownBody ol ol ol {
+    list-style-type: lower-alpha;
 }
 
 .downloads a {
