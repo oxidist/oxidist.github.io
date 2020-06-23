@@ -2,6 +2,7 @@
 layout: default
 ---
 <span style="font-variant:small-caps;">This is the website</span> of **Oxide**. I created this website to write about mathematics, linguistics, psychology, etc.
+
 For more information about me, see [About]({{site.url}}/about).
 # Recent
   {% for post in site.posts %}

@@ -3,14 +3,14 @@
 
 body {
   background-color: #fff;
-  padding:50px;
-  font: 16px "Source Serif Pro"; // "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding:15px;
+  font: 17px "Source Serif Pro"; // "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#000;
   font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
+  color:#000;//#222;
   margin:0 0 20px;
 }
 
@@ -27,11 +27,11 @@ h1 {
 }
 
 h2 {
-  color:#393939;
+    color:#000;//#393939;
 }
 
 h3, h4, h5, h6 {
-  color:#494949;
+    color:#000;//#494949;
 }
 
 div.markdownBody {
@@ -140,7 +140,7 @@ ul.downloads {
 }
 
 strong {
-  color:#222;
+  color:#000;
   font-weight:700;
 }
 
@@ -174,10 +174,14 @@ hr {
 }
 
 footer {
-  width:270px;
-  float:left;
-  position:fixed;
+  width:auto;
+  position:static;
+  text-align:center;
+  padding-top:40px;
   bottom:50px;
+  text-decoration:underline;
+  text-decoration-color:#267CB9;
+  font-style:italic;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
