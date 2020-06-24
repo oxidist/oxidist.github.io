@@ -4,14 +4,16 @@
 body {
   background-color: #fff;
   padding:15px;
-  font: 17px "Source Serif Pro"; // "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px "Source Serif Pro"; // "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#000;
   font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
+  color:#000;
   margin:0 0 20px;
+  font-variant:small-caps;
+
 }
 
 p, table, pre, dl {
@@ -23,7 +25,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+    font-size:28px;
 }
 
 h2 {
@@ -33,9 +35,12 @@ h2 {
 h3, h4, h5, h6 {
     color:#494949;
 }
-
-div.markdownBody {
+p {
+    padding-left: 0.7em;
+}
+div#markdownBody {
     text-align: justify;
+//    text-justify: inter-character;
 }
 a {
   color:#3c3c3c;
@@ -96,10 +101,167 @@ a:hover small {
 }
 
 blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
+  border:1px solid #ccc;
+  margin: 1.625em 0 1.625em 0;
+  padding:1em 1.25em 0.6em 1.25em;
+  font-size: 0.95em;
+  background-color: #f5f5f5;
+}
+.epigraph {
+    margin: 2em 0 2em 0;
+    padding: 0.5em 2.5em 0.375em 2.5em;
+    overflow: hidden;
+}
+.epigraph blockquote {
+    padding: 0;
+    border: none;
+    background-color: inherit;
+    margin: 0;
+    font-size: inherit;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+.epigraph q {
+    font-style: italic;
+    background-color: inherit;
+}
+/*  Reverse back to normal when italics are used inside an epigraph.
+    */
+.epigraph q em {
+    font-style: normal;
+}
+.epigraph blockquote > p:nth-last-child(2) > span.quote-mark:first-child, .epigraph blockquote > p:nth-last-child(2) > span.quote-mark:last-child {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+}
+#markdownBody .epigraph p:last-child {
+    margin: 0.5em 0 0 0;
+    text-align: right;
+    font-size: 0.875em;
+    text-indent: 0;
+}
+.epigraph p:nth-last-of-type(n+2) > q::before, .epigraph p:nth-last-of-type(n+2) > q::after {
+    display: none;
+}
+.epigraph blockquote::before, .epigraph blockquote::after {
+    display: block;
+    position: absolute;
+    font-size: 2.5em;
+    opacity: 0.5;
+}
+.epigraph blockquote::before {
+    content: "\201C";
+    left: -0.975em;
+    top: -0.5em;
+}
+.epigraph blockquote::after {
+    content: "\201D";
+    right: -0.975em;
+    bottom: -1em;
+}
+
+sub,
+sup {
+    line-height: 0.3em;
+}
+a.footnote-ref sup {
+    vertical-align: baseline;
+    font-size: 0.75em;
+}
+a.footnote-ref {
+    vertical-align: super;
+    line-height: 0.3;
+    position: relative;
+    top: 0.05em;
+    padding: 0 0.05em;
+    font-feature-settings: 'lnum';
+    font-weight: 600;
+    z-index: 1;
+}
+a.footnote-ref::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% + 0.5em);
+    height: 125%;
+    left: -0.25em;
+    top: 0;
+    z-index: -1;
+}
+
+/* Deal with multiple footnote superscripts one after another; per Charuru */
+sup + sup,
+a.footnote-ref {
+    margin-left: 0.05em;
+}
+
+#markdownBody .footnotes > ol > li + li {
+    margin: 1em 0 0 0;
+}
+
+.footnotes .footnote-back {
+    margin: 0 0 0 10px;
+    position: relative;
+    font-weight: bold;
+    line-height: 1;
+    border: 1px dotted #000;
+    display: inline-block;
+    padding: 5px 5px 0 6px;
+    text-indent: 0;
+    vertical-align: bottom;
+    bottom: 2px;
+}
+#markdownBody .footnotes a.footnote-back {
+    background-image: none;
+}
+#markdownBody .footnotes a.footnote-back:hover {
+    border-color: #999;
+}
+
+.footnotes li {
+    position: relative;
+}
+.footnotes blockquote + a.footnote-back,
+.footnotes pre + a.footnote-back,
+.footnotes .sourceCode + a.footnote-back {
+    position: absolute;
+    right: 0.5em;
+    top: unset;
+    bottom: -0.5em;
+    background-color: #fff;
+}
+
+#footnotediv {
+    z-index: 10001;
+    font-size: 0.9em;
+    box-shadow: 0 0 0 2px #fff;
+    position: absolute;
+    opacity: 1.0;
+    transition: none;
+}
+#footnotediv.fading {
+    opacity: 0.0;
+    transition:
+        opacity 0.75s ease-in 0.1s;
+}
+
+#footnotediv > div {
+    background-color: #fff;
+    padding: 12px 16px 14px 16px;
+    max-width: 800px;
+    max-height: calc(100vh - 32px);
+    border: 3px double #aaa;
+    line-height: 1.45;
+    overflow: auto;
+    overscroll-behavior: none;
+}
+
+#markdownBody section > :not(:first-child) a[href^='#'].footnote-ref::after, #markdownBody p a[href^='#'].footnote-ref::after, #markdownBody section > :not(:first-child) a[href^='#'].footnote-back::after, #markdownBody p a[href^='#'].footnote-back::after {
+    content: none;
 }
 
 code, pre {
@@ -170,13 +332,11 @@ ul.downloads {
     position: relative;
     margin: 0;
 }
-#markdownBody ul > li:nth-of-type(n+2),
-#markdownBody ol > li:nth-of-type(n+2) {
+#markdownBody ul > li:nth-of-type(n+2), #markdownBody ol > li:nth-of-type(n+2) {
     margin: 0.5em 0 0 0;
 }
 
-#markdownBody ul > li::before,
-#markdownBody ol > li::before {
+#markdownBody ul > li::before, #markdownBody ol > li::before {
     position: absolute;
     z-index: 1;
 }
@@ -188,7 +348,7 @@ ul.downloads {
 }
 
 #markdownBody ul > li::before, #markdownBody ul ul ul > li::before {
-    content: "\2022";
+    content: "\2727";
 }
 #markdownBody ul ul > li::before, #markdownBody ul ul ul ul > li::before {
     content: "\2726";

@@ -25,6 +25,7 @@ I personally recommend the [Cornell note taking system](https://www.umfk.edu/lea
 When you take notes in that system, save the summary section for writing after the lecture/class. This forces you to revise the material that was taught.
 But when you do write it, don't just write it off the top of your head. First use the [Feynman technique](https://youtu.be/_f-qkGJBPts) to summarize the whole lesson, and do it at least twice. And then, write the summary. What this does is exercise your understanding of the material and quickly identifies your weak spots.
 
+
 ### Alternative
 
 If you can't write your notes in the Cornell system, or rewrite them, you can still use the Feynman technique to summarize them, or draw cause-effect diagrams, and try to express the ideas as simply as you can. For example, for history, you can draw cause, effect and consequence diagrams, and in mathematics, you can write down the most important formulae, or the main idea behind a theorem and its proofs, &c.
