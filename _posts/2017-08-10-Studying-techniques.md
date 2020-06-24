@@ -53,6 +53,6 @@ So as some general guidelines, that you should always follow regardless of exams
 - Do a form of physical exercise such as sports.
 - Keep your mind mentally stimulated, either by reading, or some other activity.
 
-## References
+----------
 
 [^2]: Williamson AM, Feyer A. [“Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication”](https://oem.bmj.com/content/oemed/57/10/649.full.pdf). *Occupational and Environmental Medicine*  2000; **57**:649-655. 
