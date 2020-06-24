@@ -7,8 +7,8 @@ For more information about me, see [About]({{site.url}}/about).
 # Recent
   {% for post in site.posts %}
   <article> 
-    <small><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time></small>
     <p>
+      <small><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time></small><br> 
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
