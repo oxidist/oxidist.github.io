@@ -5,47 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+<!--     <link rel="stylesheet" href="{{ "/assets/css/gwern.css?v=" | append: site.github.build_revision | relative_url }}">
+     <link rel="stylesheet" href="{{ "/assets/css/inline.css?v=" | append: site.github.build_revision | relative_url }}"> --> 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
+    <link rel="preload" href="/assets/img/logo.svg" as="image" type="image/svg+xml">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-          <!--  <h1><a href="{{ "/" | absolute_url }}">{{ site.title}}</a></h1> -->
-
+      <div class="wrapper">
+      <div id="sidebar">
           {% if site.logo %}
         <a href="{{ "/" | absolute_url }}"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
           {% endif %}
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
-
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
 
        {% if site.show_downloads %}
        <ul class="downloads">
            <li><a href="{{site.url}}/about">About</a></li>
           <li><a href="{{site.url}}/books">Books</a></li>
         </ul>
-        {% endif %}
-      </header>
+       {% endif %}
+      </div id="sidebar">
       <section>
 
       {{ content }}
-
       <footer><a href="https://docs.google.com/forms/d/e/1FAIpQLScfGXWT3lAkwGOgJYTueRjayniMODZzhJyqXOAHilxni-UUbg/viewform?usp=sf_link">Submit anonymous feedback</a></footer>
       </section>
-    </div>
+      </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/footnotes.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/sidenotes.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/jquery-1.7.1.min.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/wikipedia-popups.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

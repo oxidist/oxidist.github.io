@@ -1,8 +1,10 @@
 title: Oxide
-author: Oxide
-logo: /assets/img/logo.png
+logo: /assets/img/logo.svg
 description:
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
 github: OfficialOxide
+markdown: kramdown
+gems:
+  - jekyll-pandoc

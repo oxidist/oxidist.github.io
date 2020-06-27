@@ -1,7 +1,13 @@
 /*	Popup/floating footnotes to avoid readers needing to scroll to the end of
 	the page to see any footnotes; see
 	http://ignorethecode.net/blog/2010/04/20/footnotes/ for details.
-	*/
+*/
+function jq( myid ) {
+
+    return myid.replace( /(:|\.|\[|\]|,|=|@)/g, "\\$1" );
+
+}
+
 Footnotes = {
 	contentContainerSelector: "#markdownBody",
 	minFootnoteWidth: 520,
@@ -10,7 +16,7 @@ Footnotes = {
 	footnotepopuptimeout: false,
 	footnotePopup: null,
 	unbind: function() {
-		document.querySelectorAll(".footnote-ref").forEach(fnref => {
+		  document.querySelectorAll(jq(".footnote")).forEach(fnref => {
 			//	Unbind existing mouseover/mouseout events, if any.
 			fnref.removeEventListener("mouseover", Footnotes.footnoteover);
 			fnref.removeEventListener("mouseout", Footnotes.footnoteoout);
@@ -18,12 +24,12 @@ Footnotes = {
 	},
 	setup: function() {
 		Footnotes.unbind();
-		//	Get all footnote links.
-		document.querySelectorAll(".footnote-ref").forEach(fnref => {
+		  //	Get all footnote links.
+		  document.querySelectorAll(".footnote").forEach(fnref => {
 			//	Bind mousemover/mouseout events.
 			fnref.addEventListener("mouseover", Footnotes.footnoteover);
 			fnref.addEventListener("mouseout", Footnotes.footnoteoout);
-		});
+		  });
 	},
 	//	The mouseover event.
 	footnoteover: (event) => {
@@ -43,8 +49,7 @@ Footnotes = {
 
 			if (!event.target.hash) return;
 			var targetFootnoteId = event.target.hash.substr(1);
-
-			//	Get, or create, the footnote popup.
+        //	Get, or create, the footnote popup.
 			Footnotes.footnotePopup = document.querySelector("#footnotediv");
 			if (Footnotes.footnotePopup) {
 				Footnotes.footnotePopup.classList.remove("fading");
@@ -56,7 +61,7 @@ Footnotes = {
 
 			//	Inject the contents of the footnote into the popup, if needed.
 			if (Footnotes.footnotePopup.dataset.footnoteReference != targetFootnoteId) {
-				var targetFootnote = document.querySelector("#" + targetFootnoteId);
+				  var targetFootnote = document.querySelector(jq("#" + targetFootnoteId));
 				Footnotes.footnotePopup.innerHTML = '<div>' + targetFootnote.innerHTML + '</div>';
 				Footnotes.footnotePopup.dataset.footnoteReference = targetFootnoteId;
 			}
@@ -128,8 +133,8 @@ Footnotes = {
 			Footnotes.footnotekilltimeout = setTimeout(() => {
 				Footnotes.footnotePopup.classList.remove("fading");
 				Footnotes.footnotePopup.remove();
-			}, 50);
-		}, 50);
+			}, 750);
+		}, 100);
 	},
 	//	The "user moved mouse back into popup" mouseover event.
 	divover: (event) => {
@@ -138,7 +143,7 @@ Footnotes = {
 		clearTimeout(Footnotes.footnotepopuptimeout);
 		Footnotes.footnotePopup.classList.remove("fading");
 	}
-}
+};
 
 if (document.readyState == "complete") {
 	Footnotes.setup();

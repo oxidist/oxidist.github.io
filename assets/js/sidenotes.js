@@ -46,9 +46,9 @@ function updateTargetCounterpart() {
 		*/
 	var counterpart;
 	if (location.hash.match(/#sn[0-9]/)) {
-		counterpart = document.querySelector("#fnref" + location.hash.substr(3));
+		  counterpart = document.querySelector(jq("#fnref" + location.hash.substr(3)));
 	} else if (location.hash.match(/#fnref[0-9]/) && GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
-		counterpart = document.querySelector("#sn" + location.hash.substr(6));
+		  counterpart = document.querySelector(jq("#sn" + location.hash.substr(6)));
 	}
 	/*	If a target counterpart exists, mark it as such.
 		*/
@@ -276,21 +276,26 @@ function expandCollapseBlocksToReveal(element) {
 	targeted by the URL hash. (This includes expanding collapse blocks to
 	reveal a footnote reference associated with a targeted sidenote). It also
 	scrolls the targeted element into view.
-	*/
+*/
+function jq( myid ) {
+
+    return myid.replace( /(:|\.|\[|\]|,|=|@)/g, "\\$1" );
+
+}
 function revealTarget() {
 	GWLog("revealTarget");
 
 	if (!location.hash) return;
 
-	let target = document.querySelector(decodeURIComponent(location.hash));
+	let target = document.querySelector(jq(decodeURIComponent(location.hash)));
 	if (!target) return;
-
+    console.log(target);
 	/*	What needs to be revealed is not necessarily the targeted element
 		itself; if the target is a sidenote, expand collapsed blocks to reveal
 		the citation reference.
 		*/
 	let targetInText = location.hash.match(/#sn[0-9]/) ?
-				 	   document.querySelector("#fnref" + location.hash.substr(3)) :
+			document.querySelector(jq("#fnref" + location.hash.substr(3))):
 				 	   target;
 	expandCollapseBlocksToReveal(targetInText);
 
@@ -355,7 +360,7 @@ function updateFootnoteReferenceLinks() {
 		if (GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
 			fnref.href = "#sn" + (i + 1);
 		} else {
-			fnref.href = "#fn" + (i + 1);
+			fnref.href = "#fn:" + (i + 1);
 		}
 	}
 }
@@ -714,7 +719,7 @@ function constructSidenotes() {
 		sidenote.classList.add("sidenote");
 		sidenote.id = "sn" + (i + 1);
 		//	Wrap the contents of the footnote in two wrapper divs...
-		let referencedFootnote = document.querySelector(GW.sidenotes.footnoteRefs[i].hash);
+		  let referencedFootnote = document.querySelector(jq(GW.sidenotes.footnoteRefs[i].hash));
 		sidenote.innerHTML = "<div class='sidenote-outer-wrapper'><div class='sidenote-inner-wrapper'>" +
 							 (referencedFootnote ? referencedFootnote.innerHTML : "Loading sidenote contents, please wait…")
 							 + "</div></div>";
@@ -868,8 +873,8 @@ function sidenotesSetup() {
 		*/
 	if (location.hash.match(/#sn[0-9]/) &&
 		GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == true) {
-		location.hash = "#fn" + location.hash.substr(3);
-	} else if (location.hash.match(/#fn[0-9]/) &&
+		location.hash = "#fn:" + location.hash.substr(3);
+	} else if (location.hash.match(/#fn:[0-9]/) &&
 		GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
 		location.hash = "#sn" + location.hash.substr(3);
 	} else {

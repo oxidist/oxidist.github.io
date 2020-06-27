@@ -1,47 +1,225 @@
 @import "fonts";
 @import "rouge-github";
+@import "links";
 
 body {
   background-color: #fff;
   padding:15px;
-  font: 16px "Source Serif Pro"; // "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px "Source Serif Pro", serif;
   color:#000;
   font-weight:400;
+  width:100%;
+  max-width:112ch;
+  margin:auto;
+  font-variant-numeric: lining-nums;
+}
+table, pre, dl {
+    margin:0 0 20px;
 }
 
+#markdownBody p {
+    text-align: justify;
+}
+.wrapper {
+    width:905px;
+    margin:auto;
+}
+
+#sidebar {
+    left:30px;
+    padding:10px;
+    width:70px;
+    float:left;
+    position:absolute;
+    -webkit-font-smoothing:subpixel-antialiased;
+}
+
+
+section {
+    width:86%;
+    float: right;
+    padding-bottom:50px;
+    padding-right: 30px;
+    padding-top: 19px;
+}
+
+#markdownBody>p:first-child::first-line {
+	  font-variant:small-caps;
+}
+/************/
+/* HEADINGS */
+/************/
+
+/* HEADER H1-6 HIERARCHY */
 h1, h2, h3, h4, h5, h6 {
-  color:#000;
-  margin:0 0 20px;
-  font-variant:small-caps;
-
+    margin: 1.25em 0 0.5em -0.75rem;
+    font-weight: bold;
+    position: relative;
+}
+@media only screen and (max-width: 65ch) {
+    h1, h2, h3, h4, h5, h6 {
+        margin: 1.25em 0 0.5em 0;
+    }
 }
 
-p, table, pre, dl {
-  margin:0 0 20px;
+/*=-------------------------=*/
+/*= Inline code in headings =*/
+/*=-------------------------=*/
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+    border: none;
+    padding: 0;
+    background-color: inherit;
+    font-size: inherit;
+    font-weight: normal;
 }
 
-h1, h2, h3 {
-  line-height:1.1;
+/*=----------------=*/
+/*= Heading levels =*/
+/*=----------------=*/
+
+header h1 {
+	  margin: 0 0;
+	  text-align: center;
+	  text-transform: none;
+	  font-variant: small-caps;
+	  font-size: 2.5em;
+	  line-height: 1.15;
+	  font-weight: 600;
+	  letter-spacing: -1px
+}
+
+@media only screen and (max-width:64.9ch) {
+	  header h1 {
+		    font-size: 2em
+	  }
+}
+
+/* h1 defined in initial.css */
+
+h1 {
+	  margin: 1.25em 0 0.5em -0.75rem;
+	  font-weight: bold;
+	  position: relative
+}
+
+@media only screen and (max-width:65ch) {
+	  h1 {
+		    margin: 1.25em 0 0.5em 0
+	  }
 }
 
 h1 {
-    font-size:28px;
+	  font-feature-settings: 'smcp';
+	  font-size: 1.75em;
+	  line-height: 1.25;
+	  letter-spacing: -0.75px
+}
+section:not(.collapse) > h1:first-child {
+    line-height: 1;
+    margin: 1.75em 0 0.375em 0;
+    text-align: right;
+    font-weight: 600;
+    box-shadow:
+        0 -2px 0 0 #fff inset,
+        0 -3px 0 0 #888 inset;
+}
+#markdownBody section:not(.collapse) > h1:first-child a {
+    position: relative;
+}
+#markdownBody section:not(.collapse) > h1:first-child a::after {
+    position: absolute;
+    top: 0.15em;
+}
+@media only screen and (min-width: 65ch) {
+    section:not(.collapse) > h1:first-child {
+        margin: 1.75em 0 0.375em -0.75rem;
+        font-size: 2em;
+        overflow: hidden;
+        padding: 0 0 3px 0.75rem;
+        box-shadow:
+            0 -5px 0 0 #fff inset,
+            0 -6px 0 0 #888 inset;
+    }
+    #markdownBody section:not(.collapse) > h1:first-child a::after {
+        opacity: 0.4;
+        left: -0.375em;
+    }
+}
+
+/*  Italics in h1 headings.
+    */
+h1 em:last-child {
+    padding-right: 0.075em;
 }
 
 h2 {
-    color:#393939;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    padding: 0 0.5em 0 0;
+    line-height: 1.25;
+}
+h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px dotted #888;
+    left: 0;
+    bottom: 0.1em;
+    pointer-events: none;
+    z-index: -1;
+}
+#markdownBody section:not(.collapse) > h2:first-child a {
+    padding-top: 20px;
+    padding-top: 20px;
+    padding-top: 20px;
+    position: relative;
+}
+#markdownBody section:not(.collapse) > h2:first-child a::after {
+    position: absolute;
+    top: 0.1em;
+    left: unset;
+    right: -0.75em;
+}
+#markdownBody section.collapse > h2:first-child a::after {
+    top: -0.2em;
+}
+@media only screen and (min-width: 65ch) {
+    section:not(.collapse) > h2:first-child {
+        overflow: hidden;
+    }
 }
 
-h3, h4, h5, h6 {
-    color:#494949;
+h3 {
+    text-transform: capitalize;
+    font-size: 1.125em;
 }
-p {
-    padding-left: 0.7em;
+h4 {
+    text-transform: capitalize;
 }
-div#markdownBody {
-    text-align: justify;
-//    text-justify: inter-character;
+h5 {
+    font-size: 1em;
 }
+h6 {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/*  Margins between adjacent headings should collapse.
+    */
+h1 + section > h2:first-child,
+h2 + section > h3:first-child {
+    margin-top: 0;
+}
+
+ /* LINKS */
 a {
   color:#3c3c3c;
 }
@@ -84,7 +262,7 @@ a:hover, a:focus {
   color:#888;
 }
 
-a small {
+.wrapper a small {
   font-size:11px;
   color:#777;
   margin-top:-0.3em;
@@ -95,22 +273,182 @@ a:hover small {
   color:#777;
 }
 
-.wrapper {
-  width:910px;
-  margin:auto;
+article > :not(#markdown-toc) a:link {
+    text-decoration: none;
+    background-image:
+        linear-gradient(#fff, #fff),
+        linear-gradient(#fff, #fff),
+        linear-gradient(#333, #333);
+    background-size:
+        0.05em 1px,
+        0.05em 1px,
+           1px 1px;
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        repeat-x;
+    background-position:
+          0% 90%,
+        100% 90%,
+          0% 90%;
+    text-shadow:
+         0.03em 0       #fff,
+        -0.03em 0       #fff,
+         0      0.03em  #fff,
+         0     -0.03em  #fff,
+         0.06em 0       #fff,
+        -0.06em 0       #fff,
+         0.09em 0       #fff,
+        -0.09em 0       #fff,
+         0.12em 0       #fff,
+        -0.12em 0       #fff,
+         0.15em 0       #fff,
+        -0.15em 0       #fff;
+
+    /*  Disable oldstyle nums in underlined links because the oldstyle nums are almost subscript-like and overlap */
+    font-variant-numeric: lining-nums;
+}
+article > :not(#TOC) a:hover {
+    background-image:
+        linear-gradient(#fff, #fff),
+        linear-gradient(#fff, #fff),
+        linear-gradient(#999, #999);
 }
 
+
+/***************/
+/* BLOCKQUOTES */
+/***************/
+
+/* main gray background is implemented in initial.css to avoid 'flash' on load */
+
+/* avoid problems with floating */
 blockquote {
-  border:1px solid #ccc;
-  margin: 1.625em 0 1.625em 0;
-  padding:1em 1.25em 0.6em 1.25em;
-  font-size: 0.95em;
-  background-color: #f5f5f5;
+    margin: 1.625em 0 1.75em 0;
+    border: 1px solid #ccc;
+    font-size: 0.95em;
+    padding: 1em 1.25em;
+    clear: both;
 }
+
+blockquote,
+blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote {
+    z-index: -2;
+    background-color: var(--GW-blockquote-background-color)
+}
+
+blockquote blockquote,
+blockquote blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote blockquote {
+    background-color: #e6e6e6
+}
+
+:root {
+    --GW-blockquote-background-color: #f5f5f5
+}
+article > :not(#TOC) blockquote a:link,
+article > :not(#TOC) blockquote blockquote blockquote a:link,
+article > :not(#TOC) blockquote blockquote blockquote blockquote blockquote a:link {
+    text-shadow:
+         0.03em 0       var(--GW-blockquote-background-color),
+        -0.03em 0       var(--GW-blockquote-background-color),
+         0      0.03em  var(--GW-blockquote-background-color),
+         0     -0.03em  var(--GW-blockquote-background-color),
+         0.06em 0       var(--GW-blockquote-background-color),
+        -0.06em 0       var(--GW-blockquote-background-color),
+         0.09em 0       var(--GW-blockquote-background-color),
+        -0.09em 0       var(--GW-blockquote-background-color),
+         0.12em 0       var(--GW-blockquote-background-color),
+        -0.12em 0       var(--GW-blockquote-background-color),
+         0.15em 0       var(--GW-blockquote-background-color),
+        -0.15em 0       var(--GW-blockquote-background-color);
+}
+article > :not(#TOC) blockquote blockquote a:link,
+article > :not(#TOC) blockquote blockquote blockquote blockquote a:link,
+article > :not(#TOC) blockquote blockquote blockquote blockquote blockquote blockquote a:link {
+    text-shadow:
+         0.03em 0       #e6e6e6,
+        -0.03em 0       #e6e6e6,
+         0      0.03em  #e6e6e6,
+         0     -0.03em  #e6e6e6,
+         0.06em 0       #e6e6e6,
+        -0.06em 0       #e6e6e6,
+         0.09em 0       #e6e6e6,
+        -0.09em 0       #e6e6e6,
+         0.12em 0       #e6e6e6,
+        -0.12em 0       #e6e6e6,
+         0.15em 0       #e6e6e6,
+        -0.15em 0       #e6e6e6;
+}
+
+blockquote blockquote {
+    margin: 1em 1px;
+}
+
+/*=--------------------=*/
+/*= Various edge cases =*/
+/*=--------------------=*/
+
+#markdownBody blockquote blockquote:first-child {
+    margin: 0.25em 1px 1em 1px;
+}
+
+#markdownBody blockquote > :last-child,
+#markdownBody blockquote > :last-child > :last-child,
+#markdownBody blockquote > :last-child > :last-child > :last-child,
+#markdownBody blockquote > :last-child > :last-child > :last-child > :last-child {
+    margin-bottom: 0;
+}
+#markdownBody blockquote > :first-child,
+#markdownBody blockquote > :first-child > :first-child,
+#markdownBody blockquote > :first-child > :first-child > :first-child,
+#markdownBody blockquote > :first-child > :first-child > :first-child > :first-child {
+    margin-top: 0;
+}
+
+/*  Special case for tables in blockquotes.
+    */
+#markdownBody blockquote > table:last-child,
+#markdownBody blockquote > :last-child > table:last-child,
+#markdownBody blockquote > :last-child > :last-child > table:last-child,
+#markdownBody blockquote > :last-child > :last-child > :last-child > table:last-child {
+    margin-bottom: 0.5em;
+}
+#markdownBody blockquote > table:first-child,
+#markdownBody blockquote > :first-child > table:first-child,
+#markdownBody blockquote > :first-child > :first-child > table:first-child,
+#markdownBody blockquote > :first-child > :first-child > :first-child > table:first-child {
+    margin-top: 0.5em;
+}
+
+/*  Interviews (e.g. https://www.gwern.net/Morning-writing#examples).
+    */
+blockquote p > code:first-child,
+blockquote p > a:first-child code:first-child {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-family: inherit;
+    padding: 0;
+    font-size: inherit;
+}
+
+/*  Tables in blockquotes.
+    */
+blockquote table {
+    font-size: 0.7em;
+}
+
+/***************/
+/* EPIGRAPHS */
+/*************/
+/* loosely inspired by https://edwardtufte.github.io/tufte-css/#epigraphs */
+
 .epigraph {
     margin: 2em 0 2em 0;
     padding: 0.5em 2.5em 0.375em 2.5em;
-    overflow: hidden;
+//    overflow: hidden;
 }
 .epigraph blockquote {
     padding: 0;
@@ -122,16 +460,17 @@ blockquote {
     z-index: 1;
     overflow: visible;
 }
-.epigraph q {
+.epigraph p  {
     font-style: italic;
     background-color: inherit;
 }
-/*  Reverse back to normal when italics are used inside an epigraph.
+/*  Reverse back to normal when italics are used inside an epigraph, or final block.
     */
-.epigraph q em {
+.epigraph p:nth-child(1) em, .epigraph p:last-child {
     font-style: normal;
 }
-.epigraph blockquote > p:nth-last-child(2) > span.quote-mark:first-child, .epigraph blockquote > p:nth-last-child(2) > span.quote-mark:last-child {
+.epigraph blockquote > p:nth-last-child(2) > span.quote-mark:first-child,
+.epigraph blockquote > p:nth-last-child(2) > span.quote-mark:last-child {
     display: inline-block;
     width: 0;
     height: 0;
@@ -144,10 +483,9 @@ blockquote {
     font-size: 0.875em;
     text-indent: 0;
 }
-.epigraph p:nth-last-of-type(n+2) > q::before, .epigraph p:nth-last-of-type(n+2) > q::after {
-    display: none;
-}
-.epigraph blockquote::before, .epigraph blockquote::after {
+
+.epigraph blockquote::before,
+.epigraph blockquote::after {
     display: block;
     position: absolute;
     font-size: 2.5em;
@@ -164,25 +502,85 @@ blockquote {
     bottom: -1em;
 }
 
+article > :not(#markdown-toc) .epigraph blockquote a:link{
+    text-shadow:
+         0.03em 0       #fff,
+        -0.03em 0       #fff,
+         0      0.03em  #fff,
+         0     -0.03em  #fff,
+         0.06em 0       #fff,
+        -0.06em 0       #fff,
+         0.09em 0       #fff,
+        -0.09em 0       #fff,
+         0.12em 0       #fff,
+        -0.12em 0       #fff,
+         0.15em 0       #fff,
+        -0.15em 0       #fff;
+}
+
+@media only screen and (max-width: 64.9ch) {
+    .epigraph {
+        margin: 2.125em 1em;
+        padding: 0;
+        font-size: 0.95em;
+        overflow: visible;
+    }
+    .epigraph blockquote::before {
+        left: -0.375em;
+        top: -0.75em;
+    }
+    .epigraph blockquote::after {
+        right: -0.375em;
+        bottom: -1.25em;
+    }
+    .epigraph + .epigraph {
+        margin-top: 2.75em;
+    }
+}
+
+/*=------------=*/
+/*= Edge cases =*/
+/*=------------=*/
+
+@media only screen and (min-width: 65ch) {
+    h1 + .epigraph,
+    h3 + .epigraph,
+    h5 + .epigraph {
+        margin-top: 1.25em;
+    }
+    h2 + .epigraph,
+    h4 + .epigraph,
+    h6 + .epigraph {
+        margin-top: 1em;
+    }
+
+}
+
+/*************/
+/* FOOTNOTES */
+/*************/
+
+/* make footnotes better: http://bytes.com/topic/html-css/answers/97932-superscript-doesnt-distort-line-spacing#post340658 */
 sub,
 sup {
     line-height: 0.3em;
 }
-a.footnote-ref sup {
+a.footnote sup {
     vertical-align: baseline;
-    font-size: 0.75em;
+    font-size: 0.60em;
 }
-a.footnote-ref {
+a.footnote {
     vertical-align: super;
     line-height: 0.3;
     position: relative;
     top: 0.05em;
     padding: 0 0.05em;
-    font-feature-settings: 'lnum';
+    font-feature-settings: 'smcp', 'c2sc';
+    font-variant-numeric:lining-nums;
     font-weight: 600;
     z-index: 1;
 }
-a.footnote-ref::before {
+a.footnote::before {
     content: "";
     display: block;
     position: absolute;
@@ -195,7 +593,7 @@ a.footnote-ref::before {
 
 /* Deal with multiple footnote superscripts one after another; per Charuru */
 sup + sup,
-a.footnote-ref {
+a.footnote {
     margin-left: 0.05em;
 }
 
@@ -203,7 +601,11 @@ a.footnote-ref {
     margin: 1em 0 0 0;
 }
 
-.footnotes .footnote-back {
+/*=------------------------=*/
+/*= Back-to-citation links =*/
+/*=------------------------=*/
+
+.footnote .reversefootnote {
     margin: 0 0 0 10px;
     position: relative;
     font-weight: bold;
@@ -215,19 +617,19 @@ a.footnote-ref {
     vertical-align: bottom;
     bottom: 2px;
 }
-#markdownBody .footnotes a.footnote-back {
+#markdownBody .footnote a.reversefootnote {
     background-image: none;
 }
-#markdownBody .footnotes a.footnote-back:hover {
+#markdownBody .footnote a.reversefootnote:hover {
     border-color: #999;
 }
-
-.footnotes li {
+.footnotes {
+    font-variant-numeric:oldstyle-nums;
+}
+.footnote li {
     position: relative;
 }
-.footnotes blockquote + a.footnote-back,
-.footnotes pre + a.footnote-back,
-.footnotes .sourceCode + a.footnote-back {
+.footnote blockquote + a.reversefootnote, .footnote pre + a.reversefootnote, .footnote .highlighterRouge + a.reversefootnote {
     position: absolute;
     right: 0.5em;
     top: unset;
@@ -235,6 +637,11 @@ a.footnote-ref {
     background-color: #fff;
 }
 
+/*=--------------------------=*/
+/*= Floating footnote popups =*/
+/*=--------------------------=*/
+
+/* http://ignorethecode.net/blog/2010/04/20/footnotes/ */
 #footnotediv {
     z-index: 10001;
     font-size: 0.9em;
@@ -246,12 +653,12 @@ a.footnote-ref {
 #footnotediv.fading {
     opacity: 0.0;
     transition:
-        opacity 0.75s ease-in 0.1s;
+        opacity 0.75s ease-in 0.05s;
 }
 
 #footnotediv > div {
     background-color: #fff;
-    padding: 12px 16px 14px 16px;
+    padding: 0px 16px;
     max-width: 800px;
     max-height: calc(100vh - 32px);
     border: 3px double #aaa;
@@ -260,8 +667,228 @@ a.footnote-ref {
     overscroll-behavior: none;
 }
 
-#markdownBody section > :not(:first-child) a[href^='#'].footnote-ref::after, #markdownBody p a[href^='#'].footnote-ref::after, #markdownBody section > :not(:first-child) a[href^='#'].footnote-back::after, #markdownBody p a[href^='#'].footnote-back::after {
-    content: none;
+/*  Scroll bar styles (Webkit/Blink only).
+    */
+#footnotediv > div::-webkit-scrollbar {
+    width: 14px;
+}
+#footnotediv > div::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    box-shadow:
+        0 0 0 3px #fff inset;
+}
+#footnotediv > div::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+#footnotediv a.reversefootnote {
+    display: none;
+}
+
+#footnotediv blockquote {
+    margin: 1em 0;
+}
+
+/*  The following compensates for the variable edge case where the last
+    blockquote within a floating footnote popup either DOES, or DOES NOT, have a
+    back-to-citation link after it (which is not shown, if present, but makes it
+    uncertain whether the blockquote is the last child of the popup or not. This
+    code makes everything consistent regardless of which case applies.
+    â€”Obormot (2019-02-17)
+    */
+#footnotediv > div > blockquote:nth-last-child(2) {
+    margin-bottom: 2px;
+}
+#footnotediv > div > blockquote:nth-last-child(2) + p {
+    margin-top: 1em;
+}
+
+@media only screen and (max-width: 64.9ch), not screen and (hover:hover) and (pointer:fine) {
+    #footnotediv {
+        display: none;
+    }
+
+}
+
+/*=-----------=*/
+/*= Citations =*/
+/*=-----------=*/
+
+.reversefootnote.highlighted::before,
+.reversefootnote:target::before,
+.reversefootnote.targeted::before {
+    background-color: rgba(255,255,255,0.75);
+    box-shadow:
+        0 0 0 1px #aaa,
+        0 0 0 2px #fff,
+        0 0 0 3px #aaa;
+}
+@media only screen and (max-width: 176ch) {
+    .reversefootnote:target::before {
+        background-color: inherit;
+        box-shadow: none;
+    }
+}
+
+/*  Special styles for special browsers.
+ */
+@supports (-moz-user-focus: normal) {
+    @media only screen and (max-width: 176ch) {
+        .reversefootnote:target {
+            background-color: #fff;
+            box-shadow:
+                0 0.2em 0 6px #fff,
+                0 0.2em 0 7px #aaa,
+                0 0.2em 0 8px #fff,
+                0 0.2em 0 9px #aaa;
+        }
+    }
+}
+
+/**********/
+/* TABLES */
+/**********/
+
+.tableWrapper {
+    margin: 2em 0 2.125em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+h1 + .tableWrapper,
+h2 + .tableWrapper,
+h3 + .tableWrapper,
+h4 + .tableWrapper,
+h5 + .tableWrapper,
+h6 + .tableWrapper {
+    margin: 0 0 2.125em 0;
+}
+
+table {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.65em;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px 0;
+
+    /*  'tabular figures' to make numbers line up in tables:
+        https://practicaltypography.com/alternate-figures.html#tabular-and-proportional-figures
+        https://helpx.adobe.com/fonts/using/open-type-syntax.html#tnum
+        */
+    font-variant-numeric: tabular-nums;
+}
+
+/*=-------------------=*/
+/*= Full-width tables =*/
+/*=-------------------=*/
+
+.tableWrapper.full-width {
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+/*=-------------=*/
+/*= Table parts =*/
+/*=-------------=*/
+
+table caption {
+    padding: 0.25em 0.75em;
+    font-style: italic;
+    font-size: 1.25em;
+    border-top: 2px solid #000;
+}
+
+table th,
+table td {
+    padding: 7px 10px;
+    line-height: 1.35;
+}
+table th {
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    text-align: left;
+}
+table td {
+    vertical-align: top;
+}
+table th + th,
+table td + td {
+    border-left: 1px solid #fff;
+}
+
+/*=--------------------------------------------------=*/
+/*= Horizontal scrollbar styling (Webkit/Blink only) =*/
+/*=--------------------------------------------------=*/
+
+.tableWrapper::-webkit-scrollbar {
+    height: 16px;
+}
+.tableWrapper::-webkit-scrollbar-thumb {
+    background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMXd3d////ywAAAAABAAEAAACBgQShqgJBQA7');
+    background-size: 2px;
+    box-shadow:
+        0 2px 0 0   #fafafa inset,
+        0 0   0 1px #000 inset,
+        0 2px 0 1px #000 inset;
+}
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+    background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMQAAAP///ywAAAAABAAEAAACBgQShqgJBQA7');
+}
+
+/*  Add little icons to tables handled by tablesorter.js
+    to advertise that they are sortable.
+    http://tablesorter.com/docs/#Configuration
+    */
+th.tablesorter-header {
+    background-image: url('/static/img/bg.gif');
+    cursor: pointer;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 20px;
+}
+th.header:hover {
+    background-color: #e2f0f2;
+}
+th.tablesorter-headerAsc {
+    background-image: url('/static/img/small_asc.gif');
+}
+th.tablesorter-headerDesc {
+    background-image: url('/static/img/small_desc.gif');
+}
+th.tablesorter-headerAsc,
+th.tablesorter-headerDesc,
+th.tablesorter-headerAsc:hover,
+th.tablesorter-headerDesc:hover {
+    background-color: #8bd0ed;
+    color: #fff;
+    text-shadow:
+       0.5px 0.5px 0 #000,
+       0 0 1px #000;
+}
+
+/*  zebra-stripe tables (CSS3); from Twitter's bootstrap package
+    */
+:not(.small-table) > table tr:nth-child(odd) td {
+    background-color: #f6f6f6;
+}
+#markdownBody table tr:hover {
+    outline: 1px dotted #000;
+}
+
+/*  Tables in blockquotes.
+    */
+blockquote :not(.small-table) > table tr:nth-child(odd) td {
+    background-color: #fff;
+}
+blockquote table th + th,
+blockquote table td + td {
+    border-left: 1px solid var(--GW-blockquote-background-color);
+
 }
 
 code, pre {
@@ -277,36 +904,11 @@ pre {
   overflow-x: auto;
 }
 
-table {
-  width:100%;
-  border-collapse:collapse;
-}
-
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-dt {
-  color:#444;
-  font-weight:700;
-}
-
-th {
-  color:#444;
-}
 
 img {
   max-width:100%;
 }
 
-header {
-  width:85px;
-  float:left;
-  position:absolute;
-  -webkit-font-smoothing:subpixel-antialiased;
-}
 
 ul.downloads {
   list-style:none;
@@ -315,73 +917,6 @@ ul.downloads {
  // width:0px;
 }
 
-#markdownBody ul,
-#markdownBody ol {
-    list-style-type: none;
-    margin: 1.25em 0 1.5em 0;
-    padding: 0 0 0 2.5em;
-    overflow: hidden;
-}
-#markdownBody li > ul,
-#markdownBody li > ol {
-    margin: 0.5em 0;
-}
-
-#markdownBody ul > li,
-#markdownBody ol > li {
-    position: relative;
-    margin: 0;
-}
-#markdownBody ul > li:nth-of-type(n+2), #markdownBody ol > li:nth-of-type(n+2) {
-    margin: 0.5em 0 0 0;
-}
-
-#markdownBody ul > li::before, #markdownBody ol > li::before {
-    position: absolute;
-    z-index: 1;
-}
-#markdownBody ul > li::before {
-    color: #888;
-    font-size: 0.875em;
-    top: 0.125em;
-    left: -1.375em;
-}
-
-#markdownBody ul > li::before, #markdownBody ul ul ul > li::before {
-    content: "\2727";
-}
-#markdownBody ul ul > li::before, #markdownBody ul ul ul ul > li::before {
-    content: "\2726";
-}
-
-#markdownBody ol {
-    counter-reset: ol;
-}
-#markdownBody ol > li {
-    counter-increment: ol;
-}
-#markdownBody ol > li::before {
-    content: counter(ol) ".";
-    width: 2em;
-    right: calc(100% + 0.5em);
-    text-align: right;
-    font-feature-settings: 'onum';
-    color: #444;
-}
-
-#markdownBody ol ol {
-    list-style-type: lower-roman;
-}
-#markdownBody ol ol > li {
-    padding: 0 0 0 0.25em;
-}
-#markdownBody ol ol > li::before {
-    content: none;
-}
-
-#markdownBody ol ol ol {
-    list-style-type: lower-alpha;
-}
 
 .downloads a {
 //  line-height:1;
@@ -418,15 +953,125 @@ strong {
   color:#222;
 }
 
-section {
-  width:86%;
-  float: right;
-  padding-bottom:50px;
-  padding-right: 20px;
+/* LISTS */
+/*********/
+
+/* the /index needs more space in the lists for mobile users */
+@media only screen and (max-width:64.9ch) { body.siteIndex #markdownBody li { line-height: 1.65; } }
+
+@media only screen and (min-width: 65ch) {
+    blockquote {
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 64.9ch) {
+    /* even less horizontal is available on mobile! */
+    blockquote {
+        margin: 1.25em 0 1.5em 0;
+    }
 }
 
+#markdownBody ul,
+#markdownBody ol {
+    list-style-type: none;
+    margin: 1.25em 0 1.5em 0;
+    padding: 0 0 0 2.5em;
+    overflow: hidden;
+}
+#markdownBody li > ul,
+#markdownBody li > ol {
+    margin: 0.5em 0;
+}
+
+#markdownBody ul > li,
+#markdownBody ol > li {
+    position: relative;
+    margin: 0;
+}
+#markdownBody ul > li:nth-of-type(n+2),
+#markdownBody ol > li:nth-of-type(n+2) {
+    margin: 0.5em 0 0 0;
+}
+
+#markdownBody ul > li::before,
+#markdownBody ol > li::before {
+    position: absolute;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 64.9ch) {
+    #markdownBody ul,
+    #markdownBody ol {
+        padding: 0 0 0 1.75em;
+    }
+}
+
+/*=-----------------------=*/
+/*= Bulleted list markers =*/
+/*=-----------------------=*/
+
+#markdownBody ul > li::before {
+    color: #888;
+    font-size: 0.875em;
+    top: 0.125em;
+    left: -1.375em;
+}
+
+#markdownBody ul > li::before,
+#markdownBody ul ul ul > li::before {
+    content: "\2727";
+}
+#markdownBody ul ul > li::before,
+#markdownBody ul ul ul ul > li::before {
+    content: "\2726";
+}
+
+/*=-----------------------=*/
+/*= Numbered list markers =*/
+/*=-----------------------=*/
+
+#markdownBody ol {
+    counter-reset: ol;
+}
+#markdownBody ol > li {
+    counter-increment: ol;
+}
+#markdownBody ol > li::before {
+    content: counter(ol) ".";
+    width: 2em;
+    right: calc(100% + 0.5em);
+    text-align: right;
+    font-feature-settings: 'onum';
+    color: #444;
+}
+
+#markdownBody ol ol {
+    list-style-type: lower-roman;
+}
+#markdownBody ol ol > li {
+    padding: 0 0 0 0.25em;
+}
+#markdownBody ol ol > li::before {
+    content: none;
+}
+
+#markdownBody ol ol ol {
+    list-style-type: lower-alpha;
+}
+
+/*=------------------=*/
+/*= Weird edge cases =*/
+/*=------------------=*/
+
+li > ul + p,
+li > ol + p {
+    margin-top: 1em;
+}
+
+
+
 small {
-  font-size:11px;
+  font-size:0.6875em;
 }
 
 hr {
@@ -435,6 +1080,7 @@ hr {
   height:1px;
   margin:0 0 20px;
 }
+
 
 footer {
   font-size: 0.75em;
@@ -451,75 +1097,75 @@ footer {
 
 @media print, screen and (max-width: 960px) {
 
-  div.wrapper {
-    width:auto;
-    margin:50px;
-  }
+    div.wrapper {
+        width:auto;
+        margin:50px;
+    }
 
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
+    #sidebar, section, footer {
+        float:none;
+        position:static;
+        width:auto;
+    }
 
-  header {
-    padding-right:320px;
-  }
+    #sidebar {
+        padding-right:320px;
+    }
 
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
+    section {
+        border:1px solid #e5e5e5;
+        border-width:1px 0;
+        padding:20px 0;
+        margin:0 0 20px;
+    }
 
-  header a small {
-    display:inline;
-  }
+    #sidebar a small {
+        display:inline;
+    }
 
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
+    #sidebar ul {
+        position:absolute;
+        right:50px;
+        top:52px;
+    }
 }
 
 @media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
+    body {
+        word-wrap:break-word;
+    }
 
-  header {
-    padding:0;
-  }
+    #sidebar {
+        padding:0;
+    }
 
-  header ul, header p.view {
-    position:static;
-  }
+    #sidebar ul, #sidebar p.view {
+        position:static;
+    }
 
-  pre, code {
-    word-wrap:normal;
-  }
+    pre, code {
+        word-wrap:normal;
+    }
 }
 
 @media print, screen and (max-width: 480px) {
-  body {
-    padding:15px;
-  }
+    body {
+        padding:15px;
+    }
 
-  .downloads {
-    width:99%;
-  }
+    .downloads {
+        width:99%;
+    }
 
-  .downloads li, .downloads li + li + li {
-    width:33%;
-  }
+    .downloads li, .downloads li + li + li {
+        width:33%;
+    }
 }
 
 @media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-  }
+    body {
+        padding:0.4in;
+        font-size:12pt;
+        color:#444;
+    }
 }
