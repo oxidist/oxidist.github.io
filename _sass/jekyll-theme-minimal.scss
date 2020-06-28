@@ -49,10 +49,7 @@ h6 code {
 /*=----------------=*/
 /*= Heading levels =*/
 /*=----------------=*/
-
 /* h1 defined in initial.css */
-
-
 section:not(.collapse) > h1:first-child {
     line-height: 1;
     margin: 1.75em 0 0.375em 0;
@@ -104,7 +101,7 @@ h2::after {
     display: block;
     position: absolute;
     width: 100%;
-    //border-bottom: 1px dotted #888;
+    border-bottom: 1px dotted #888;
     left: 0;
     bottom: 0.1em;
     pointer-events: none;
@@ -154,7 +151,9 @@ h2 + section > h3:first-child {
     margin-top: 0;
 }
 
- /* LINKS */
+/****************/
+/*   LINKS     */
+/**************/
 
 
 /***************/
@@ -476,7 +475,7 @@ a.footnote {
 
 #footnotediv > div {
     background-color: #fff;
-    padding: 0px 16px;
+    padding: 12px 16px 14px;
     max-width: 700px;
     max-height: calc(100vh - 32px);
     border: 3px double #aaa;
@@ -712,17 +711,7 @@ blockquote table td + td {
 }
 
 
-pre {
-  padding:8px 15px;
-  background: #f8f8f8;
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x: auto;
-}
-
-
-
-
+/*********/
 /* LISTS */
 /*********/
 

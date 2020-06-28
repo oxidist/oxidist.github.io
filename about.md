@@ -1,6 +1,6 @@
 ---
-layout: index
-title: About
+layout: post
+title: "About This Website"
 permalink: /about/
 ---
 
