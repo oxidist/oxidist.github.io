@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% seo %}
-    <link rel="preload" as="style" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
-    <link rel="preload" href="/assets/img/logo.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="/assets/img/logo.svg" as="image" type="image/svg+xml" >
     <link rel="preload" href="/assets/fonts/source/WOFF/TTF/SourceSerifPro-Regular.ttf.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="preload" href="/assets/fonts/source/WOFF/TTF/SourceSerifPro-Bold.ttf.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="preload" href="/assets/fonts/source/WOFF/TTF/SourceSerifPro-Semibold.ttf.woff" as="font" type="font/woff" crossorigin="anonymous">
@@ -28,7 +28,7 @@
           <a class="links" href="{{site.url}}/books">Books</a>
        </div>
        {% endif %}
-      </div id="sidebar">
+      </div>
       <article>
       {{ content }}
       </article>
