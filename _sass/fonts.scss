@@ -3,7 +3,8 @@
   font-family: 'Source Serif Pro';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/source/WOFF2/TTF/SourceSerifPro-Regular.ttf.woff2') format('woff2'),
+  src: local('Source Serif Pro'),
+       url('../fonts/source/WOFF2/TTF/SourceSerifPro-Regular.ttf.woff2') format('woff2'),
        url('../fonts/source/WOFF/OTF/SourceSerifPro-Regular.otf.woff') format('woff'),
        url('../fonts/source/OTF/SourceSerifPro-Regular.otf') format('opentype'),
        url('../fonts/source/TTF/SourceSerifPro-Regular.ttf') format('truetype');
