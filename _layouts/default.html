@@ -15,26 +15,22 @@
     <link rel="preload" href="/assets/img/logo.svg" as="image" type="image/svg+xml">
   </head>
   <body>
-      <div class="wrapper">
+      <main>
       <div id="sidebar">
           {% if site.logo %}
-        <a href="{{ "/" | absolute_url }}"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
+        <a href="{{ "/" | absolute_url }}" id="logo"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
           {% endif %}
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
        {% if site.show_downloads %}
-       <ul class="downloads">
-           <li><a href="{{site.url}}/about">About</a></li>
-          <li><a href="{{site.url}}/books">Books</a></li>
-        </ul>
+       <div id="sidebar-links">
+          <a class="site" href="{{site.url}}/about">About</a>
+          <a class="links" href="{{site.url}}/books">Books</a>
+       </div>
        {% endif %}
       </div id="sidebar">
-      <section>
-
+      <article>
       {{ content }}
-      <footer><a href="https://docs.google.com/forms/d/e/1FAIpQLScfGXWT3lAkwGOgJYTueRjayniMODZzhJyqXOAHilxni-UUbg/viewform?usp=sf_link">Submit anonymous feedback</a></footer>
-      </section>
-      </div>
+      </article>
+      </main>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/footnotes.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/jquery-1.7.1.min.js" | relative_url }}"></script>

@@ -152,12 +152,12 @@ Extracts = {
                 popupLeft = layoutParentAbsoluteRect.width - Extracts.minPopupWidth;
             Extracts.popup.style.left = popupLeft + "px";
             //  Correct for various positioning aberrations.
-          if (Extracts.popup.getBoundingClientRect().right > layoutParentAbsoluteRect.width)
-              Extracts.popup.style.maxWidth = (Extracts.popup.clientWidth - (Extracts.popup.getBoundingClientRect().right - layoutParentAbsoluteRect.width) - parseInt(getComputedStyle(Extracts.popup.firstElementChild).paddingRight)) + "px";
-          else if (targetPosition.left + Extracts.popup.clientWidth < layoutParentAbsoluteRect.width)
-              Extracts.popup.style.left = (targetPosition.left) + "px";
-          else if (targetPosition.left - (Extracts.popup.clientWidth) > Extracts.popup.getBoundingClientRect().left)
-              Extracts.popup.style.left = (targetPosition.left - Extracts.popup.clientWidth) + "px";
+          // if (Extracts.popup.getBoundingClientRect().right > layoutParentAbsoluteRect.width)
+          //     Extracts.popup.style.maxWidth = (Extracts.popup.clientWidth - (Extracts.popup.getBoundingClientRect().right - layoutParentAbsoluteRect.width) - parseInt(getComputedStyle(Extracts.popup.firstElementChild).paddingRight)) + "px";
+          // else if (targetPosition.left + Extracts.popup.clientWidth < layoutParentAbsoluteRect.width)
+          //     Extracts.popup.style.left = (targetPosition.left) + "px";
+          // else if (targetPosition.left - (Extracts.popup.clientWidth) > Extracts.popup.getBoundingClientRect().left)
+          //     Extracts.popup.style.left = (targetPosition.left - Extracts.popup.clientWidth) + "px";
 
             //  Now we know how tall the popup is...
             var provisionalExtractPopupHeight = Extracts.popup.clientHeight;

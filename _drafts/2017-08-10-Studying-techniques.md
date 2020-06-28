@@ -20,7 +20,7 @@ Now, you have just created your own studying framework, in which you study for x
 
 *This is your own version of the Pomodoro technique personalized for your own attention span. Try to do this experiment every 2 months, so you can increase your attention span.*[^hello]
 
-[^hello]: I wholeheartedly agree.
+[^hello]: 
     ```haskell
     main :: IO()
     main = putStrLn "nigger."
