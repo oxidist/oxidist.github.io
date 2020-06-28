@@ -7,8 +7,6 @@
 
     {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-<!--     <link rel="stylesheet" href="{{ "/assets/css/gwern.css?v=" | append: site.github.build_revision | relative_url }}">
-     <link rel="stylesheet" href="{{ "/assets/css/inline.css?v=" | append: site.github.build_revision | relative_url }}"> --> 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -34,7 +32,6 @@
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/footnotes.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/jquery-1.7.1.min.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/wikipedia-popups.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -45,6 +42,5 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
-
   </body>
 </html>
