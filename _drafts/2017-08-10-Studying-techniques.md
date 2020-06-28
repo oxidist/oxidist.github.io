@@ -3,10 +3,10 @@ layout: post
 comments: true
 title: "How to study more effectively by leveraging your psychology"
 ---
-Using productivity techniques is great, but if you leverage your own concentration and habits, you will maximise your efficiency.[^1][^aaaa]
+Using productivity techniques is great, but if you leverage your own concentration and habits, you will maximise your efficiency.[^1][^2]
 
 [^1]: Aliquam nec tincidunt ipsum. Etiam nec lacus tincidunt velit sodales vulputate. Praesent quam mi, consectetur vel aliquam eu, vulputate sit amet diam. Suspendisse tincidunt tellus quis leo vulputate, quis suscipit risus gravida. Aenean pulvinar tortor non leo viverra, id aliquet erat congue.
-[^aaaa]: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at tempus sapien. Sed nec nunc a dui vehicula pellentesque non ut lacus. Praesent in lorem non risus posuere volutpat. Maecenas nec finibus eros, suscipit dictum dolor. Nam sit amet molestie sapien, sit amet ornare nisi. Cras dapibus ipsum dui, et semper mi tempor a. Aliquam quis luctus lorem, eget viverra ex. Donec sit amet neque eros. Mauris luctus augue ultrices, sagittis eros et, finibus mi. Quisque vitae euismod dolor.
+[^2]: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at tempus sapien. Sed nec nunc a dui vehicula pellentesque non ut lacus. Praesent in lorem non risus posuere volutpat. Maecenas nec finibus eros, suscipit dictum dolor. Nam sit amet molestie sapien, sit amet ornare nisi. Cras dapibus ipsum dui, et semper mi tempor a. Aliquam quis luctus lorem, eget viverra ex. Donec sit amet neque eros. Mauris luctus augue ultrices, sagittis eros et, finibus mi. Quisque vitae euismod dolor.
 
 The most touted technique is to use the Pomodoro technique, which is effective, but not completely. So you must change it to reflect your own needs.
 
@@ -18,9 +18,9 @@ The most touted technique is to use the Pomodoro technique, which is effective, 
 
 Now, you have just created your own studying framework, in which you study for x minutes, take a break for z minutes and it nicely adds up to an easily measurable number y.
 
-*This is your own version of the Pomodoro technique personalized for your own attention span. Try to do this experiment every 2 months, so you can increase your attention span.*[^hello]
+*This is your own version of the Pomodoro technique personalized for your own attention span. Try to do this experiment every 2 months, so you can increase your attention span.*[^osama]
 
-[^hello]: 
+[^osama]: 
     ```haskell
     main :: IO()
     main = putStrLn "nigger."
@@ -42,9 +42,9 @@ But when you do write it, don't just write it off the top of your head. First us
 
 # Lorem
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed accumsan diam, vel dapibus justo. Curabitur consequat, orci sit amet cursus placerat, arcu nunc ultricies ex, a porta dolor purus quis felis. Integer id dolor at mauris pretium mollis. Duis nec mauris vitae enim vehicula sodales. Donec congue tortor at nisl semper, ut molestie sapien viverra. Curabitur faucibus orci a eros accumsan laoreet. Praesent velit ipsum, commodo et pretium id, efficitur quis orci. Aliquam pellentesque nisi non orci fermentum efficitur sed et justo. In quam nibh, cursus gravida lacinia facilisis, vestibulum a purus. Fusce ultricies molestie nunc eget commodo. Nullam faucibus erat sit amet pretium viverra. In eu dolor ex. Donec aliquam sollicitudin ante, vitae imperdiet elit dictum sit amet. Etiam eget accumsan lectus, eget bibendum lorem. Pellentesque elementum lobortis suscipit.[^lorem]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed accumsan diam, vel dapibus justo. Curabitur consequat, orci sit amet cursus placerat, arcu nunc ultricies ex, a porta dolor purus quis felis. Integer id dolor at mauris pretium mollis. Duis nec mauris vitae enim vehicula sodales. Donec congue tortor at nisl semper, ut molestie sapien viverra. Curabitur faucibus orci a eros accumsan laoreet. Praesent velit ipsum, commodo et pretium id, efficitur quis orci. Aliquam pellentesque nisi non orci fermentum efficitur sed et justo. In quam nibh, cursus gravida lacinia facilisis, vestibulum a purus. Fusce ultricies molestie nunc eget commodo. Nullam faucibus erat sit amet pretium viverra. In eu dolor ex. Donec aliquam sollicitudin ante, vitae imperdiet elit dictum sit amet. Etiam eget accumsan lectus, eget bibendum lorem. Pellentesque elementum lobortis suscipit.[^4]
 
-[^lorem]: Aliquam nec tincidunt ipsum. Etiam nec lacus tincidunt velit sodales vulputate. Praesent quam mi, consectetur vel aliquam eu, vulputate sit amet diam. Suspendisse tincidunt tellus quis leo vulputate, quis suscipit risus gravida. Aenean pulvinar tortor non leo viverra, id aliquet erat congue.
+[^4]: Aliquam nec tincidunt ipsum. Etiam nec lacus tincidunt velit sodales vulputate. Praesent quam mi, consectetur vel aliquam eu, vulputate sit amet diam. Suspendisse tincidunt tellus quis leo vulputate, quis suscipit risus gravida. Aenean pulvinar tortor non leo viverra, id aliquet erat congue.
 Donec sodales nunc ac dolor tristique, sed blandit tellus pulvinar. Proin congue vulputate nunc, vitae ornare enim fermentum eu. Ut facilisis consectetur congue. Donec sagittis, lectus vel aliquet rutrum, leo purus posuere orci, eget lobortis neque libero ac neque. Phasellus nec congue odio, eget elementum nisl. Curabitur tincidunt vehicula nunc, ac dictum diam imperdiet nec. Ut vel tortor ut sem iaculis rhoncus. Phasellus ultricies convallis ipsum, tristique dignissim justo fringilla ut.
 
 Aenean egestas neque sit amet accumsan cursus. Phasellus sed gravida nunc, in condimentum velit. Donec vitae mauris est. Donec lectus quam, posuere nec nisi nec, viverra ornare purus. Vestibulum tincidunt bibendum dolor ut lacinia. Proin vel nulla volutpat, ultricies lorem in, interdum orci. Morbi mollis sollicitudin mauris eu feugiat. Aliquam sit amet eros pulvinar, facilisis dui ut, ullamcorper libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis nec pulvinar velit.
@@ -67,9 +67,9 @@ If you can't write your notes in the Cornell system, or rewrite them, you can st
 
 ## Changing your studying system
 
-Now, place these notes in your [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) basket, for later review.[^supermemo] Not only will you complete your later revision faster, but you will have to study *less* than if you had normally done it, and *still understand more*, at just the expense of one experiment, a switch of a note taking system and summarizing your lectures.
+Now, place these notes in your [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) basket, for later review.[^5] Not only will you complete your later revision faster, but you will have to study *less* than if you had normally done it, and *still understand more*, at just the expense of one experiment, a switch of a note taking system and summarizing your lectures.
 
- [^supermemo]: [General principles of SuperMemo.](https://www.supermemo.com/english/princip.htm)
+ [^5]: [General principles of SuperMemo.](https://www.supermemo.com/english/princip.htm)
  
 ## Bringing it all together
 
@@ -80,9 +80,9 @@ Here's how you use the aforementioned techniques to study most efficiently out o
 
 ## Additional tips
 
-At the end of the day, remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. If you neglect these, your cognitive ability will go down. For example, if you sleep 6 hours a night for 14 days straight, you'll have the cognitive ability of someone with a blood alcohol level of 0.1%.[^2]
+At the end of the day, remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. If you neglect these, your cognitive ability will go down. For example, if you sleep 6 hours a night for 14 days straight, you'll have the cognitive ability of someone with a blood alcohol level of 0.1%.[^6]
 
-[^2]: Williamson AM, Feyer A. [“Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication”](https://oem.bmj.com/content/oemed/57/10/649.full.pdf). *Occupational and Environmental Medicine*  2000; **57**:649-655. 
+[^6]: Williamson AM, Feyer A. [“Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication”](https://oem.bmj.com/content/oemed/57/10/649.full.pdf). *Occupational and Environmental Medicine*  2000; **57**:649-655. 
 <span style="font-variant:small-caps;">todo</span>: add more examples of sleep deprivation and cognitive deterioration
 
 So as some general guidelines, that you should always follow regardless of exams:

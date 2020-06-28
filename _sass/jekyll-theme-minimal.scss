@@ -91,7 +91,7 @@ h1 em:last-child {
 h2 {
     font-feature-settings: 'smcp';
     font-size: 1.25em;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     word-spacing:0.2em;
     padding: 0 0.5em 0 0;
     line-height: 1.25;
@@ -101,7 +101,7 @@ h2::after {
     display: block;
     position: absolute;
     width: 100%;
-    border-bottom: 1px dotted #888;
+    //border-bottom: 1px dotted #888;
     left: 0;
     bottom: 0.1em;
     pointer-events: none;
@@ -441,12 +441,12 @@ a.footnote {
 .footnotes {
     font-variant-numeric:oldstyle-nums;
 }
-.footnotes li {
+.footnotes ol li {
     position: relative;
 }
-.footnotes blockquote + a.reversefootnote,
-.footnotes pre + a.reversefootnote,
-.footnotes code + a.reversefootnote {
+.footnotes blockquote + p a.reversefootnote,
+.footnotes pre + p a.reversefootnote,
+.footnotes code + p a.reversefootnote {
     position: absolute;
     right: 0.5em;
     top: unset;
@@ -533,9 +533,7 @@ a.footnote {
 /*= Citations =*/
 /*=-----------=*/
 
-.reversefootnote.highlighted::before,
-.reversefootnote:target::before,
-.reversefootnote.targeted::before {
+.reversefootnote.highlighted::before, .reversefootnote:target::before, .reversefootnote.targeted::before {
     background-color: rgba(255,255,255,0.75);
     box-shadow:
         0 0 0 1px #aaa,
@@ -564,6 +562,66 @@ a.footnote {
     }
 }
 
+/*=-------------------------------=*/
+/*= Sidenote self-links (numbers) =*/
+/*=-------------------------------=*/
+
+.sidenote > .sidenote-self-link {
+    font-weight: 600;
+    position: absolute;
+    top: 3px;
+    outline: 3px double #ccc;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+/*  Disable link underlining.
+    */
+article > :not(#TOC) .sidenote > .sidenote-self-link {
+    background-image: none;
+}
+.sidenote.highlighted > .sidenote-self-link, .sidenote:hover > .sidenote-self-link, .sidenote:target > .sidenote-self-link, .sidenote.targeted > .sidenote-self-link {
+    outline: 3px double #aaa;
+}
+#sidenote-column-left .sidenote > .sidenote-self-link {
+    right: 3px;
+}
+#sidenote-column-right .sidenote > .sidenote-self-link {
+    left: 3px;
+}
+
+/*=--------------=*/
+/*= Margin notes *=/
+/*=--------------=*/
+/* display inline on mobile/narrow windows; on sufficiently-wide screens, pop out as number-less sidenotes */
+.marginnote {
+    /* bolding turns out to be too obtrusive for users' liking; italicized both inline & popped-out */
+    font-style: italic;
+}
+.marginnote.inline::after {
+    content: " ";
+}
+
+.marginnote.sidenote {
+    float: right;
+    position: absolute;
+    left: calc(100% + 3em);
+    text-align: left;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    text-indent: 0;
+    width: calc((100vw - 112ch) / 2 - 5em);
+    font-size: 0.85em;
+    opacity: 0.85;
+    z-index: 1;
+}
+.marginnote.sidenote:hover {
+    box-shadow: none;
+}
 /**********/
 /* TABLES */
 /**********/

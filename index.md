@@ -6,13 +6,9 @@ layout: index
 For more information about me, see [About]({{site.url}}/about).
 # <span style="font-variant:small-caps;">Recent</span>
 <section>
+  <ul>
   {% for post in site.posts %}
-    <small><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time></small>
-    <p>
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </p>
+      <li> <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
-
+  </ul>
 </section>
