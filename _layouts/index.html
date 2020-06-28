@@ -182,7 +182,9 @@ body.siteIndex #markdownBody a[href^="https://www.gwern.net/"]:not([href$=".pdf"
        {% endif %}
       </div>
       <article>
-      {{ content }}
+          <div id="markdownBody">
+            {{ content }}
+          </div>
       </article>
       </main>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
