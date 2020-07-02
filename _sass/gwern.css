@@ -689,10 +689,6 @@ figure.full-width {
 
 /* avoid problems with floating */
 blockquote {
-    margin: 1.625em 0 1.75em 0;
-    border: 1px solid #ccc;
-    font-size: 0.95em;
-    padding: 1em 1.25em
     clear: both;
 }
 
