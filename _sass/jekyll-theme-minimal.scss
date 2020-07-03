@@ -2,10 +2,6 @@
 @import "rouge-github";
 @import "links";
 
-#markdownBody>p:first-child::first-line {
-	  font-variant:small-caps;
-}
-
 /*************/
 /*  LAYOUT  */
 /***********/
@@ -89,9 +85,8 @@ h1 em:last-child {
 }
 
 h2 {
-    font-feature-settings: 'smcp';
+    font-style:italic;
     font-size: 1.25em;
-    letter-spacing: 0.05em;
     word-spacing:0.2em;
     padding: 0 0.5em 0 0;
     line-height: 1.25;
@@ -101,7 +96,6 @@ h2::after {
     display: block;
     position: absolute;
     width: 100%;
-    //border-bottom: 1px dotted #888;
     left: 0;
     bottom: 0.1em;
     pointer-events: none;
@@ -151,6 +145,41 @@ h2 + section > h3:first-child {
     margin-top: 0;
 }
 
+/*=----------------------------=*/
+/*= Section heading self-links =*/
+/*=----------------------------=*/
+
+article #markdownBody section > :first-child a {
+    background: none;
+}
+article #markdownBody section:not(.collapse) > h1:first-child a,
+article #markdownBody section:not(.collapse) > h2:first-child a {
+    display: block;
+}
+#markdownBody section > :first-child a:hover {
+    color: #485555;
+}
+#markdownBody section > :first-child a::after {
+    content: "\00B6"; /* Pilcrow sign: Â¶ */
+    font-size: 0.75em;
+    position: relative;
+    top: -0.2em;
+    left: 0.35em;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0s ease 0.1s;
+}
+#markdownBody section > :first-child a[href^='#']:hover::after,
+#markdownBody section > :first-child a[href^='#']:active::after,
+#markdownBody section > :first-child a[href^='#']:focus::after,
+#markdownBody section:target > :first-child a[href^='#']::after,
+#markdownBody section.highlighted > :first-child a[href^='#']::after {
+    visibility: visible;
+    opacity: 0.8;
+}
+#markdownBody section:target > :first-child a[href^='#']::after {
+    opacity: 0.5;
+}
 /****************/
 /*   LINKS     */
 /**************/
@@ -371,257 +400,8 @@ article > :not(#markdown-toc) .epigraph blockquote a:link{
 
 }
 
-/*************/
-/* FOOTNOTES */
-/*************/
 
-/* make footnotes better: http://bytes.com/topic/html-css/answers/97932-superscript-doesnt-distort-line-spacing#post340658 */
-sub,
-sup {
-    line-height: 0.3em;
-}
-a.footnote sup {
-    vertical-align: baseline;
-    font-size: 0.60em;
-}
-a.footnote {
-    vertical-align: super;
-    line-height: 0.3;
-    position: relative;
-    top: 0.05em;
-    padding: 0 0.05em;
-    font-feature-settings: 'smcp', 'c2sc';
-    font-variant-numeric:lining-nums;
-    font-weight: 600;
-    z-index: 1;
-}
-a.footnote::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: calc(100% + 0.5em);
-    height: 125%;
-    left: -0.25em;
-    top: 0;
-    z-index: -1;
-}
 
-/* Deal with multiple footnote superscripts one after another; per Charuru */
-sup + sup,
-a.footnote {
-    margin-left: 0.05em;
-}
-
-#markdownBody .footnotes > ol > li + li {
-    margin: 1em 0 0 0;
-}
-
-/*=------------------------=*/
-/*= Back-to-citation links =*/
-/*=------------------------=*/
-
-.footnotes .reversefootnote {
-    margin: 0 0 0 10px;
-    position: relative;
-    font-weight: bold;
-    line-height: 1;
-    border: 1px dotted #000;
-    display: inline-block;
-    padding: 5px 5px 0 6px;
-    text-indent: 0;
-    vertical-align: bottom;
-    bottom: 2px;
-}
-#markdownBody .footnotes a.reversefootnote {
-    background-image: none;
-}
-#markdownBody .footnotes a.reversefootnote:hover {
-    border-color: #999;
-}
-.footnotes {
-    font-variant-numeric:oldstyle-nums;
-}
-.footnotes ol li {
-    position: relative;
-}
-.footnotes blockquote + p a.reversefootnote,
-.footnotes pre + p a.reversefootnote,
-.footnotes code + p a.reversefootnote {
-    position: absolute;
-    right: 0.5em;
-    top: unset;
-    bottom: -0.5em;
-    background-color: #fff;
-}
-
-/*=--------------------------=*/
-/*= Floating footnote popups =*/
-/*=--------------------------=*/
-
-/* http://ignorethecode.net/blog/2010/04/20/footnotes/ */
-#footnotediv {
-    z-index: 10001;
-    font-size: 0.9em;
-    box-shadow: 0 0 0 2px #fff;
-    position: absolute;
-    opacity: 1.0;
-    transition: none;
-}
-#footnotediv.fading {
-    opacity: 0.0;
-    transition:
-        opacity 0.5s ease-in 0.03s;
-}
-
-#footnotediv > div {
-    background-color: #fff;
-    padding: 12px 16px 14px;
-    max-width: 700px;
-    max-height: calc(100vh - 32px);
-    border: 3px double #aaa;
-    line-height: 1.45;
-    overflow: auto;
-    overscroll-behavior: none;
-}
-
-/*  Scroll bar styles (Webkit/Blink only).
-    */
-#footnotediv > div::-webkit-scrollbar {
-    width: 14px;
-}
-#footnotediv > div::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    box-shadow:
-        0 0 0 3px #fff inset;
-}
-#footnotediv > div::-webkit-scrollbar-thumb:hover {
-    background-color: #999;
-}
-
-#footnotediv a.reversefootnote {
-    display: none;
-}
-
-#footnotediv blockquote {
-    margin: 1em 0;
-}
-
-/*  The following compensates for the variable edge case where the last
-    blockquote within a floating footnote popup either DOES, or DOES NOT, have a
-    back-to-citation link after it (which is not shown, if present, but makes it
-    uncertain whether the blockquote is the last child of the popup or not. This
-    code makes everything consistent regardless of which case applies.
-    â€”Obormot (2019-02-17)
-    */
-#footnotediv > div > blockquote:nth-last-child(2) {
-    margin-bottom: 2px;
-}
-#footnotediv > div > blockquote:nth-last-child(2) + p {
-    margin-top: 1em;
-}
-#footnotediv > div > code:nth-child(1) {
-    margin-top: 12px;
-}
-@media only screen and (max-width: 64.9ch), not screen and (hover:hover) and (pointer:fine) {
-    #footnotediv {
-        display: none;
-    }
-
-}
-
-/*=-----------=*/
-/*= Citations =*/
-/*=-----------=*/
-
-.reversefootnote.highlighted::before, .reversefootnote:target::before, .reversefootnote.targeted::before {
-    background-color: rgba(255,255,255,0.75);
-    box-shadow:
-        0 0 0 1px #aaa,
-        0 0 0 2px #fff,
-        0 0 0 3px #aaa;
-}
-@media only screen and (max-width: 176ch) {
-    .reversefootnote:target::before {
-        background-color: inherit;
-        box-shadow: none;
-    }
-}
-
-/*  Special styles for special browsers.
- */
-@supports (-moz-user-focus: normal) {
-    @media only screen and (max-width: 176ch) {
-        .reversefootnote:target {
-            background-color: #fff;
-            box-shadow:
-                0 0.2em 0 6px #fff,
-                0 0.2em 0 7px #aaa,
-                0 0.2em 0 8px #fff,
-                0 0.2em 0 9px #aaa;
-        }
-    }
-}
-
-/*=-------------------------------=*/
-/*= Sidenote self-links (numbers) =*/
-/*=-------------------------------=*/
-
-.sidenote > .sidenote-self-link {
-    font-weight: 600;
-    position: absolute;
-    top: 3px;
-    outline: 3px double #ccc;
-    width: 2em;
-    height: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
-/*  Disable link underlining.
-    */
-article > :not(#TOC) .sidenote > .sidenote-self-link {
-    background-image: none;
-}
-.sidenote.highlighted > .sidenote-self-link, .sidenote:hover > .sidenote-self-link, .sidenote:target > .sidenote-self-link, .sidenote.targeted > .sidenote-self-link {
-    outline: 3px double #aaa;
-}
-#sidenote-column-left .sidenote > .sidenote-self-link {
-    right: 3px;
-}
-#sidenote-column-right .sidenote > .sidenote-self-link {
-    left: 3px;
-}
-
-/*=--------------=*/
-/*= Margin notes *=/
-/*=--------------=*/
-/* display inline on mobile/narrow windows; on sufficiently-wide screens, pop out as number-less sidenotes */
-.marginnote {
-    /* bolding turns out to be too obtrusive for users' liking; italicized both inline & popped-out */
-    font-style: italic;
-}
-.marginnote.inline::after {
-    content: " ";
-}
-
-.marginnote.sidenote {
-    float: right;
-    position: absolute;
-    left: calc(100% + 3em);
-    text-align: left;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    hyphens: none;
-    text-indent: 0;
-    width: calc((100vw - 112ch) / 2 - 5em);
-    font-size: 0.85em;
-    opacity: 0.85;
-    z-index: 1;
-}
-.marginnote.sidenote:hover {
-    box-shadow: none;
-}
 /**********/
 /* TABLES */
 /**********/
@@ -778,7 +558,7 @@ blockquote table td + td {
 
 @media only screen and (min-width: 65ch) {
     blockquote {
-        overflow: hidden;
+    //    overflow: hidden;
     }
 }
 @media only screen and (max-width: 64.9ch) {
@@ -885,6 +665,216 @@ li > ol + p {
     margin-top: 1em;
 }
 
+/*************/
+/* FOOTNOTES */
+/*************/
+
+/* make footnotes better: http://bytes.com/topic/html-css/answers/97932-superscript-doesnt-distort-line-spacing#post340658 */
+sub,
+sup {
+    line-height: 0.3em;
+}
+a.footnote sup {
+    vertical-align: baseline;
+    font-size: 0.60em;
+}
+a.footnote {
+    vertical-align: super;
+    line-height: 0.3;
+    position: relative;
+    top: 0.05em;
+    padding: 0 0.05em;
+    font-feature-settings: 'smcp', 'c2sc';
+    font-variant-numeric:lining-nums;
+    font-weight: 600;
+    z-index: 1;
+}
+a.footnote::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% + 0.5em);
+    height: 125%;
+    left: -0.25em;
+    top: 0;
+    z-index: -1;
+}
+
+/* Deal with multiple footnote superscripts one after another; per Charuru */
+sup + sup,
+a.footnote {
+    margin-left: 0.05em;
+}
+
+#markdownBody .footnotes > ol > li + li {
+    margin: 1em 0 0 0;
+}
+
+/*=------------------------=*/
+/*= Back-to-citation links =*/
+/*=------------------------=*/
+
+.footnotes .reversefootnote {
+    margin: 0 0 0 10px;
+    position: relative;
+    font-weight: bold;
+    line-height: 1;
+    border: 1px dotted #000;
+    display: inline-block;
+    padding: 5px 5px 0 6px;
+    text-indent: 0;
+    vertical-align: bottom;
+    bottom: 2px;
+}
+#markdownBody .footnotes a.reversefootnote {
+    background-image: none;
+}
+#markdownBody .footnotes a.reversefootnote:hover {
+    border-color: #999;
+}
+
+.footnotes {
+    font-variant-numeric:tabular-nums;
+}
+.footnotes ol li {
+    position: relative;
+}
+
+
+.footnotes ol li ol {
+    counter-reset: ol;
+}
+.footnotes ol li ol li {
+    list-style-type: none;
+    font-variant-numeric:tabular-nums;
+}
+// ordered lists inside footnotes
+.footnotes ol li ol li::marker {
+    content: counter(ol) ".";
+    width: 2em;
+    right: calc(100% + 0.5em);
+    text-align: right;
+    font-feature-settings: 'onum';
+    color: #444;
+}
+
+.footnotes blockquote + p a.reversefootnote,
+.footnotes pre + p a.reversefootnote,
+.footnotes code + p a.reversefootnote {
+    position: absolute;
+    right: 0.5em;
+    top: unset;
+    bottom: -0.5em;
+    background-color: #fff;
+}
+
+/*=--------------------------=*/
+/*= Floating footnote popups =*/
+/*=--------------------------=*/
+
+/* http://ignorethecode.net/blog/2010/04/20/footnotes/ */
+#footnotediv {
+    z-index: 10001;
+    font-size: 0.9em;
+    box-shadow: 0 0 0 2px #fff;
+    position: absolute;
+    opacity: 1.0;
+    transition: none;
+}
+#footnotediv.fading {
+    opacity: 0.0;
+    transition:
+        opacity 0.5s ease-in 0.03s;
+}
+
+#footnotediv > div {
+    background-color: #fff;
+    padding: 12px 16px 14px;
+    max-width: 500px;
+    max-height: calc(100vh - 32px);
+    border: 3px double #aaa;
+    line-height: 1.45;
+    overflow: auto;
+    overscroll-behavior: none;
+}
+
+/*  Scroll bar styles (Webkit/Blink only).
+    */
+#footnotediv > div::-webkit-scrollbar {
+    width: 14px;
+}
+#footnotediv > div::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    box-shadow:
+        0 0 0 3px #fff inset;
+}
+#footnotediv > div::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+#footnotediv a.reversefootnote {
+    display: none;
+}
+
+#footnotediv blockquote {
+    margin: 1em 0;
+}
+
+/*  The following compensates for the variable edge case where the last
+    blockquote within a floating footnote popup either DOES, or DOES NOT, have a
+    back-to-citation link after it (which is not shown, if present, but makes it
+    uncertain whether the blockquote is the last child of the popup or not. This
+    code makes everything consistent regardless of which case applies.
+    â€”Obormot (2019-02-17)
+    */
+#footnotediv > div > blockquote:nth-last-child(2) {
+    margin-bottom: 2px;
+}
+#footnotediv > div > blockquote:nth-last-child(2) + p {
+    margin-top: 1em;
+}
+#footnotediv > div > code:nth-child(1) {
+    margin-top: 0px;
+}
+@media only screen and (max-width: 64.9ch), not screen and (hover:hover) and (pointer:fine) {
+    #footnotediv {
+        display: none;
+    }
+
+}
+
+/*=-----------=*/
+/*= Citations =*/
+/*=-----------=*/
+
+.reversefootnote.highlighted::before, .reversefootnote:target::before, .reversefootnote.targeted::before {
+    background-color: rgba(255,255,255,0.75);
+    box-shadow:
+        0 0 0 1px #aaa,
+        0 0 0 2px #fff,
+        0 0 0 3px #aaa;
+}
+@media only screen and (max-width: 176ch) {
+    .reversefootnote:target::before {
+        background-color: inherit;
+        box-shadow: none;
+    }
+}
+
+/*  Special styles for special browsers.
+ */
+@supports (-moz-user-focus: normal) {
+    @media only screen and (max-width: 176ch) {
+        .reversefootnote:target {
+            background-color: #fff;
+            box-shadow:
+                0 0.2em 0 6px #fff,
+                0 0.2em 0 7px #aaa,
+                0 0.2em 0 8px #fff,
+                0 0.2em 0 9px #aaa;
+        }
+    }
+}
 
 /***************/
 /* CODE BLOCKS */

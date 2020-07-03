@@ -1,27 +1,3 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    <link rel="preload" href="/assets/img/logo.svg" as="image" type="image/svg+xml" >
-    <link rel="preload" href="/assets/fonts/source/WOFF/TTF/SourceSerifPro-Regular.ttf.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/source/WOFF/TTF/SourceSerifPro-Light.ttf.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/source/WOFF/TTF/SourceSerifPro-Bold.ttf.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/source/WOFF/TTF/SourceSerifPro-Semibold.ttf.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/source/WOFF/TTF/SourceSerifPro-It.ttf.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/source/WOFF2/TTF/SourceSerifPro-Regular.ttf.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/source/WOFF2/TTF/SourceSerifPro-Bold.ttf.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/source/WOFF2/TTF/SourceSerifPro-Semibold.ttf.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/source/WOFF2/TTF/SourceSerifPro-It.ttf.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/source/WOFF2/TTF/SourceSerifPro-Light.ttf.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <style>
 blockquote {
 	margin: 1.625em 0 1.75em 0;
 	border: 1px solid #ccc;
@@ -56,7 +32,7 @@ html {
 }
 
 body {
-	max-width: 97ch;
+	max-width: 112ch
 }
 
 @media only screen and (max-width:64.9ch) {
@@ -234,26 +210,15 @@ header {
 
 header h1 {
 	margin: 0.75em 0;
-	text-align: left;
-  text-transform:uppercase;
-	font-size: 1.5em;
+	text-align: center;
+	text-transform: none;
+	font-variant: small-caps;
+	font-size: 2.5em;
 	line-height: 1.15;
-	font-weight: 400;
-  word-spacing:0.5em;
-  letter-spacing: 0.08em;
-  font-family: Minion Pro;
+	font-weight: 600;
+	letter-spacing: -1px
 }
-header h1:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    border-bottom: 1px solid #000;
-    left: 0;
-    bottom: -0.6em;
-    pointer-events: none;
-    z-index: -1;
-}
+
 @media only screen and (max-width:64.9ch) {
 	header h1 {
 		font-size: 2em
@@ -303,7 +268,8 @@ header h1:after {
 }
 
 #markdownBody {
-  overflow-wrap: break-word;
+	  overflow-wrap: break-word;
+    width:66ch;
 }
 
 @media only screen and (min-width:176.1ch) {
@@ -352,16 +318,14 @@ header h1:after {
 }
 
 #abstract+p::first-line,
-:not(.siteIndex) > #markdownBody>p:first-child::first-line {
+#markdownBody>p:first-child::first-line {
 	font-feature-settings: 'smcp'
 }
 
 h1 {
 	margin: 1.25em 0 0.5em -0.75rem;
-  font-family: Minion Pro;
-  text-transform: lowercase;
-  letter-spacing:0.05em;
-	position: relative;
+	font-weight: bold;
+	position: relative
 }
 
 @media only screen and (max-width:65ch) {
@@ -374,6 +338,7 @@ h1 {
 	font-feature-settings: 'smcp';
 	font-size: 1.75em;
 	line-height: 1.25;
+	letter-spacing: -0.75px
 }
 
 a {
@@ -428,37 +393,3 @@ hr {
 	border-bottom: 1px solid #aaa;
 	margin: 1em 0
 }
-    </style>
-  </head>
-  <body>
-      <main>
-      <div id="sidebar">
-          {% if site.logo %}
-        <a href="{{ "/" | absolute_url }}" id="logo"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
-          {% endif %}
-       {% if site.show_downloads %}
-       <div id="sidebar-links">
-          <a class="site" href="{{site.url}}/about">About</a>
-          <!-- <a class="links" href="{{site.url}}/books">Books</a> -->
-       </div>
-       {% endif %}
-      </div>
-      <article>
-        {{ content }}
-      </article>
-      </main>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/footnotes.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/jquery-1.7.1.min.js" | relative_url }}"></script>
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
-    {% endif %}
-  </body>
-</html>
