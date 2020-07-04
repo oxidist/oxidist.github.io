@@ -4,3 +4,11 @@ _site/
 .jekyll-cache/
 *.swp
 *.swo
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
