@@ -51,7 +51,7 @@ and either reboot, or restart the X server.
 3. If you're on Ubuntu, you don't need to install fontconfig for ubuntu, obviously. But I am unaware of any other ports of ubuntu font config to distributions other than Arch. If you are, please bring it to my notice.
 
 
-And that should do the trick. If the fonts are a bit too bold for you, you can change `INFINALITY_FT_USE_VARIOUS_TWEAKS` to `true` and that hopefully makes them lighter.
+And that should do the trick. If the fonts are a bit too bold for you, you can change `INFINALITY_FT_USE_VARIOUS_TWEAKS` to `true` and that makes them lighter.
 
 If that still doesn't fix it, try [customizing your own configuration from this file](https://github.com/bohoomil/fontconfig-ultimate/blob/master/freetype/generic_settings/infinality-settings.sh).
 

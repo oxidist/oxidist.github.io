@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "Studying Tips"
 ---
-Using productivity techniques is great, but if you leverage your own concentration and habits, you will maximise your efficiency.[^1][^2]
+Using productivity techniques is great, but if you leverage your own concentration and habits, you will maximise your efficiency.[^1] [^2]
 
 [^1]: Aliquam nec tincidunt ipsum. Etiam nec lacus tincidunt velit sodales vulputate. Praesent quam mi, consectetur vel aliquam eu, vulputate sit amet diam. Suspendisse tincidunt tellus quis leo vulputate, quis suscipit risus gravida. Aenean pulvinar tortor non leo viverra, id aliquet erat congue.
 [^2]: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at tempus sapien. Sed nec nunc a dui vehicula pellentesque non ut lacus. Praesent in lorem non risus posuere volutpat. Maecenas nec finibus eros, suscipit dictum dolor. Nam sit amet molestie sapien, sit amet ornare nisi. Cras dapibus ipsum dui, et semper mi tempor a. Aliquam quis luctus lorem, eget viverra ex. Donec sit amet neque eros. Mauris luctus augue ultrices, sagittis eros et, finibus mi. Quisque vitae euismod dolor.
@@ -24,7 +24,7 @@ Now, you have just created your own studying framework, in which you study for x
     main :: IO()
     main = putStrLn "nigger."
     ``` 
-    > "When people see a strong horse and a weak horse, by nature, they will like the strong horse."
+    > “When people see a strong horse and a weak horse, by nature, they will like the strong horse.”
     >
     > Osama bin Laden, [2001](https://www.npr.org/news/specials/response/investigation/011213.binladen.transcript.html "Transcript of Bin Laden Videotape Dec. 13, 2001")
 
@@ -32,12 +32,12 @@ Now, you have just created your own studying framework, in which you study for x
 
 # Changing your note system
 <div class="epigraph" markdown="1">
-> "When people see a strong horse and a weak horse, by nature, they will like the strong horse."
+> “When people see a strong horse and a weak horse, by nature, they will like the strong horse.”
 >
 > Osama bin Laden, [2001](https://www.npr.org/news/specials/response/investigation/011213.binladen.transcript.html "Transcript of Bin Laden Videotape Dec. 13, 2001")
 </div>
 
-I personally recommend the [Cornell note taking system](https://en.wikipedia.org/wiki/Cornell_Notes).
+I recommend the [Cornell note taking system](https://en.wikipedia.org/wiki/Cornell_Notes).
 When you take notes in that system, save the summary section for writing after the lecture/class. This forces you to revise the material that was taught.
 But when you do write it, don't just write it off the top of your head. First use the [Feynman technique](https://youtu.be/_f-qkGJBPts) to summarize the whole lesson, and do it at least twice. And then, write the summary. What this does is exercise your understanding of the material and quickly identifies your weak spots.
 # Lorem
@@ -79,7 +79,9 @@ Here's how you use the aforementioned techniques to study most efficiently out o
 
 # Additional tips
 
-At the end of the day, remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. If you neglect these, your cognitive ability will go down. For example, if you sleep 6 hours a night for 14 days straight, you'll have the cognitive ability of someone with a blood alcohol level of 0.1%.[^6]
+Remember that your physical health, your diet, and your mental health are just as important factors for your grades as your study habits. 
+If you neglect these, your cognitive ability will go down. 
+For example, if you sleep 6 hours a night for 14 days straight, you'll have the cognitive ability of someone with a blood alcohol level of 0.1%.[^6]
 
 [^6]: Williamson AM, Feyer A. [“Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication”](https://oem.bmj.com/content/oemed/57/10/649.full.pdf). *Occupational and Environmental Medicine*  2000; **57**:649-655. 
 <span style="font-variant:small-caps;">todo</span>: add more examples of sleep deprivation and cognitive deterioration
@@ -95,15 +97,15 @@ So as some general guidelines, that you should always follow regardless of exams
  [^5]: 
     [20 rules of formulating effective knowledge](https://www.supermemo.com/en/archives1990-2015/articles/20rules), Piotr Wozniak:
 >
-1.    Do not learn if you do not understand.
-1.    Learn before you memorize—build the picture of the whole before you dismember it into simple items in SuperMemo. If the whole shows holes, review it again!
-1.    Build upon the basics—never jump both feet into a complex manual because you may never see the end. Well remembered basics will help the remaining knowledge easily fit in.
-1.    Stick to the minimum information principle—if you continue forgetting an item, try to make it as simple as possible. If it does not help, see the remaining rules (cloze deletion, graphics, mnemonic techniques, converting sets into enumerations, etc.)
-1.    [Cloze deletion](https://en.wikipedia.org/wiki/Cloze_deletion) is easy and effective—completing a deleted word or phrase is not only an effective way of learning. Most of all, it greatly speeds up formulating knowledge and is highly recommended for beginners.
-1.    Use imagery—a picture is worth a thousand words.
+1. Do not learn if you do not understand.
+1. Learn before you memorize—build the picture of the whole before you dismember it into simple items in SuperMemo. If the whole shows holes, review it again.
+1. Build upon the basics—never jump both feet into a complex manual because you may never see the end. Well remembered basics will help the remaining knowledge easily fit in.
+1. Stick to the minimum information principle—if you continue forgetting an item, try to make it as simple as possible. If it does not help, see the remaining rules (cloze deletion, graphics, mnemonic techniques, converting sets into enumerations, etc.)
+1. [Cloze deletion](https://en.wikipedia.org/wiki/Cloze_deletion) is easy and effective—completing a deleted word or phrase is not only an effective way of learning. Most of all, it greatly speeds up formulating knowledge and is highly recommended for beginners.
+1. Use imagery—a picture is worth a thousand words.
 1. Use [mnemonic](https://en.wikipedia.org/wiki/Mnemonic) techniques—read about peg lists and mind maps. Study the books by Tony Buzan. Learn how to convert memories into funny pictures. You won't have problems with phone numbers and complex figures.
 1. Graphic deletion is as good as cloze deletion—obstructing parts of a picture is great for learning anatomy, geography and more.
-1. Avoid sets—larger sets are virtually un-memorizable unless you convert them into enumerations!
+1. Avoid sets—larger sets are virtually un-memorizable unless you convert them into enumerations.
 1. Avoid enumerations—enumerations are also hard to remember but can be dealt with using cloze deletion.
 1. Combat interference—even the simplest items can be completely intractable if they are similar to other items. Use examples, context cues, vivid illustrations, refer to emotions, and to your personal life.
 1. Optimize wording—like you reduce mathematical equations, you can reduce complex sentences into smart, compact and enjoyable maxims.

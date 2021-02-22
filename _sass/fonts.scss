@@ -3,18 +3,7 @@
     font-style: normal;
     font-weight: 400;
     src: local('Minion Pro'),
-         url('../fonts/minion.otf') format('opentype');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-style: normal;
-    font-weight: 200;
-    src: local('Source Serif Pro Light'),
-         url('../fonts/source/WOFF2/TTF/SourceSerifPro-Light.ttf.woff2') format('woff2'),
-         url('../fonts/source/WOFF/OTF/SourceSerifPro-Light.otf.woff') format('woff'),
-         url('../fonts/source/OTF/SourceSerifPro-Light.otf') format('opentype'),
-         url('../fonts/source/TTF/SourceSerifPro-Light.ttf') format('truetype');
+         url('../fonts/minion/MinionPro-Regular_0.otf') format('opentype');
     font-display: swap;
 }
 /* source-serif-pro-regular - latin */

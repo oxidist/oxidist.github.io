@@ -6,3 +6,5 @@ google_analytics:
 theme: jekyll-theme-minimal
 github: OfficialOxide
 markdown: kramdown
+kramdown:
+  math_engine: katex
