@@ -23,8 +23,8 @@
     <link rel="preload" href="/assets/fonts/source/WOFF2/TTF/SourceSerifPro-It.ttf.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/assets/fonts/source/minion.otf" as="font" type="font/otf" crossorigin="anonymous">-->
   	<link rel="stylesheet" href="https://use.typekit.net/bfy8tye.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <!--  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
@@ -34,7 +34,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
     <style>
-    .katex { font-size: 1em; }
+    .katex { font-size: 1.1em; }
     blockquote {
         margin: 1.625em 0 1.75em 0;
         border: 1px solid #ccc;
@@ -56,17 +56,26 @@
       }
 
       :root {
-        --GW-blockquote-background-color: #f5f5f5
+        --GW-blockquote-background-color: #f5f5f5;
+        --GW-body-link-color: #272727;
+        --GW-body-link-hover-color: #888;
+        --GW-text-selection-background-color: #333;
+        --GW-text-selection-color: #fff;
       }
 
+      ::selection {
+        text-shadow: none;
+        background: var(--GW-text-selection-background-color);
+        color: var(--GW-text-selection-color);
+      }
       html {
         padding: 0;
         margin: 0;
         background-color: #fff;
         color: #000;
         font-weight: 400;
-        font-family: "Crimson Text", "Vollkorn", "Source Serif Pro", "Apple Garamond", Baskerville, "Libre Baskerville", "Times New Roman", "Droid Serif", Times, serif;
-        font-size: 19px;
+        font-family: "crimson", "Vollkorn", "Source Serif Pro", "Apple Garamond", Baskerville, "Libre Baskerville", "Times New Roman", "Droid Serif", Times, serif;
+        font-size: 16px;
       }
 
       body {
@@ -75,7 +84,7 @@
 
       @media only screen and (max-width:64.9ch) {
         html {
-          font-size: 18px
+          font-size: 17px
         }
       }
 
@@ -331,17 +340,17 @@
       @media only screen and (min-width:65ch) {
         @media only screen and (max-width: 100ch) {
           #markdownBody {
-            line-height:1.30
+            line-height:1.45
           }
         }
         @media only screen and (min-width:100.1ch) and (max-width:120ch) {
           #markdownBody {
-            line-height: 1.30
+            line-height: 1.5
           }
         }
         @media only screen and (min-width:120.1ch) {
           #markdownBody {
-            line-height: 1.30
+            line-height: 1.5
           }
         }
       }
@@ -460,6 +469,7 @@
         {{ content }}
       </article>
       </main>
+    <script src="{{ "/assets/js/helper.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/footnotes.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/sidenotes.js" | relative_url }}" async></script>

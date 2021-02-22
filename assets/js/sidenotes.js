@@ -47,7 +47,7 @@ Sidenotes = {
 	noteNumberFromHash: () => {
 		if (location.hash.match(/#[sf]n[0-9]/))
 			return location.hash.substr(3);
-		else if (location.hash.match(/#fnref[0-9]/))
+    else if (location.hash.match(/#fnref:[0-9]/))
 			return location.hash.substr(6);
 		else
 			return "";
@@ -91,8 +91,8 @@ Sidenotes = {
 			*/
 		var counterpart;
 		if (location.hash.match(/#sn[0-9]/)) {
-			counterpart = document.querySelector("#fnref" + Sidenotes.noteNumberFromHash());
-		} else if (location.hash.match(/#fnref[0-9]/) && Sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
+      counterpart = document.querySelector("#fnref:" + Sidenotes.noteNumberFromHash());
+    } else if (location.hash.match(/#fnref:[0-9]/) && Sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
 			counterpart = document.querySelector("#sn" + Sidenotes.noteNumberFromHash());
 		}
 		/*  If a target counterpart exists, mark it as such.
@@ -572,7 +572,7 @@ Sidenotes = {
 						*/
 					GW.notificationCenter.addHandlerForEvent("Collapse.targetDidRevealOnHashUpdate", Sidenotes.updateStateAfterTargetDidRevealOnHashUpdate = (info) => {
 						if (location.hash.match(/#sn[0-9]/)) {
-							revealElement(document.querySelector("#fnref" + Sidenotes.noteNumberFromHash()), false);
+              revealElement(document.querySelector("#fnref:" + Sidenotes.noteNumberFromHash()), false);
 							scrollElementIntoView(getHashTargetedElement(), (-1 * Sidenotes.sidenotePadding));
 						}
 

@@ -27,7 +27,7 @@ The [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle) s
 
 A better version is “In a finite set of real numbers, the maximum is at least the average”.[^pigeon] [Dijsktra writes](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1094.html):
 
-[^pigeon]: The pigeonhole principle is in fact a special case of this, by taking the set to be $$\{1,1,…,1,2\}$$.
+[^pigeon]: The pigeonhole principle is in fact a special case of this, by taking the set to be $$\{1,1,…,1,2\}$$, for example.
 > The thing we observe is that the "objects" and the "compartments" have disappeared. That is a great improvement, for it saves us the needless trouble of making a painful identification in all those circumstances in which (for visual or linguistic reasons) the metaphor of objects and compartments does not fit nicely.
 
 So in a sense, the "pigeonhole" analogy is wrong because it emphasizes precisely the wrong things.
