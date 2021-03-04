@@ -6,6 +6,11 @@ tags: philosophy
 ---
 
 # Introduction
+<div class="epigraph" markdown="1">
+> "A resemblance of relations; an agreement or likeness between things in some circumstances or effects, when the things are otherwise entirely different. Thus, learning *enlightens* the mind, because it is to the mind what *light* is to the eye, enabling it to discover things before hidden."
+> 
+> Noah Webster, [1913](https://www.websters1913.com/words/Analogy)
+</div>
 If two things are *analogous*, it means that locally, the [directed graphs](https://en.wikipedia.org/wiki/Directed_graph) of their relations to other things are quite similar.[^1] In this essay, I will talk about the use and abuse of analogies.
 
 [^1]: That the similarity is *local* is essential, although in simpler cases they may also be global, which is the source of [John Baez](https://en.wikipedia.org/wiki/John_C._Baez)'s “Every sufficiently precise analogy is yearning to be a [functor](https://en.wikipedia.org/wiki/Functor)”.
@@ -13,7 +18,7 @@ If two things are *analogous*, it means that locally, the [directed graphs](http
 
 # Analogies as an explanatory tool
 ## The good parts
-For sufficiently simple subjects such as mathematics, analogies are sometimes more than simply mental crutches—they can be formalised into actual mathematics. The first isomorphism theorem valid in 
+For sufficiently simple subjects such as mathematics, analogies are sometimes more than simply mental crutches—they can be formalised into actual mathematics. The first isomorphism theorem for groups or rings is exactly analogous to the rank-nullity theorem, and this is formalised in the context of [universal algebra](https://en.wikipedia.org/wiki/Universal_algebra).
 
 ## The bad parts
 My chemistry teacher in high school prefers to explain things mostly by analogy to human behaviour. For example, electrons in the outer orbits of an atom experience a weaker [binding force](https://en.wikipedia.org/wiki/Ionization_energy) as compared to those in the inner orbits, similar to how students sitting at the back of the classoom are less likely to pay attention.
