@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "About This Website"
+tags: about
 permalink: /about/
+date: 2020-06-28
 ---
 
 I am interested in mathematics, linguistics, philosophy, psychology, and computer science.
