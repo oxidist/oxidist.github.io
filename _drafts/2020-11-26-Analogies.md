@@ -28,13 +28,13 @@ Such explanations are highly tempting, especially from a pedagogical perspective
 For any possible state of the world there may be constructed any supporting analogy. This, by itself, disproves analogies as an explanatory tool.
 
 # Wrong analogies
-The [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle) states that if you have $$n$$ holes and $$n+1$$ pigeons to put them in, at least 1 hole will have more than one pigeon. It's a trite observation that nonetheless finds various surprising uses in mathematics. In actuality, the surprisal only comes from how salient in our minds the *active* process of distribution is, which makes it a poor analogy in more 'passive' situations, and thus harder to immediately recognise.
+The [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle) states that if you have $$n$$ holes and $$n+1$$ pigeons to put them in, at least 1 hole will have more than one pigeon. It's a trite observation that nonetheless finds various surprising uses in mathematics. In actuality, we are only surprised because of how salient in our minds the *active* process of distribution is, which makes it a poor analogy in more 'passive' situations, and therefore harder to immediately recognise.
 
-A better version is “In a finite set of real numbers, the maximum is at least the average”.[^pigeon] [Dijsktra writes](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1094.html):
+A better version, proposed by Dijkstra, is: “In a finite set of real numbers, the maximum is at least the average”.[^pigeon] [Dijkstra writes](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1094.html):
 
 [^pigeon]: The pigeonhole principle is in fact a special case of this, by taking the set to be $$\{1,1,…,1,2\}$$, for example.
 > The thing we observe is that the "objects" and the "compartments" have disappeared. That is a great improvement, for it saves us the needless trouble of making a painful identification in all those circumstances in which (for visual or linguistic reasons) the metaphor of objects and compartments does not fit nicely.
 
 So in a sense, the "pigeonhole" analogy is wrong because it emphasizes precisely the wrong things.
 
-------------------------
+---

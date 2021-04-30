@@ -20,13 +20,13 @@
   	<link rel="stylesheet" href="https://use.typekit.net/bfy8tye.css">
 
     <!-- KaTeX -->
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css" integrity="sha384-ThssJ7YtjywV52Gj4JE/1SQEDoMEckXyhkFVwaf4nDSm5OBlXeedVYjuuUd0Yua+" crossorigin="anonymous">
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.js" integrity="sha384-Bi8OWqMXO1ta+a4EPkZv7bYGIes7C3krGSZoTGNTAnAn5eYQc7IIXrJ/7ck1drAi" crossorigin="anonymous"></script>
 
     <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
  
     <style>
@@ -55,7 +55,7 @@
         --GW-blockquote-background-color: #f5f5f5;
         --GW-body-link-color: #272727;
         --GW-body-link-hover-color: #888;
-        --GW-text-selection-background-color: #262626;
+        --GW-text-selection-background-color: #121212;
         --GW-text-selection-color: #fff;
       }
 
@@ -446,6 +446,40 @@
       }
 
 
+			/*  Breakpoint for sidenotes.
+				*/
+			@media only screen and (min-width: 1761px) {
+				#markdownBody {
+					position: relative;
+				}
+			}
+
+
+			/*************/
+			/* SIDENOTES */
+			/*************/
+
+			/*  Hide sidenote columns on narrow viewports.
+					*/
+			@media only screen and (max-width: 1760px) {
+					#sidenote-column-left,
+					#sidenote-column-right {
+							display: none;
+					}
+			}
+
+
+    /*  Sidenotes.
+        */
+    --GW-sidenote-highlight-background-color: var(--GW-body-background-color);
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-track-color: var(--GW-body-background-color);
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+
     </style>
   </head>
   <body>
@@ -465,6 +499,8 @@
         {{ content }}
       </article>
       </main>
+    <script src="{{ "/assets/js/helper.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/sidenotes.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/footnotes.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/jquery-1.7.1.min.js" | relative_url }}"></script>

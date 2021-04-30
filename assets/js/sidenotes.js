@@ -45,7 +45,7 @@ Sidenotes = {
 	sidenoteColumnRight: null,
 
 	noteNumberFromHash: () => {
-		if (location.hash.match(/#[sf]n[0-9]/))
+    if (location.hash.match(/#[sf]n:[0-9]/))
 			return location.hash.substr(3);
     else if (location.hash.match(/#fnref:[0-9]/))
 			return location.hash.substr(6);
@@ -90,10 +90,10 @@ Sidenotes = {
 		/*  Identify new target counterpart, if any.
 			*/
 		var counterpart;
-		if (location.hash.match(/#sn[0-9]/)) {
+    if (location.hash.match(/#sn:[0-9]/)) {
       counterpart = document.querySelector("#fnref:" + Sidenotes.noteNumberFromHash());
     } else if (location.hash.match(/#fnref:[0-9]/) && Sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
-			counterpart = document.querySelector("#sn" + Sidenotes.noteNumberFromHash());
+      counterpart = document.querySelector("#sn:" + Sidenotes.noteNumberFromHash());
 		}
 		/*  If a target counterpart exists, mark it as such.
 			*/
@@ -446,9 +446,9 @@ Sidenotes = {
 			let sidenote = document.createElement("div");
 			sidenote.classList.add("sidenote");
 			let sidenoteNumber = "" + (i + 1);
-			sidenote.id = "sn" + sidenoteNumber;
+      sidenote.id = "sn:" + sidenoteNumber;
 			//  Wrap the contents of the footnote in two wrapper divs...
-			let referencedFootnote = document.querySelector("#fn" + sidenoteNumber);
+      let referencedFootnote = document.querySelector("#fn:" + sidenoteNumber);
 			sidenote.innerHTML = `<div class="sidenote-outer-wrapper"><div class="sidenote-inner-wrapper">` +
 								 (referencedFootnote ? referencedFootnote.innerHTML : "Loading sidenote contents, please waitâ€¦")
 								 + `</div></div>`;
@@ -465,7 +465,7 @@ Sidenotes = {
 		for (var i = 0; i < Sidenotes.citations.length; i++) {
 			let sidenoteSelfLink = document.createElement("a");
 			sidenoteSelfLink.classList.add("sidenote-self-link");
-			sidenoteSelfLink.href = "#sn" + (i + 1);
+      sidenoteSelfLink.href = "#sn:" + (i + 1);
 			sidenoteSelfLink.textContent = (i + 1);
 			Sidenotes.sidenoteDivs[i].appendChild(sidenoteSelfLink);
 		}
@@ -512,8 +512,8 @@ Sidenotes = {
 			query to rewrite the hash whenever the viewport width media query changes.
 			*/
 		doWhenMatchMedia(Sidenotes.mediaQueries.viewportWidthBreakpoint, "Sidenotes.rewriteHashForCurrentMode", (mediaQuery) => {
-			let regex = new RegExp(mediaQuery.matches ? "#sn[0-9]" : "#fn[0-9]");
-			let prefix = (mediaQuery.matches ? "#fn" : "#sn");
+      let regex = new RegExp(mediaQuery.matches ? "#sn:[0-9]" : "#fn:[0-9]");
+      let prefix = (mediaQuery.matches ? "#fn" : "#sn:");
 
 			if (location.hash.match(regex)) {
 				GW.hashRealignValue = prefix + Sidenotes.noteNumberFromHash();
@@ -524,8 +524,8 @@ Sidenotes = {
 				}
 			}
 		}, null, (mediaQuery) => {
-			if (location.hash.match(/#sn[0-9]/)) {
-				GW.hashRealignValue = "#fn" + Sidenotes.noteNumberFromHash();
+      if (location.hash.match(/#sn:[0-9]/)) {
+        GW.hashRealignValue = "#fn:" + Sidenotes.noteNumberFromHash();
 
 				if (document.readyState == "complete") {
 					history.replaceState(null, null, GW.hashRealignValue);
@@ -550,10 +550,10 @@ Sidenotes = {
 		GW.notificationCenter.addHandlerForEvent("Sidenotes.sidenotesDidConstruct", () => {
 			doWhenMatchMedia(Sidenotes.mediaQueries.viewportWidthBreakpoint, "Sidenotes.rewriteCitationTargetsForCurrentMode", (mediaQuery) => {
 				for (var i = 0; i < Sidenotes.citations.length; i++)
-					Sidenotes.citations[i].href = (mediaQuery.matches ? "#fn" : "#sn") + (i + 1);
+          Sidenotes.citations[i].href = (mediaQuery.matches ? "#fn:" : "#sn:") + (i + 1);
 			}, null, (mediaQuery) => {
 				for (var i = 0; i < Sidenotes.citations.length; i++)
-					Sidenotes.citations[i].href = "#fn" + (i + 1);
+          Sidenotes.citations[i].href = "#fn:" + (i + 1);
 			});
 		}, { once: true });
 
@@ -571,7 +571,7 @@ Sidenotes = {
 						collapse block, expand it and all collapse blocks enclosing it.
 						*/
 					GW.notificationCenter.addHandlerForEvent("Collapse.targetDidRevealOnHashUpdate", Sidenotes.updateStateAfterTargetDidRevealOnHashUpdate = (info) => {
-						if (location.hash.match(/#sn[0-9]/)) {
+            if (location.hash.match(/#sn:[0-9]/)) {
               revealElement(document.querySelector("#fnref:" + Sidenotes.noteNumberFromHash()), false);
 							scrollElementIntoView(getHashTargetedElement(), (-1 * Sidenotes.sidenotePadding));
 						}
