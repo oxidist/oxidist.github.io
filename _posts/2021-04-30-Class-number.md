@@ -7,7 +7,7 @@ tags: mathematics
 # Introduction
 Recently, I came across a theorem which relates unique factorisation in a ring to the value of a certain $$\zeta$$ function. It also helps in determining whether the ring has unique factorisation if you can calculate the value of that $$\zeta$$ function.[^0]
 
-I was quite impressed by this extraordinary connection between algebra and analysis, and wrote a short note on it.
+I was quite impressed by this extraordinary connection between algebra and analysis, and wrote a short note on it for two of my friends which is reproduced here.
 
 [^0]: And you don't need to have an exact value either, sometimes you can even approximate it.
 
