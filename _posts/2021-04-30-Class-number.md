@@ -17,8 +17,9 @@ Let $$K = \mathbb{Q}(\sqrt{m} )$$ where $$m < 0$$ is square-free. This is known 
 
 It also has a *ring of integers* $$\mathcal{O}_K$$, which is the analogue of $$\mathbb{Z}$$ for this field. 
 In fact, $$\mathcal{O}_K$$ is the [integral closure](https://en.wikipedia.org/wiki/Integral_element#Integral_closure_in_algebraic_number_theory) of $$\mathbb{Z}$$ in $$K$$.
-Now, it is not necessarily true that $$\mathcal{O}_K$$ is a principal ideal domain, or even a unique factorisation domain. 
-The *class number* measures how much $$\mathcal{O}_K$$ fails to be a principal ideal domain.[^1]
+Unfortunately, the ring $$\mathcal{O}_K$$ is not always a unique factorisation domain. 
+For example, in \mathbb{Z}[-5]$$ we have $$6 = 2 \cdot 3 = (1 + \sqrt{-5})(1 - \sqrt{-5})$$.
+The *class number* measures how much $$\mathcal{O}_K$$ fails to be a principal ideal domain, and hence a unique factorisation domain.[^1]
 
 [^1]: It is the order of a certain group known as the ideal class group. When the order is 1, $$\mathcal{O}_K$$ is a principal ideal domain.
 
@@ -27,8 +28,8 @@ $$N = \begin{cases} |m| & \text{if } m \equiv 1 \mod{4} \\
 4|m| & \text{if } m \equiv 2,3\mod{4} \end{cases}$$
 
 The number $$N$$ is known as the *discriminant* of the number field. 
-We can define a group homomorphism $$\chi : (\mathbb{Z}/N\mathbb{Z})^\times \to \{\pm 1\} $$ as follows. 
-For any prime $$p$$ not dividing $$m$$, we put $$\chi(p) = \left( \frac{m}{p} \right) $$
+We can define a group homomorphism $$\chi : (\mathbb{Z}/N\mathbb{Z})^\times \to \{\pm 1\} $$ as follows:
+for any prime $$p$$ not dividing $$m$$, we put $$\chi(p) = \left( \frac{m}{p} \right) $$
   (This is the Legendre symbol, which outputs $$1$$ if  $$m$$ has a square root in  $$\mathbb{F}_p$$ and $$-1$$ otherwise).
 
 # L functions
