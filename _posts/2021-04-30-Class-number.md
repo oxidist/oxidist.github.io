@@ -3,6 +3,7 @@ layout: post
 comments: false
 title: "The class number formula"
 tags: mathematics
+comments: true
 ---
 # Introduction
 Recently, I came across a theorem which relates unique factorisation in a ring to the value of a certain $$\zeta$$ function. It also helps in determining whether the ring has unique factorisation if you can calculate the value of that $$\zeta$$ function.[^0]
