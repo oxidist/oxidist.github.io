@@ -444,6 +444,85 @@
         border-bottom: 1px solid #aaa;
         margin: 1em 0
       }
+    
+      /***********/
+      /* FIGURES */
+      /***********/
+
+      figure {
+          margin: 2em auto 1.75em auto;
+          max-width: calc(100% - 5em);
+      }
+      @supports (width: -moz-fit-content) {
+          figure {
+                  width: -moz-fit-content;
+              }
+      }
+      @supports (width: fit-content) {
+          figure {
+                  width: fit-content;
+              }
+      }
+      @media only screen and (max-width: 64.9ch) {
+          figure {
+                  max-width: calc(100% - 2em);
+              }
+      }
+      figure + figure {
+          margin-top: 2.75em;
+      }
+      @media only screen and (max-width: 64.9ch) {
+          figure + figure {
+                  margin-top: 2em;
+              }
+      }
+      figure img,
+      figure video {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          width: auto;
+          margin: 0 auto;
+          outline: 1px solid #888;
+      }
+      figure img {
+          max-height: calc(100vh - 8em);
+      }
+      figcaption {
+          font-size: 0.9375em;
+          font-weight: bold;
+          line-height: 1.45;
+          margin: auto;
+          padding: 0.25em 0.5em calc(0.25em + 1px) 0.5em;
+      }
+      .caption-wrapper {
+          display: block;
+          outline: 1px solid #888;
+          margin: 1px 0 0 0;
+      }
+      @supports (width: -moz-fit-content) {
+          figcaption {
+                  width: -moz-fit-content;
+              }
+      }
+      @supports (width: fit-content) {
+          figcaption {
+                  width: fit-content;
+              }
+      }
+      @media only screen and (max-width: 64.9ch) {
+          figcaption {
+                  font-size: 0.875em;
+              }
+      }
+
+      /*  Layout fix for images outside of <figure>.
+              REMOVE once all images are properly within <figure>!
+                  */
+      #markdownBody :not(figure) img {
+          max-width: 100%;
+          height: auto;
+      }
 
     </style>
   </head>
