@@ -14,10 +14,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     <link rel="preload" href="/assets/img/logo.svg" as="image" type="image/svg+xml" >
-    <link rel="preload" href="/assets/fonts/crimson/crimson-roman-webfont.woff" as "font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/crimson/crimson-italic-webfont.woff" as "font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/crimson/crimson-semibold-webfont.woff" as "font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/crimson/crimson-bold-webfont.woff" as "font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/crimson/crimson-roman-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/crimson/crimson-italic-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/crimson/crimson-semibold-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/crimson/crimson-bold-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
 
     <!-- KaTeX -->
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css" integrity="sha384-ThssJ7YtjywV52Gj4JE/1SQEDoMEckXyhkFVwaf4nDSm5OBlXeedVYjuuUd0Yua+" crossorigin="anonymous">
@@ -64,6 +64,7 @@
         background: var(--GW-text-selection-background-color);
         color: var(--GW-text-selection-color);
       }
+
       html {
         padding: 0;
         margin: 0;
@@ -246,6 +247,7 @@
           width: 2.5rem
         }
       }
+
 
       header {
         overflow: auto
@@ -543,11 +545,6 @@
         {{ content }}
       </article>
       </main>
-    <script src="{{ "/assets/js/helper.js" | relative_url }}"></script>
-    <!--<script src="{{ "/assets/js/sidenotes.js" | relative_url }}"></script>-->
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/footnotes.js" | relative_url }}"></script>
-    <!-- <script src="{{ "/assets/js/jquery-1.7.1.min.js" | relative_url }}"></script>-->
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -559,4 +556,8 @@
     </script>
     {% endif %}
   </body>
+    <script src="{{ "/assets/js/jquery-1.7.1.min.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/wikipedia-popups.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/footnotes.js" | relative_url }}"></script>
 </html>
