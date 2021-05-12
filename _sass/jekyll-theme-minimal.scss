@@ -501,7 +501,7 @@ table td + td {
     http://tablesorter.com/docs/#Configuration
     */
 th.tablesorter-header {
-    background-image: url('/static/img/bg.gif');
+    background-image: url('/assets/img/bg.gif');
     cursor: pointer;
     font-weight: bold;
     background-repeat: no-repeat;
@@ -512,10 +512,10 @@ th.header:hover {
     background-color: #e2f0f2;
 }
 th.tablesorter-headerAsc {
-    background-image: url('/static/img/small_asc.gif');
+    background-image: url('/assets/img/asc.gif');
 }
 th.tablesorter-headerDesc {
-    background-image: url('/static/img/small_desc.gif');
+    background-image: url('/assets/img/desc.gif');
 }
 th.tablesorter-headerAsc,
 th.tablesorter-headerDesc,

@@ -23,6 +23,15 @@ layout: default
 <br/>
 <br/>
 
+<script>
+if (document.querySelector("table")) {
+    var js = document.createElement("script");
+    js.type = "text/javascript";
+    js.src = "/assets/js/tablesorter.js";
+    document.body.appendChild(js);
+  }
+</script>
+
 {% if page.comments %}
 <div id="post_id" data="{{comment_id}}"></div>
     <div class="disqus-container">

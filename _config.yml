@@ -6,6 +6,5 @@ google_analytics: UA-196349666-1
 theme: jekyll-theme-minimal
 github: OfficialOxide
 markdown: kramdown
-url: https://oxyde.ga
 kramdown:
   math_engine: katex
