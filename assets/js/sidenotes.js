@@ -1,6 +1,7 @@
 if (typeof window.GW == "undefined")
 	window.GW = { };
 
+GW.loggingEnabled = true;
 /********************/
 /* DEBUGGING OUTPUT */
 /********************/
@@ -26,6 +27,13 @@ GW.disableLogging = (permanently = false) => {
 /* HELPERS */
 /***********/
 
+// for fixing “ 'fn:foo' is not a valid selector” nonsense
+function jq( myid ) {
+
+    return myid.replace( /(:|\.|\[|\]|,|=|@)/g, "\\$1" );
+
+}
+
 /*	The "target counterpart" is the element associated with the target, i.e.:
 	if the URL hash targets a footnote reference, its counterpart is the
 	sidenote for that citation; and vice-versa, if the hash targets a sidenote,
@@ -46,8 +54,8 @@ function updateTargetCounterpart() {
 		*/
 	var counterpart;
   if (location.hash.match(/#sn:[0-9]/)) {
-    counterpart = document.querySelector("#fnref:" + location.hash.substr(3));
-  } else if (location.hash.match(/#fnref:[0-9]/) && GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
+		counterpart = document.querySelector(jq("#fnref:" + location.hash.substr(4)));
+  } else if (location.hash.match(/#fnref[0-9]/) && GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
     counterpart = document.querySelector("#sn:" + location.hash.substr(6));
 	}
 	/*	If a target counterpart exists, mark it as such.
@@ -127,19 +135,19 @@ function ridiculousWorkaroundsForBrowsersFromBizarroWorld() {
 
 	GW.isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 	if (!GW.isFirefox) {
-		GW.sidenotes.viewportWidthBreakpointMediaQueryString = `(max-width: 176ch)`;
+		GW.sidenotes.viewportWidthBreakpointMediaQueryString = `(max-width: 130ch)`;
 		GW.sidenotes.mobileViewportWidthBreakpointMediaQueryString = `(max-width: 65ch)`;
 	} else {
 		/*	This should match the "max-width" property of the "body" element.
 			*/
-		GW.maxBodyWidthInCharacterUnits = 112;
+		GW.maxBodyWidthInCharacterUnits = 75;
 
 		/*	This should be some property/value pair that only Firefox supports.
 			*/
 		GW.firefoxTargetingSelector = "@supports (-moz-user-focus: normal)";
 
 		let widthOfCharacterUnit = parseInt(getComputedStyle(document.body).maxWidth) / GW.maxBodyWidthInCharacterUnits;
-		let viewportWidthBreakpointInPixels = 176 * widthOfCharacterUnit;
+		let viewportWidthBreakpointInPixels = 130 * widthOfCharacterUnit;
 		GW.sidenotes.viewportWidthBreakpointMediaQueryString = `(max-width: ${viewportWidthBreakpointInPixels}px)`;
 		let mobileViewportWidthBreakpointInPixels = 65 * widthOfCharacterUnit;
 		GW.sidenotes.mobileViewportWidthBreakpointMediaQueryString = `(max-width: ${mobileViewportWidthBreakpointInPixels}px)`;
@@ -168,7 +176,7 @@ function ridiculousWorkaroundsForBrowsersFromBizarroWorld() {
 					}
 				}
 				@media only screen and (max-width: ${viewportWidthBreakpointInPixels}px) {
-					.footnote-ref:target {
+					.footnote:target {
 						background-color: inherit;
 						box-shadow: none;
 					}
@@ -282,15 +290,15 @@ function revealTarget() {
 
 	if (!location.hash) return;
 
-	let target = document.querySelector(decodeURIComponent(location.hash));
+	let target = document.querySelector(jq(decodeURIComponent(location.hash)));
 	if (!target) return;
 
 	/*	What needs to be revealed is not necessarily the targeted element
 		itself; if the target is a sidenote, expand collapsed blocks to reveal
 		the citation reference.
 		*/
-  let targetInText = location.hash.match(/#sn:[0-9]/) ?
-    document.querySelector("#fnref:" + location.hash.substr(3)) :
+	let targetInText = location.hash.match(/#sn[0-9]/) ?
+    document.querySelector("#fnref" + location.hash.substr(3)) :
 				 	   target;
 	expandCollapseBlocksToReveal(targetInText);
 
@@ -355,7 +363,7 @@ function updateFootnoteReferenceLinks() {
 		if (GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
       fnref.href = "#sn:" + (i + 1);
 		} else {
-      fnref.href = "#fn:" + (i + 1);
+      fnref.href = GW.sidenotes.footnoteRefs[i].hash;
 		}
 	}
 }
@@ -435,6 +443,7 @@ function clearFootnotePopups() {
 function updateSidenotePositions() {
 	GWLog("updateSidenotePositions");
 
+	let sidenoteMaxHeight = 600.0;
 	/*	If we're in footnotes mode (i.e., the viewport is too narrow), then
 		don't do anything.
 		*/
@@ -478,6 +487,9 @@ function updateSidenotePositions() {
 
 		//	What side is this sidenote on?
 		let side = (i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight;
+
+		// Maximum height.
+		sidenote.firstElementChild.style.maxHeight = `${sidenoteMaxHeight}px`;
 
 		//	Default position (vertically aligned with the footnote reference).
 		sidenote.style.top = Math.round(((GW.sidenotes.footnoteRefs[i].getBoundingClientRect().top) - side.getBoundingClientRect().top) + 4) + "px";
@@ -707,14 +719,15 @@ function constructSidenotes() {
 		*/
 	GW.sidenotes.sidenoteDivs = [ ];
 	//	The footnote references (citations).
-	GW.sidenotes.footnoteRefs = Array.from(document.querySelectorAll("a.footnote-ref"));
+	GW.sidenotes.footnoteRefs = Array.from(document.querySelectorAll("a.footnote"));
+
 	for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
 		//	Create the sidenote outer containing block...
 		let sidenote = document.createElement("div");
 		sidenote.classList.add("sidenote");
     sidenote.id = "sn:" + (i + 1);
 		//	Wrap the contents of the footnote in two wrapper divs...
-		let referencedFootnote = document.querySelector(GW.sidenotes.footnoteRefs[i].hash);
+		let referencedFootnote = document.querySelector(jq(GW.sidenotes.footnoteRefs[i].hash));
 		sidenote.innerHTML = "<div class='sidenote-outer-wrapper'><div class='sidenote-inner-wrapper'>" +
 							 (referencedFootnote ? referencedFootnote.innerHTML : "Loading sidenote contents, please wait…")
 							 + "</div></div>";

@@ -51,6 +51,12 @@
       }
 
       :root {
+       
+				--GW-body-background-color: #fff;
+				--GW-body-text-color: #000;
+				--GW-body-link-color: #272727;
+				--GW-body-link-hover-color: #888; 
+
         --GW-blockquote-background-color: #f5f5f5;
         --GW-body-link-color: #272727;
         --GW-body-link-hover-color: #888;
@@ -67,11 +73,12 @@
       html {
         padding: 0;
         margin: 0;
-        background-color: #fff;
-        color: #000;
+        background-color: var(--GW-body-background-color);
+        color: var(--GW-body-text-color);
         font-weight: 400;
         font-family: "crimson", "Source Serif Pro", "Apple Garamond", Baskerville, "Libre Baskerville", "Times New Roman", "Droid Serif", Times, serif;
         font-size: 16px;
+        scroll-behavior: smooth;
       }
 
       body {
@@ -99,19 +106,19 @@
           display: flex;
           flex-flow: column
         }
-        @media only screen and (min-width:176.1ch) {
+        @media only screen and (min-width:130.1ch) {
           main {
             position: relative;
             right: 4ch
           }
         }
-        @supports (-moz-user-focus:normal) {
-          @media only screen and (min-width: 176.1ch) {
+        /*@supports (-moz-user-focus:normal) {
+          @media only screen and (min-width: 130.1ch) {
             main {
-              right:0
+              right:4ch
             }
           }
-        }
+        }*/
         article {
           flex: 1 1 auto
         }
@@ -328,7 +335,7 @@
         overflow-wrap: break-word
       }
 
-      @media only screen and (min-width:176.1ch) {
+      @media only screen and (min-width:130.1ch) {
         #markdownBody {
           position: relative
         }
@@ -525,6 +532,19 @@
           height: auto;
       }
 
+      /*************/
+      /* SIDENOTES */
+      /*************/
+
+      /*  Hide sidenote columns on narrow viewports.
+          */
+      @media only screen and (max-width: 130ch) {
+          #sidenote-column-left,
+          #sidenote-column-right {
+              display: none;
+          }
+      }
+
     </style>
     <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script> 
   </head>
@@ -559,6 +579,7 @@
     <script src="{{ "/assets/js/helper.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/jquery-1.7.1.min.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/wikipedia-popups.js" | relative_url }}" defer></script>
-    <script src="{{ "/assets/js/footnotes.js" | relative_url }}"></script>
+    <!--<script src="{{ "/assets/js/wikipedia-popups.js" | relative_url }}" defer></script>-->
+    <!--<script src="{{ "/assets/js/footnotes.js" | relative_url }}" defer></script>-->
+    <script src="{{ "/assets/js/sidenotes.js" | relative_url }}" async></script>
 </html>

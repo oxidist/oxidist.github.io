@@ -2,6 +2,33 @@
 @import "rouge-github";
 @import "links";
 
+:root {
+		--GW-sidenotes-max-width: 280px;
+
+    /*  Footnotes.
+        */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+    --GW-footnote-backlink-after-bordered-block-background-color: var(--GW-body-background-color);
+
+    /*  Footnote references.
+        */
+    --GW-footnote-ref-highlight-box-shadow-color: #aaa;
+    --GW-footnote-ref-highlight-background-color: rgba(255,255,255,0.75);
+
+    /*  Sidenotes.
+        */
+    --GW-sidenote-highlight-background-color: var(--GW-body-background-color);
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-track-color: var(--GW-body-background-color);
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+}
 /*************/
 /*  LAYOUT  */
 /***********/
@@ -673,10 +700,11 @@ li > ol + p {
 sub,
 sup {
     line-height: 0.3em;
+    font-feature-settings: 'lnum';
 }
 a.footnote sup {
     vertical-align: baseline;
-    font-size: 0.60em;
+    font-size: 0.75em;
 }
 a.footnote {
     vertical-align: super;
@@ -684,22 +712,35 @@ a.footnote {
     position: relative;
     top: 0.05em;
     padding: 0 0.05em;
-    font-feature-settings: 'smcp', 'c2sc';
-    font-variant-numeric:lining-nums;
+    font-feature-settings: 'lnum';
     font-weight: 600;
     z-index: 1;
 }
+
 a.footnote::before {
     content: "";
     display: block;
     position: absolute;
     width: calc(100% + 0.5em);
-    height: 125%;
-    left: -0.25em;
-    top: 0;
+    height: 190%;
+    left: calc(-0.25em - 3px);
+    top: -10px;
     z-index: -1;
+    border-color: transparent;
+    border-style: double;
+    border-width: 3px;
+    transition:
+        background-color 0.15s ease 0.05s,
+        border-color 0.15s ease 0.05s;
 }
-
+a.footnote.highlighted::before,
+a.footnote:hover::before,
+a.footnote:target::before,
+a.footnote.targeted::before {
+    background-color: var(--GW-footnote-ref-highlight-background-color);
+    border-color: var(--GW-footnote-ref-highlight-box-shadow-color);
+    outline: none;
+}
 /* Deal with multiple footnote superscripts one after another; per Charuru */
 sup + sup,
 a.footnote {
@@ -765,9 +806,16 @@ a.footnote {
     right: 0.5em;
     top: unset;
     bottom: -0.5em;
-    background-color: #fff;
+    background-color: var(--GW-footnote-backlink-after-bordered-block-background-color);
 }
 
+// To get the return to footnote link stuck into the blockquote edges properly
+
+.sidenote blockquote + p a.reversefootnote,
+.sidenote pre + p a.reversefootnote,
+.sidenote code + p a.reversefootnote {
+    bottom: 1.2em;
+}
 /*=--------------------------=*/
 /*= Floating footnote popups =*/
 /*=--------------------------=*/
@@ -922,3 +970,204 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+/*************/
+/* SIDENOTES */
+/*************/
+
+#sidenote-column-left,
+#sidenote-column-right {
+    position: absolute;
+    max-width: var(--GW-sidenotes-max-width);
+    font-size: 0.85em;
+    z-index: 1;
+    pointer-events: none;
+}
+#sidenote-column-left > *,
+#sidenote-column-right > * {
+    pointer-events: auto;
+}
+#sidenote-column-left {
+    height: calc(100% - 10rem);
+    width: calc(50vw - (50% + 92px));
+    top: 10rem;
+    right: calc(100% + 64px);
+}
+#sidenote-column-right {
+    height: 100%;
+    width: calc(50vw - (50% + 104px));
+    top: 0;
+    left: calc(100% + 60px);
+}
+
+/*=-----------------=*/
+/*= Sidenote blocks =*/
+/*=-----------------=*/
+
+.sidenote {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 0.85;
+    line-height: 1.5;
+    padding: 2em 0 0 0;
+}
+.sidenote.hidden {
+    display: none;
+}
+.sidenote.highlighted,
+.sidenote:hover,
+.sidenote:target,
+.sidenote.targeted {
+    background-color: var(--GW-sidenote-highlight-background-color);
+    opacity: 1.0;
+}
+.sidenote:target {
+    z-index: 1;
+}
+.sidenote.highlighted,
+.sidenote:hover {
+    z-index: 2;
+}
+
+/*  This provides a solid hover margin.
+    */
+.sidenote::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    top: -13px;
+    left: -13px;
+}
+.sidenote.highlighted::after,
+.sidenote:hover::after,
+.sidenote:target::after,
+.sidenote.targeted::after {
+    border: 3px double var(--GW-sidenote-highlight-box-shadow-color);
+}
+
+/*=-------------------=*/
+/*= Sidenote wrappers =*/
+/*=-------------------=*/
+
+/*  Outer wrapper (scrolls).
+    */
+.sidenote-outer-wrapper {
+    /* max-height is set inline, in sidenotes.js */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border-style: dotted;
+    border-color: var(--GW-sidenote-border-color);
+    border-width: 1px 0;
+}
+.sidenote.cut-off .sidenote-outer-wrapper {
+    overflow-y: auto;
+    overscroll-behavior: none;
+    width: 100%;
+    padding: 0 1px 0 0;
+}
+
+/*  Scroll bar styles (for WebKit/Chromium).
+    */
+.sidenote.cut-off .sidenote-outer-wrapper::-webkit-scrollbar {
+    width: 12px;
+}
+.sidenote.cut-off .sidenote-outer-wrapper::-webkit-scrollbar-thumb {
+    background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMXd3d////ywAAAAABAAEAAACBgQShqgJBQA7');
+    box-shadow:
+        0 0 0 2px var(--GW-sidenote-scrollbar-track-color) inset;
+    background-size: 2px;
+}
+.sidenote.cut-off .sidenote-outer-wrapper::-webkit-scrollbar-thumb:hover {
+    background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMQAAAP///ywAAAAABAAEAAACBgQShqgJBQA7');
+}
+
+/*  Scroll bar styles (for Firefox).
+    */
+.sidenote.cut-off .sidenote-outer-wrapper {
+    scrollbar-color: var(--GW-sidenote-scrollbar-thumb-color) var(--GW-sidenote-scrollbar-track-color);
+}
+.sidenote.cut-off .sidenote-outer-wrapper:hover {
+    scrollbar-color: var(--GW-sidenote-scrollbar-thumb-hover-color) var(--GW-sidenote-scrollbar-track-color);
+}
+
+/*  Inner wrapper (does not scroll; stretches to height of content).
+    */
+.sidenote-inner-wrapper {
+    position: relative;
+    margin: 0.5em 0;
+}
+
+/*  Ensure content is interactable.
+    */
+.sidenote-inner-wrapper > * {
+    position: relative;
+    z-index: 1;
+}
+
+/*=--------------------------------------=*/
+/*= Sidenote contents layout corrections =*/
+/*=--------------------------------------=*/
+
+.sidenote blockquote {
+    margin: 1.5em 0 0.75em 0;
+}
+.sidenote pre {
+    margin: 1.75em 0 0.75em 0;
+}
+.sidenote blockquote + *,
+.sidenote pre + * {
+    margin-top: 1.75em;
+}
+
+.sidenote p + p {
+    text-indent: 1em;
+}
+
+#markdownBody .sidenote ul,
+#markdownBody .sidenote ol {
+    padding: 0 0 0 1.75em;
+}
+
+#markdownBody .sidenote li {
+    text-align: left;
+}
+
+/*=-------------------------------=*/
+/*= Sidenote self-links (numbers) =*/
+/*=-------------------------------=*/
+
+.sidenote > .sidenote-self-link {
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    border-style: dotted;
+    border-color: var(--GW-sidenote-self-link-border-color);
+    border-width: 1px 1px 0px 1px;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+/*  Disable link underlining.
+    */
+#markdownBody .sidenote > .sidenote-self-link {
+    background-image: none;
+}
+#sidenote-column-left .sidenote > .sidenote-self-link {
+    right: 0;
+}
+#sidenote-column-right .sidenote > .sidenote-self-link {
+    left: 0;
+}
+
+/*=------------=*/
+/*= Edge cases =*/
+/*=-------------=*/
+
+.sidenote .footnote-self-link {
+    display: none;
+}

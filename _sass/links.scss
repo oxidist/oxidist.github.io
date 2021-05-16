@@ -123,6 +123,16 @@
     opacity: 0.55;
 }
 
+/* Oxide */
+#markdownBody a[href*="oxyde.ga"]::after {
+    content: "\1D4AA";
+    margin: 0 0 0 2px;
+    vertical-align: baseline;
+    position: relative;
+    bottom: 0.15em;
+    opacity: 0.8;
+}
+
 /* Technology Review (their logo has a little slash in it which you probably can't see at low-res) but is otherwise just a 'T' so meh */
 #markdownBody a[href*="technologyreview.com"]::after {
     content: "T"; }
