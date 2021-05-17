@@ -6,7 +6,9 @@ tags: mathematics
 comments: true
 ---
 # Introduction
-Recently, I came across a theorem which relates unique factorisation in a ring to the value of a certain $$\zeta$$ function. 
+Factorisation is an essential idea in number theory. After learning the basics of abstract algebra, one quickly learns that factoring is not limited to just the integers and polynomials, but can be done for an element of any ring. In an arbitrary ring however, a factorisation is not necessarily unique.
+
+I learned of a theorem which relates unique factorisation in a ring to the value of a $$\zeta$$ function. 
 It also helps in determining whether the ring has unique factorisation if you can calculate the value of that $$\zeta$$ function.[^approx]
 
 This extraordinary connection between algebra and analysis impressed me, so I wrote a short note on it for two of my friends, which is reproduced here.
