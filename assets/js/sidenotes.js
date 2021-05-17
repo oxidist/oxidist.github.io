@@ -586,7 +586,6 @@ function updateSidenotePositions() {
 			/*	Otherwise, move the sidenote down to the next free space, and
 				try laying it out again.
 				*/
-			console.log(proscribedVerticalRanges);
 			sidenote.style.top = (proscribedVerticalRanges[nextProscribedRangeAfterSidenote].bottom + GW.sidenotes.sidenoteSpacing) + "px";
 			i--;
 			continue;
