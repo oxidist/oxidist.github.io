@@ -31,8 +31,9 @@ The *class number* measures exactly how much unique factorisation fails in $$\ma
 [^classnumber]: It is the order of a certain group known as the [ideal class group](https://en.wikipedia.org/wiki/Ideal_class_group). When the order is 1, $$\mathcal{O}_K$$ is a principal ideal domain, and therefore a unique factorisation domain.
 
 Now, let 
-$$N = \begin{cases} |m| & \text{if } m \equiv 1 \mod{4} \\ 
-4|m| & \text{if } m \equiv 2,3\mod{4} \end{cases}$$
+\\[
+N = \begin{cases} |m| & \text{if } m \equiv 1 \mod{4} \\\ 4|m| & \text{if } m \equiv 2,3\mod{4} \end{cases}
+\\]
 
 The number $$N$$ is known as the *discriminant* of the number field. 
 We can define a group homomorphism $$\chi : (\mathbb{Z}/N\mathbb{Z})^\times \to \{\pm 1\} $$ as follows:
