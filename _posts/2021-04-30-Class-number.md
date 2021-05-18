@@ -6,6 +6,7 @@ tags: mathematics
 comments: true
 ---
 # Introduction
+[test](oxyde.ga/about)
 Factorisation is an essential idea in number theory. After learning the basics of abstract algebra, one quickly learns that factoring is not limited to just the integers and polynomials, but can be done for an element of any ring. In an arbitrary ring however, a factorisation is not necessarily unique.
 
 I learned of a theorem which relates unique factorisation in a ring to the value of a $$\zeta$$ function. 
