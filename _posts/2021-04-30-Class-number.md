@@ -1,6 +1,5 @@
 ---
 layout: post
-comments: false
 title: "The class number formula"
 tags: mathematics
 comments: true
