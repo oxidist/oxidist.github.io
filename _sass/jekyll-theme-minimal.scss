@@ -212,6 +212,13 @@ article #markdownBody section:not(.collapse) > h2:first-child a {
 /**************/
 
 
+a:hover,
+footer a:hover,
+#sidebar a:hover {
+    color: var(--GW-body-link-hover-color);
+}
+
+
 /***************/
 /* BLOCKQUOTES */
 /***************/
@@ -759,10 +766,11 @@ a.footnote {
     margin: 0 0 0 10px;
     position: relative;
     font-weight: bold;
+    font-family: 'IBM Plex Serif';
     line-height: 1;
     border: 1px dotted #000;
     display: inline-block;
-    padding: 5px 5px 0 6px;
+    padding: 2px 5px 0 6px;
     text-indent: 0;
     vertical-align: bottom;
     bottom: 2px;
@@ -814,7 +822,7 @@ a.footnote {
 .sidenote blockquote + p a.reversefootnote,
 .sidenote pre + p a.reversefootnote,
 .sidenote code + p a.reversefootnote {
-    bottom: 1.2em;
+    bottom: 1.3em;
 }
 /*=--------------------------=*/
 /*= Floating footnote popups =*/

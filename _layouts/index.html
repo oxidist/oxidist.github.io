@@ -576,7 +576,11 @@
       <main>
       <div id="sidebar">
           {% if site.logo %}
-        <a href="{{ "/" | absolute_url }}" id="logo"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
+          <a href="{{ "/" | absolute_url }}" id="logo">
+            <svg width="64" height="64" viewBox="0 0 64 64" alt="Logo">
+              <use href="/assets/img/logo.svg#logo"/>
+            </svg>
+          </a>
           {% endif %}
        {% if site.show_downloads %}
        <div id="sidebar-links">
