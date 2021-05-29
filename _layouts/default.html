@@ -1362,41 +1362,7 @@
         }
       }
     </style>
-  </head>
-  <body>
-      <main>
-      <div id="sidebar">
-          {% if site.logo %}
-          <a href="{{ "/" | absolute_url }}" id="logo">
-            <svg width="64" height="64" viewBox="0 0 64 64" alt="Logo">
-              <use href="/assets/img/logo.svg#logo"/>
-            </svg>
-          </a>
-          {% endif %}
-       {% if site.show_downloads %}
-       <div id="sidebar-links">
-          <a class="site" href="{{site.url}}/about">About</a>
-          <a class="rss" href="/feed.xml" target="_blank">rss feed</a>
-          <!-- <a class="links" href="{{site.url}}/books">Books</a> -->
-       </div>
-       {% endif %}
-      </div>
-      <article>
-        {{ content }}
-      </article>
-      </main>
     <script src="{{ "/assets/js/helper.js" | relative_url }}"></script>
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
-    {% endif %}
-  </body>
     <script>
                 /*	This code is part of darkmode.js by Said Achmiz.
         See the file `darkmode.js` for license and more information.
@@ -1438,8 +1404,41 @@
 
       // Activate saved mode.
       setMode(currentMode);
-
     </script>
+  </head>
+  <body>
+      <main>
+      <div id="sidebar">
+          {% if site.logo %}
+          <a href="{{ "/" | absolute_url }}" id="logo">
+            <svg width="64" height="64" viewBox="0 0 64 64" alt="Logo">
+              <use href="/assets/img/logo.svg#logo"/>
+            </svg>
+          </a>
+          {% endif %}
+       {% if site.show_downloads %}
+       <div id="sidebar-links">
+          <a class="site" href="{{site.url}}/about">About</a>
+          <a class="rss" href="/feed.xml" target="_blank">rss feed</a>
+          <!-- <a class="links" href="{{site.url}}/books">Books</a> -->
+       </div>
+       {% endif %}
+      </div>
+      <article>
+        {{ content }}
+      </article>
+      </main>
+    {% if site.google_analytics %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+  </body>
       <script src="{{ "/assets/js/jquery-1.7.1.min.js" | relative_url }}"></script>
       <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <!--<script src="{{ "/assets/js/wikipedia-popups.js" | relative_url }}" defer></script>-->
