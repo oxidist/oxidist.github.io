@@ -7,7 +7,8 @@
 
     <meta name="google-site-verification" content="1mkXiNUdgx887FJ8UzA3jdIimwEg5Kkn2d4x6i366qo" />
     {% seo %}
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">-->
+    <link rel="stylesheet" href="{{ "/assets/css/colors.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -19,7 +20,630 @@
     <link rel="preload" href="/assets/fonts/crimson/crimson-semibold-webfont.woff" as "font" type="font/woff" crossorigin="anonymous">
     <link rel="preload" href="/assets/fonts/crimson/crimson-bold-webfont.woff" as "font" type="font/woff" crossorigin="anonymous">
 
-    <style>
+    <style id="inlined-styles-colors">
+      :root {
+       
+				--GW-body-background-color: #fff;
+				--GW-body-text-color: #000;
+				--GW-body-link-color: #272727;
+				--GW-body-link-hover-color: #888; 
+
+        --GW-blockquote-background-color: #f5f5f5;
+        --GW-body-link-color: #272727;
+        --GW-body-link-hover-color: #888;
+        --GW-text-selection-background-color: #121212;
+        --GW-text-selection-color: #fff;
+
+
+        /*  Link underlining.
+            */
+        --GW-link-underline-background-color: var(--GW-body-background-color);
+        --GW-link-underline-gradient-line-color: #333;
+        --GW-link-underline-gradient-line-color-hover: #999;
+
+      }
+    </style>
+    <style id="inlined-dark-mode-styles" media="all and (prefers-color-scheme: dark)">
+    :root {
+        /*  General.
+            */
+        --GW-body-background-color: #000;
+        --GW-body-text-color: #fff;
+        --GW-body-link-color: #e5e5e5;
+        --GW-body-link-hover-color: #999;
+
+        /*  Selection.
+            */
+        --GW-text-selection-background-color: #dcdcdc;
+        --GW-text-selection-color: #000;
+
+        /*  Link underlining.
+            */
+        --GW-link-underline-background-color: var(--GW-body-background-color);
+        --GW-link-underline-gradient-line-color: #dcdcdc;
+        --GW-link-underline-gradient-line-color-hover: #8b8b8b;
+
+        /*  Blockquotes.
+            */
+        --GW-blockquote-border-color-level-one: #5c5c5c;
+        --GW-blockquote-border-color-level-two: #646464;
+        --GW-blockquote-border-color-level-three: #747474;
+        --GW-blockquote-border-color-level-four: #7f7f7f;
+        --GW-blockquote-background-color-level-one: #212121;
+        --GW-blockquote-background-color-level-two: #3e3e3e;
+        --GW-blockquote-background-color-level-three: #4f4f4f;
+
+        /*  Abstracts.
+            */
+        --GW-abstract-border-color: #6c6c6c;
+        --GW-abstract-background-color: var(--GW-blockquote-background-color-level-one);
+
+        /*  Sidebar.
+            */
+        --GW-sidebar-horizontal-rule-color: #7c7c7c;
+        --GW-sidebar-mobile-link-border-color: #fff;
+
+        /*  Table of contents.
+            */
+        --GW-TOC-border-color: #5c5c5c;
+        --GW-TOC-background-color: #212121;
+        --GW-TOC-link-hover-background-color: #363636;
+        --GW-TOC-link-hover-color: #fff;
+        --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+        --GW-TOC-number-color: #929292;
+        --GW-TOC-number-hover-color: #ddd;
+
+        /*  Collapse blocks.
+            */
+      --GW-collapse-summary-blockquote-hover-color: #333;
+      --GW-collapse-disclosure-button-color: #333;
+      --GW-collapse-disclosure-button-hover-color: #494949;
+      --GW-collapse-disclosure-button-top-part-text-color: #6c6c6c;
+      --GW-collapse-disclosure-button-bottom-part-text-color: #7c7c7c;
+      --GW-collapse-disclosure-button-text-hover-color: #000;
+
+        /*  Headings.
+            */
+        --GW-H1-box-shadow-background-color: var(--GW-body-background-color);
+        --GW-H1-box-shadow-line-color: #999;
+        --GW-H2-bottom-border-color: #999;
+
+        /*  Comments.
+            */
+        --GW-comment-section-top-border-color: #8b8b8b;
+
+        /*  Lists.
+            */
+        --GW-bulleted-list-marker-color: #9f9f9f;
+
+        /*  Figures.
+            */
+        --GW-figure-outline-color: #999;
+        --GW-figure-caption-outline-color: #999;
+
+        /*  Epigraphs.
+            */
+        --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+        /*  Footnotes.
+            */
+        --GW-footnote-border-color: #7c7c7c;
+        --GW-footnote-highlighted-border-color: #7c7c7c;
+        --GW-footnotes-section-top-rule-color: #5c5c5c;
+        --GW-footnote-backlink-border-color: #fff;
+        --GW-footnote-backlink-border-hover-color: #8b8b8b;
+        --GW-footnote-backlink-after-bordered-block-background-color: var(--GW-body-background-color);
+
+        /*  Footnote references.
+            */
+        --GW-footnote-ref-highlight-box-shadow-color: #7c7c7c;
+        --GW-footnote-ref-highlight-background-color: rgba(0, 0, 0, 0.75);
+
+        /*  Sidenotes.
+            */
+        --GW-sidenote-highlight-background-color: var(--GW-body-background-color);
+        --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+        --GW-sidenote-border-color: #7c7c7c;
+        --GW-sidenote-scrollbar-track-color: var(--GW-body-background-color);
+        --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+        --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+        --GW-sidenote-self-link-border-color: #7c7c7c;
+
+        /*  Tables.
+            */
+        --GW-table-border-color: #fff;
+        --GW-table-full-width-background-color: var(--GW-body-background-color);
+        --GW-table-caption-border-color: #fff;
+        --GW-table-row-horizontal-border-color: #fff;
+        --GW-table-cell-vertical-border-color: var(--GW-body-background-color);
+        --GW-table-scrollbar-track-color: var(--GW-body-background-color);
+        --GW-table-scrollbar-thumb-color: #7c7c7c;
+        --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+        --GW-table-scrollbar-border-color: #fff;
+        --GW-table-column-heading-hover-background-color: #2b3637;
+        --GW-table-sorted-column-heading-background-color: #166983;
+        --GW-table-sorted-column-heading-text-color: #000;
+        --GW-table-sorted-column-heading-text-shadow-color: #fff;
+        --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+        --GW-table-row-hover-outline-color: #fff;
+
+        /*  Code blocks.
+            */
+        --GW-code-element-border-color: #606060;
+        --GW-code-element-background-color: #1d1d1d;
+        --GW-pre-element-border-color: #606060;
+        --GW-pre-element-background-color: #1d1d1d;
+        --GW-pre-element-scrollbar-track-color: #1d1d1d;
+        --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+        --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+
+        /*  Syntax highlight theme.
+            */
+        --GW-syntax-highlight-color-normal: #f1edec;
+        --GW-syntax-highlight-color-attribute: #d8deff;
+        --GW-syntax-highlight-color-data-type: inherit;
+        --GW-syntax-highlight-color-variable: #b4b4b4;
+        --GW-syntax-highlight-color-other: inherit;
+        --GW-syntax-highlight-color-preprocessor: inherit;
+        --GW-syntax-highlight-color-extension: #999;
+        --GW-syntax-highlight-color-comment: #999;
+        --GW-syntax-highlight-color-control-flow: #b6edaa;
+        --GW-syntax-highlight-color-keyword: #d8deff;
+        --GW-syntax-highlight-color-operator: #d8deff;
+        --GW-syntax-highlight-color-special-char: #94adb6;
+        --GW-syntax-highlight-color-built-in: #d8deff;
+        --GW-syntax-highlight-color-function: #d8deff;
+        --GW-syntax-highlight-color-constant: inherit;
+        --GW-syntax-highlight-color-base-n: inherit;
+        --GW-syntax-highlight-color-dec-val: inherit;
+        --GW-syntax-highlight-color-float: inherit;
+        --GW-syntax-highlight-color-information: inherit;
+        --GW-syntax-highlight-color-char: inherit;
+        --GW-syntax-highlight-color-string: inherit;
+        --GW-syntax-highlight-color-verbatim-string: inherit;
+        --GW-syntax-highlight-color-alert: #ff815c;
+        --GW-syntax-highlight-color-error: #ff4727;
+        --GW-syntax-highlight-color-import: #a6a6a6;
+        --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+        /*  Math.
+            */
+        --GW-math-block-background-color: #252525;
+        --GW-math-block-scrollbar-border-color: #5c5c5c;
+        --GW-math-block-scrollbar-track-color: var(--GW-body-background-color);
+        --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+        --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+        /*  Drop caps.
+            */
+        --GW-drop-caps-yinit-color: #f9f9f9;
+        --GW-drop-caps-yinit-text-shadow-color: #a6a6a6;
+        --GW-drop-caps-de-zs-color: #efefef;
+        --GW-drop-caps-cheshire-color: #f1f1f1;
+        --GW-drop-caps-kanzlei-color: #f1f1f1;
+
+        /*  Admonitions.
+            */
+        --GW-admonition-default-left-border-color: #929292;
+        --GW-admonition-default-background-color: #4f4f4f;
+        --GW-admonition-tip-left-border-color: #4f4f4f;
+        --GW-admonition-tip-background-color: #303030;
+        --GW-admonition-warning-left-border-color: #bdbdbd;
+        --GW-admonition-warning-background-color: #8a8a8a;
+        --GW-admonition-warning-text-color: #000;
+        --GW-admonition-warning-title-background-color: #bdbdbd;
+        --GW-admonition-warning-icon-color: #000;
+        --GW-admonition-error-left-border-color: #e1e1e1;
+        --GW-admonition-error-background-color: #bdbdbd;
+        --GW-admonition-error-text-color: #000;
+        --GW-admonition-error-title-background-color: #e1e1e1;
+        --GW-admonition-error-icon-color: #000;
+        --GW-admonition-reversed-link-color: #494949;
+        --GW-admonition-reversed-link-color-hover: #5c5c5c;
+        --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+        --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+        --GW-admonition-reversed-footnote-ref-highlight-background-color: rgba(189, 189, 189, 0.75);
+
+        /*  Sequential nav UI.
+            */
+        --GW-sequential-nav-link-background-color: var(--GW-body-background-color);
+
+        /*  Page-specific styles.
+            */
+        --GW-index-page-bottom-ornament-line-color: #9f9f9f;
+
+      /*	Pop-frames (popups or popins).
+        */
+        --GW-raw-code-popframe-line-highlight-background-color: #181700;
+        --GW-raw-code-popframe-line-hightlight-border-color: #494949;
+        --GW-raw-code-popframe-line-number-color: #7c7c7c;
+        --GW-raw-code-popframe-line-number-divider-color: #5c5c5c;
+
+        /*  Popups.
+            */
+        --GW-popups-body-background-color: var(--GW-body-background-color);
+        --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+        --GW-popups-popup-border-color: #5c5c5c;
+        --GW-popups-box-shadow-color: #5c5c5c;
+        --GW-popups-popup-border-focused-color: #7c7c7c;
+        --GW-popups-box-shadow-focused-color: #7c7c7c;
+
+        --GW-popups-popup-title-bar-background-color: #252525;
+        --GW-popups-popup-title-bar-button-color: #6c6c6c;
+        --GW-popups-popup-title-bar-button-color-hover: #fff;
+      --GW-popups-popup-title-color: #7c7c7c;
+        --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+        --GW-popups-popup-title-bar-background-focused-color: #3e3e3e;
+        --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+        --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+        --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+      --GW-popups-popup-title-focused-color: #fff;
+        --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+        --GW-popups-popup-scrollbar-track-color: var(--GW-body-background-color);
+
+        --GW-popups-popup-scrollbar-thumb-color: #494949;
+        --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+        --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+        --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+        --GW-popups-popup-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+        --GW-popups-popup-options-dialog-background-color: var(--GW-body-background-color);
+        --GW-popups-popup-options-dialog-border-color: #7c7c7c;
+        --GW-popups-popup-options-dialog-box-shadow-color: #cecece;
+        --GW-popups-popup-options-dialog-horizontal-rule-color: #5c5c5c;
+        --GW-popups-popup-options-dialog-button-background-color: var(--GW-body-background-color);
+        --GW-popups-popup-options-dialog-button-text-color: #fff;
+        --GW-popups-popup-options-dialog-button-border-color: #fff;
+        --GW-popups-popup-options-dialog-button-hover-box-shadow-color: #fff;
+        --GW-popups-popup-options-dialog-option-button-explanation-text-color: #a6a6a6;
+        --GW-popups-popup-options-dialog-option-button-hover-text-color: #a6a6a6;
+        --GW-popups-popup-options-dialog-radio-button-border-color: #fff;
+        --GW-popups-show-popup-options-dialog-button-color: #8b8b8b;
+
+        /*  Popins.
+            */
+        --GW-popins-body-background-color: var(--GW-body-background-color);
+        --GW-popins-popin-background-color: var(--GW-body-background-color);
+        --GW-popins-popin-border-color: #7c7c7c;
+        --GW-popins-box-shadow-color: #7c7c7c;
+        --GW-popins-popin-title-bar-background-color: #000;
+        --GW-popins-popin-title-bar-button-color: #a6a6a6;
+        --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+        --GW-popins-popin-scrollbar-track-color: var(--GW-body-background-color);
+        --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+        --GW-popins-popin-stack-counter-text-color: #000;
+
+        /*  Image focus.
+            */
+        --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+        /*  Mode selector (light/dark mode).
+            */
+        --GW-mode-selector-background-color: var(--GW-body-background-color);
+        --GW-mode-selector-border-hover-color: #7c7c7c;
+        --GW-mode-selector-button-text-color: #a6a6a6;
+        --GW-mode-selector-button-hover-text-color: #fff;
+
+      /*	“Back to top” link.
+        */
+      --GW-back-to-top-link-color: #5c5c5c;
+      --GW-back-to-top-link-hover-color: #8b8b8b;
+    }
+    :root {
+        /*  Adjust background color to prevent pixels from turning off.
+            */
+        --GW-body-background-color: #010101;
+
+        /*  Adjust this one color in the syntax highlighting color scheme to make it
+            less saturated. (The automatic inversion algorithm doesn’t quite handle
+            it in the way we want.)
+            */
+        --GW-syntax-highlight-color-control-flow: #cce1c8;
+    }
+
+    /*  The ‘fill’ attribute of the SVGs is modified in dark mode.
+        (We cannot use an invert filter because we don’t want to invert the whole
+         element, only the background-image.)
+        */
+    .collapse .disclosure-button::before {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" fill="%235C5C5C"></path></svg>');
+    }
+    .collapse .disclosure-button:hover::before {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" fill="%23000"></path></svg>');
+    }
+    .collapse .disclosure-button:checked::before {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" fill="%235C5C5C"></path></svg>');
+    }
+    .collapse .disclosure-button:checked:hover::before {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" fill="%23000"></path></svg>');
+    }
+
+    /*  The ‘celestial symbol’ horizonal rules are SVGs and must be inverted.
+        */
+    hr::after,
+    .horizontalRule-nth-0 hr::after {
+        opacity: 1;
+        filter: invert(1) drop-shadow(0 0 0 currentColor);
+    }
+    .horizontalRule-nth-1 hr::after {
+        opacity: 0.75;
+        filter: invert(1);
+    }
+    .horizontalRule-nth-2 hr::after {
+        opacity: 0.85;
+        filter: invert(1);
+    }
+
+    /*  Drop cap opacity adjustment.
+        */
+    .drop-cap-goudy::first-letter,
+    .drop-cap-goudy > p::first-letter {
+        opacity: 0.95;
+    }
+
+    /*  Admonition icons.
+        */
+    .admonition.tip::before,
+    .admonition.note::before,
+    .admonition.warn::before,
+    .admonition.warning::before,
+    .admonition.error::before {
+        filter: invert(1);
+    }
+
+    div.admonition.warn,
+    div.admonition.warning,
+    div.admonition.error {
+        --GW-dotted-underline-background-image: var(--GW-dotted-underline-hover-dark-background-image);
+    }
+
+    /*  List bullets are SVGs and have to be inverted.
+        */
+    ul > li::before {
+        filter: invert(1);
+    }
+
+    /*  Exclusion for TOC entries.
+        */
+    #TOC ul > li::before {
+        filter: none;
+    }
+
+    /*  For sortable table column headings, we use dark versions of the up/down/both
+        arrow icons.
+        */
+    table th.tablesorter-header {
+        background-image: url('/assets/img/tablesorter-bg-dark.gif');
+    }
+    table th.tablesorter-headerAsc {
+        background-image: url('/assets/img/tablesorter-asc-dark.gif');
+    }
+    table th.tablesorter-headerDesc {
+        background-image: url('/assets/img/tablesorter-desc-dark.gif');
+    }
+
+    /*  The pixel-grid-checkerboard pattern of these scroll bars is created by GIF
+        background-images; we use alternate versions of the images in dark mode.
+        */
+    .table-wrapper::-webkit-scrollbar-thumb {
+        background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMQAAAIiIiCwAAAAABAAEAAACBkwAhqgZBQA7');
+    }
+    .table-wrapper::-webkit-scrollbar-thumb:hover {
+        background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMQAAAL+/vywAAAAABAAEAAACBkwAhqgZBQA7');
+    }
+
+    .sidenote.cut-off .sidenote-outer-wrapper::-webkit-scrollbar-thumb {
+        background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMQAAAIiIiCwAAAAABAAEAAACBkwAhqgZBQA7');
+    }
+    .sidenote.cut-off .sidenote-outer-wrapper::-webkit-scrollbar-thumb:hover {
+        background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMQAAAL+/vywAAAAABAAEAAACBkwAhqgZBQA7');
+    }
+
+    /*  Images that are marked as invertible by the server are inverted,
+        hue-rotated, and desaturated. Other (non-invertible) images are merely
+        desaturated. Hovering over an image restores it to its original state.
+        */
+    img.invertible,
+    img.invertible-auto {
+        filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+    }
+    img:not(.invertible):not(.invertible-auto) {
+        filter: grayscale(50%);
+    }
+    img,
+    img.invertible,
+    img.invertible-auto {
+        transition: filter 0.25s ease;
+    }
+    img:hover,
+    img.invertible:hover,
+    img.invertible-auto:hover {
+        filter: none;
+        transition: filter 0s ease 0.25s;
+    }
+
+    /*  The loading spinner for object popups (image, iframe, object) is inverted
+        and made more visible in dark mode.
+        */
+    .popupdiv.loading::before {
+        filter: invert(1);
+        opacity: 0.4;
+    }
+
+    /*  “Loading failed” messages for object popups.
+        */
+    .popupdiv.loading-failed::after {
+        opacity: 0.4;
+    }
+
+    /*  The mode selector is adjusted to be better visible in dark mode, and its
+        button icons inverted.
+        */
+    div#mode-selector {
+        opacity: 0.6;
+    }
+    div#mode-selector button::before {
+        filter: invert(1);
+        opacity: 0.45;
+    }
+    div#mode-selector button.select-mode-light::before {
+        opacity: 0.55;
+    }
+
+    /*  The dotted underline for Wikipedia links is created by a
+        pixel-grid-checkerboard background-image. We use an alternate version of
+        this image in dark mode.
+        */
+    .markdownBody a[href*='wikipedia.org'].docMetadata:hover,
+    .markdownBody a[href*='wikimedia.org'].docMetadata:hover,
+    .markdownBody a[href*='wiktionary.org'].docMetadata:hover,
+    .markdownBody a[href*='wikimediafoundation.org'].docMetadata:hover,
+    .markdownBody a[href*='wikisource.org'].docMetadata:hover {
+        background-image: var(--GW-dotted-underline-hover-dark-background-image);
+    }
+
+    /*  All SVG linkicons have to be inverted.
+        */
+    a.link-self.identifier-link-up::after,
+    a.link-self.identifier-link-down::after,
+    a[href$='.pdf' i]::after,
+    a[href$='/pdf' i]::after,
+    a[href*='/pdf/' i]::after,
+    a[href$='type=pdf' i]::after,
+    a[href*='.pdf#' i]::after,
+    a[href*='pdfs.semanticscholar.org' i]::after,
+    a[href$='.epub' i]::after,
+    a[href*='citeseerx.ist.psu.edu' i]::after,
+    a[href*='eprint.iacr.org' i]::after,
+    a[href$='.opml' i]::after,
+    a[href$='.txt' i]::after,
+    a[href$='.xml' i]::after,
+    a[href$='.css' i]::after,
+    a[href$='.hs' i]::after,
+    a[href$='.js' i]::after,
+    a[href$='.json' i]::after,
+    a[href$='.jsonl' i]::after,
+    a[href^='/'][href$='.php' i]::after,
+    a[href$='.conf' i]::after,
+    a[href$='.sh' i]::after,
+    a[href$='.R' i]::after,
+    a[href$='.patch' i]::after,
+    a[href$='.diff' i]::after,
+    a[href^="/static/" i][href$=".html" i]::after,
+    a[href$='.doc' i]::after,
+    a[href$='.docx' i]::after,
+    a[href*='docs.google.com' i]::after,
+    a[href$='.xls' i]::after,
+    a[href$='.xlsx' i]::after,
+    a[href$='.ods' i]::after,
+    a[href$='.csv' i]::after,
+    a[href$='.gif' i]::after,
+    a[href$='.bmp' i]::after,
+    a[href$='.ico' i]::after,
+    a[href$='.jpg' i]::after,
+    a[href$='.jpeg' i]::after,
+    a[href$='.png' i]::after,
+    a[href$='.svg' i]::after,
+    a[href$='.xcf' i]::after,
+    a[href*='imgur.com']::after,
+    a[href$='.mp3' i]::after,
+    a[href$='.wav' i]::after,
+    a[href$='.flac' i]::after,
+    a[href$='.ogg' i]::after,
+    a[href$='.rm' i]::after,
+    a[href$='.swf' i]::after,
+    a[href$='.avi' i]::after,
+    a[href$='.mp4' i]::after,
+    a[href$='.webm' i]::after,
+    a[href$='.tar' i]::after,
+    a[href$='.zip' i]::after,
+    a[href$='.xz'  i]::after,
+    a[href$='.img' i]::after,
+    a[href$='.bin' i]::after,
+    a[href$='.pkl' i]::after,
+    a[href$='.onnx' i]::after,
+    a[href$='.pt' i]::after,
+    a[href$='.ebt' i]::after,
+    a[href$='.mdb' i]::after,
+    a[href$='.mht' i]::after,
+    a[href$='.ttf' i]::after,
+    a[href*='biorxiv.org']::after,
+    a[href*='medrxiv.org']::after,
+    a[href*='substack.com']:not([href*=astralcodexten])::after,
+    a[href*='scholar.google.com']::after,
+    a[href*='plosone.org']::after,
+    a[href*='plosmedicine.org']::after,
+    a[href*='plos.org']::after,
+    a[href*='www.plos']::after,
+    a[href*='patreon.com']::after,
+    a[href*='uptontea.com']::after,
+    a[href*='wired.com']::after,
+    a[href*='washingtonpost.com']::after,
+    a[href*='nytimes.com']::after,
+    a[href*='nlm.nih.gov']::after,
+    a[href*='newyorker.com']::after,
+    a[href*='theguardian.com']::after,
+    a[href*='www.guardian.co.uk']::after,
+    a[href*='reddit.com']::after,
+    a[href*='paulgraham.com']::after,
+    a[href*='ycombinator.com']::after,
+    a[href*='intelligence.org']::after,
+    a[href*='deepmind']::after,
+    a[href*='docs/.*/*.pdf#deepmind']::after,
+    a[href*='openai']::after,
+    a[href$='.pdf#openai']::after,
+    a[href*='distill.pub']::after,
+    a[href*='twitter.com']::after,
+    a[href*='nitter.cc']::after,
+    a[href*='erowid.org']::after,
+    a[href*='wikipedia.org']::after,
+    a[href*='wikimedia.org']::after,
+    a[href*='wiktionary.org']::after,
+    a[href*='wikimediafoundation.org']::after,
+    a[href*='wikisource.org']::after,
+    a[href*='youtube.com']::after,
+    a[href*='youtu.be']::after,
+    a[href*='soundcloud.com']::after,
+    a[href*='bandcamp.com']::after,
+    a[href*='overflow.net']::after,
+    a[href*='overflow.com']::after,
+    a[href*='stackexchange.com']::after,
+    a[href*='amazon.com']::after,
+    a[href*='amazon.co.']::after,
+    a[href*='amzn.com'  ]::after,
+    a[href*='github.com']::after,
+    a[href*='dropbox.com']::after,
+    a[href*='dropboxusercontent.com']::after,
+    a[href*='mega.nz']::after,
+    a[href*='webcitation.org'   ]::after,
+    a[href*='mementoweb.org'    ]::after,
+    a[href*='archive.org'       ]::after,
+    a[href*='archive-it.org'    ]::after,
+    a[href*='archiveteam.org'   ]::after,
+    a[href*='waybackmachine.org']::after,
+    a.local-archive-link::after,
+    a[href*="tumblr.com"]::after,
+    a[href*="t.umblr.com"]::after,
+    a[href*="#facebook"]::after,
+    a[href*="#facebook"][href*="arxiv.org"]::after,
+    a[href*='docs/.*/*.pdf#.*facebook']::after,
+    a[href*="facebook.com"]::after,
+    a[href*="bitcointalk.org"]::after,
+    a[href*="bitcoin.it"]::after,
+    a[href*="www.google.com"]::after,
+    a[href*="#google"]::after,
+    a[href*="#org=google"]::after,
+    a[href*="#google"][href*="arxiv.org"]::after,
+    a[href*="#org=google"][href*="arxiv.org"]::after,
+    a[href*='docs/.*/*.pdf#.*google']::after,
+    a[href*='docs/.*/*.pdf#org=google']::after {
+        filter: invert(1);
+    }
+    </style>
+
+    <style>/*
       @media only screen and (max-width:64.9ch) {
         body.siteIndex #markdownBody li {
           line-height: 1.65
@@ -568,7 +1192,845 @@
         border-bottom: 1px solid #aaa;
         margin: 1em 0
       }
+*/
+    </style>
 
+    <style>
+
+      @media only screen and (max-width:64.9ch) {
+        body.siteIndex #markdownBody li {
+          line-height: 1.65
+        }
+      }
+
+      body.siteIndex #markdownBody {
+        padding-top: 1.5ch
+      }
+
+      body.siteIndex article section {
+        display: inline-block;
+        vertical-align: top
+      }
+
+      body.siteIndex #sidebar a#logo {
+        pointer-events: none
+      }
+
+      body.siteIndex #abstract {
+        padding: 0;
+        border: none;
+        margin: 0;
+        box-shadow: none
+      }
+
+      body.siteIndex section:not(.collapse)>h1:first-child {
+        font-size: 1.5em;
+        line-height: 1.125;
+        box-shadow: none;
+        text-align: left;
+        font-weight: 700;
+        margin-left: 0;
+        padding: 0
+      }
+
+      body.siteIndex article,
+      body.tags article {
+        position: relative;
+        padding-bottom: 4em
+      }
+
+      body.siteIndex article::after,
+      body.tags article::after {
+        content: "";
+        background-color: var(--GW-body-background-color);
+        background-image: url(/assets/img/logo.svg);
+        display: block;
+        position: absolute;
+        bottom: .75em;
+        width: 22px;
+        height: 30px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 0 10px 0 11px;
+        z-index: 1
+      }
+
+      body.siteIndex article::before,
+      body.tags article::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: calc(.75em + 15px);
+        height: 1px;
+        border-bottom: 1px solid var(--GW-index-page-bottom-ornament-line-color);
+        width: 100%;
+      }
+
+      body.siteIndex #markdownBody ul,
+      body.tags #markdownBody ul {
+        margin: 1.25em 3em 0 0;
+        padding: 0 0 0 1.375em
+      }
+
+      body.siteIndex #markdownBody li>ul,
+      body.tags #markdownBody li>ul {
+        margin: .25em 0 .25em 0
+      }
+
+      body.siteIndex #markdownBody li,
+      body.tags #markdownBody li {
+        margin-top: 0
+      }
+
+      body.siteIndex #markdownBody>section~p {
+        border-top: 1px dotted #777;
+        margin: 2em 0 0 0;
+        padding: 1em 0 0 0;
+        font-weight: 700
+      }
+
+      body.siteIndex #markdownBody a[href^="."]:not([href*="/docs/"]):not([href*="/images/"])::after,
+      body.siteIndex #markdownBody a[href^="https://www.officialoxide.github.io/"]:not([href$=".pdf"])::after {
+        content: none
+      }
+
+      @media only screen and (min-width:120ch) {
+        body.siteIndex hr,
+        body.siteIndex p {
+          max-width: 97ch
+        }
+      }
+
+      @media only screen and (max-width:64.9ch) {
+        body.siteIndex #sidebar #logo {
+          border: 1px dotted transparent;
+          align-self: flex-start;
+          padding: 7px 5px 6px 5px
+        }
+        body.siteIndex #markdownBody section {
+          max-width: 100%
+        }
+        body.siteIndex #markdownBody ul,
+        body.tags #markdownBody ul {
+          overflow-wrap: break-word;
+          margin-right: 0
+        }
+        body.siteIndex #markdownBody li,
+        body.tags #markdownBody li {
+          padding: 1px 0;
+          margin: 2px 0 0 0
+        }
+        body.siteIndex #markdownBody ul>li::before,
+        body.tags #markdownBody ul>li::before {
+          top: .25em
+        }
+      }
+    .katex { font-size: 1.1em; }
+
+    .katex-display > .katex { white-space: normal !important;}
+    /* Add space between broken lines: */
+    .katex-display > .base { margin: 0.25em 0 !important;}
+    /* Compensate by reducing space around display math */
+    .katex-display { margin: 0.5em 0 !important;}
+
+    blockquote {
+        --GW-link-underline-background-color: var(--GW-blockquote-background-color);
+
+        margin: 1.625em 0 1.75em 0;
+        border: 1px solid var(--GW-blockquote-border-color);
+        background-color: var(--GW-blockquote-background-color);
+        font-size: 0.95em;
+        padding: 1em 1.25em;
+    }
+
+    /*blockquote {
+        margin: 1.625em 0 1.75em 0;
+        border: 1px solid var(--GW-blockquote-border-color-level-one);
+        font-size: .95em;
+        padding: 1em 1.25em
+      }*/
+
+			blockquote,
+			blockquote blockquote blockquote blockquote {
+					--GW-blockquote-background-color: var(--GW-blockquote-background-color-level-one);
+			}
+			blockquote {
+					--GW-blockquote-border-color: var(--GW-blockquote-border-color-level-one);
+			}
+			blockquote blockquote blockquote blockquote {
+					--GW-blockquote-border-color: var(--GW-blockquote-border-color-level-four);
+			}
+
+			blockquote blockquote,
+			blockquote blockquote blockquote blockquote blockquote {
+					--GW-blockquote-border-color: var(--GW-blockquote-border-color-level-two);
+					--GW-blockquote-background-color: var(--GW-blockquote-background-color-level-two);
+			}
+
+			blockquote blockquote blockquote,
+			blockquote blockquote blockquote blockquote blockquote blockquote {
+					--GW-blockquote-border-color: var(--GW-blockquote-border-color-level-three);
+					--GW-blockquote-background-color: var(--GW-blockquote-background-color-level-three);
+			}
+
+      ::selection {
+        text-shadow: none;
+        background: var(--GW-text-selection-background-color);
+        color: var(--GW-text-selection-color);
+      }
+
+      html {
+        padding: 0;
+        margin: 0;
+        background-color: var(--GW-body-background-color);
+        color: var(--GW-body-text-color);
+        font-weight: 400;
+        font-family: "crimson", "Apple Garamond", Baskerville, "Libre Baskerville", "Times New Roman", "Droid Serif", Times, serif;
+        font-size: 16px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        max-width: 75ch;
+      }
+
+      @media only screen and (max-width:64.9ch) {
+        html {
+          font-size: 17px
+        }
+      }
+
+      @media only screen and (min-width:65ch) {
+        body {
+          padding: 0 1.5ch 0 .5ch;
+          margin: 0 auto
+        }
+        @media only screen and (min-width:118.5ch) {
+          body {
+            padding: 0 6ch 0 .5ch
+          }
+        }
+        main {
+          min-height: 100vh;
+          display: flex;
+          flex-flow: column
+        }
+        @media only screen and (min-width:130.1ch) {
+          main {
+            position: relative;
+            right: 4ch
+          }
+        }
+        /*@supports (-moz-user-focus:normal) {
+          @media only screen and (min-width: 130.1ch) {
+            main {
+              right:4ch
+            }
+          }
+        }*/
+        article {
+          flex: 1 1 auto
+        }
+        #sidebar {
+          position: absolute
+        }
+        article {
+          margin-left: 15ch
+        }
+        @media only screen and (max-width:120ch) {
+          article {
+            margin-left: 14.5ch
+          }
+        }
+        @media only screen and (max-width:112ch) {
+          article {
+            margin-left: 14ch
+          }
+        }
+        @media only screen and (max-width:104ch) {
+          article {
+            margin-left: 13.5ch
+          }
+        }
+        @media only screen and (max-width:96ch) {
+          article {
+            margin-left: 13ch
+          }
+        }
+      }
+
+      @media only screen and (max-width:64.9ch) {
+        body {
+          margin: 0 1ch
+        }
+      }
+
+      #sidebar code {
+        border: none;
+        background-color: transparent;
+        padding: 0
+      }
+
+      #sidebar a {
+        display: block
+      }
+
+      @media only screen and (min-width:65ch) {
+        #sidebar {
+          font-variant: small-caps;
+          padding: 0 4ch 0 1ch;
+          width: 10ch
+        }
+        #sidebar a#logo {
+          margin: 1em 0 2em 0
+        }
+        #sidebar a#logo img {
+          width: 64px
+        }
+        #sidebar a.patreon {
+          border-top: 1px dotted #aaa
+        }
+        #sidebar a.new {
+          box-shadow: 0 1.125em 0 0 #fff inset
+        }
+        #sidebar a.patreon {
+          font-size: .9em;
+          margin-top: 1.375em;
+          padding-top: 1.25em;
+          box-shadow: 0 1.25em 0 0 #fff inset;
+          white-space: nowrap
+        }
+        #sidebar a.mail,
+        #sidebar a.r_gwern {
+          line-height: 1;
+          padding-left: .25em;
+          font-size: 1.05em
+        }
+        #sidebar a.mail::before,
+        #sidebar a.r_gwern::before {
+          content: "°\2007";
+          text-shadow: 0 0 0 #000;
+          position: relative;
+          top: .25em
+        }
+        #sidebar code {
+          font-variant: none;
+          text-transform: uppercase;
+          font-size: .7em
+        }
+      }
+
+      @media only screen and (max-width:64.9ch) {
+        #sidebar {
+          justify-content: center;
+          margin: 0 0 .5em 0
+        }
+        #sidebar a {
+          border: 1px dotted #000;
+          padding: 3px 10px;
+          text-align: center;
+          margin: 1px
+        }
+        #sidebar a#logo {
+          padding: 8px 5px 3px 5px
+        }
+        #sidebar,
+        #sidebar-links {
+          display: flex
+        }
+        #sidebar-links {
+          flex-flow: row wrap;
+          margin: .5em 0 0 0
+        }
+        #sidebar a.links,
+        #sidebar a.site {
+          flex: 1 1 20%
+        }
+        #sidebar a.mail,
+        #sidebar a.new,
+        #sidebar a.r_gwern {
+          padding: 3px 10px;
+          flex: 1 1 auto
+        }
+        #sidebar a.patreon {
+          display: none
+        }
+        #sidebar #logo {
+          margin: calc(.5em + 1px) 1px 1px 0
+        }
+        #sidebar #logo img {
+          width: 2.5rem
+        }
+      }
+
+
+      header {
+        overflow: auto
+      }
+
+      header h1 {
+        margin: .75em 0;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        line-height: 1.15;
+        font-weight: 400;
+        word-spacing: .5em;
+        letter-spacing: .08em;
+        font-family: Minion Pro;
+      }
+
+      header h1:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid var(--GW-body-text-color);
+        left: 0;
+        bottom: -.6em;
+        pointer-events: none;
+        z-index: -1
+      }
+
+      @media only screen and (max-width:64.9ch) {
+        header h1 {
+          font-size: 2em
+        }
+      }
+
+      #page-metadata hr {
+        display: none
+      }
+
+      #page-metadata {
+        margin: 0 0 2rem 0;
+        overflow: auto;
+        font-size: .95em;
+        line-height: 1.5
+      }
+
+      #page-metadata #page-description {
+        display: block;
+        margin: 0 auto .75em auto
+      }
+
+      #page-metadata #page-description~* {
+        font-size: .9em
+      }
+
+      #page-metadata #page-description+br {
+        display: none
+      }
+
+      #page-metadata-block span:nth-of-type(n+3) {
+        white-space: nowrap
+      }
+
+      #page-metadata-block>span:not(:last-child)::after {
+        content: "\00B7";
+        display: inline-block;
+        margin: 0 .5em 0 .75em
+      }
+
+      #page-metadata-block>span:nth-child(1)::after {
+        margin-left: .875em
+      }
+
+      #page-metadata-block>span:nth-child(2)::after {
+        margin-left: .8125em
+      }
+
+      #markdownBody {
+        overflow-wrap: break-word
+      }
+
+      @media only screen and (min-width:130.1ch) {
+        #markdownBody {
+          position: relative
+        }
+      }
+
+      @media only screen and (min-width:65ch) {
+        @media only screen and (max-width: 100ch) {
+          #markdownBody {
+            line-height:1.45
+          }
+        }
+        @media only screen and (min-width:100.1ch) and (max-width:120ch) {
+          #markdownBody {
+            line-height: 1.45
+          }
+        }
+        @media only screen and (min-width:120.1ch) {
+          #markdownBody {
+            line-height: 1.45
+          }
+        }
+      }
+
+      @supports (-webkit-hyphens:auto) or (-ms-hyphens:auto) or (hyphens:auto) {
+        #markdownBody li,
+        #markdownBody p {
+          text-align: justify;
+          -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+          hyphens: auto;
+        }
+      }
+
+      #markdownBody p {
+        font-variant-numeric: oldstyle-nums;
+      }
+
+      #abstract>blockquote {
+        margin: 0 0 1.5em 0;
+        border-color: #bbb;
+        padding: .9rem 1.25rem .95rem 1.25rem;
+        clear: none
+      }
+
+      h1 {
+        margin: 1.25em 0 .5em -.75rem;
+        font-family: 'Minion Pro';
+        text-transform: lowercase;
+        letter-spacing: .05em;
+        position: relative
+      }
+
+      @media only screen and (max-width:65ch) {
+        h1 {
+          margin: 1.25em 0 .5em 0
+        }
+      }
+
+      h1 {
+        font-feature-settings: 'smcp';
+        font-size: 1.55em;
+        line-height: 1.25
+      }
+
+      a {
+        color: var(--GW-body-link-color);
+        text-decoration: none;
+      }
+
+      #markdownBody a {
+        word-wrap: break-word
+      }
+
+			#markdownBody a:link, footer a {
+					text-decoration: none;
+					background-image: linear-gradient(var(--GW-link-underline-gradient-line-color), var(--GW-link-underline-gradient-line-color));
+					background-size: 1px 1px;
+					background-repeat: repeat-x;
+					background-position: 0% calc(100% - 0.1em);
+				box-decoration-break: clone;
+
+					/*  Disable oldstyle nums in underlined links because the oldstyle nums are almost subscript-like and overlap */
+					font-variant-numeric: lining-nums;
+			}
+
+      footer a, 
+			#markdownBody a:link,
+			#markdownBody a:link * {
+					text-shadow:
+							 0      0.05em  var(--GW-link-underline-background-color),
+							 0.05em 0.05em  var(--GW-link-underline-background-color),
+							-0.05em 0.05em  var(--GW-link-underline-background-color),
+							 0.10em 0.05em  var(--GW-link-underline-background-color),
+							-0.10em 0.05em  var(--GW-link-underline-background-color),
+							 0.10em 0       var(--GW-link-underline-background-color),
+							-0.10em 0       var(--GW-link-underline-background-color);
+			}
+			#markdownBody a:hover {
+            background-image: linear-gradient(var(--GW-link-underline-gradient-line-color-hover), var(--GW-link-underline-gradient-line-color-hover));
+      }
+
+      p {
+        margin: 0
+      }
+
+      p+p {
+        text-indent: 2.2em
+      }
+
+      @media only screen and (max-width:64.9ch) {
+        p+p {
+          text-indent: 1em
+        }
+      }
+
+      span.smallcaps {
+        font-feature-settings: 'smcp'
+      }
+
+      span.smallcaps-auto {
+        font-feature-settings: 'smcp', 'c2sc';
+        font-variant-numeric: tabular-nums
+      }
+
+      hr {
+        border: none;
+        height: 0;
+        border-bottom: 1px solid #aaa;
+        margin: 1em 0
+      }
+    
+      /***********/
+      /* FIGURES */
+      /***********/
+
+      figure {
+          margin: 2em auto 1.75em auto;
+          max-width: calc(100% - 5em);
+      }
+      @supports (width: -moz-fit-content) {
+          figure {
+                  width: -moz-fit-content;
+              }
+      }
+      @supports (width: fit-content) {
+          figure {
+                  width: fit-content;
+              }
+      }
+      @media only screen and (max-width: 64.9ch) {
+          figure {
+                  max-width: calc(100% - 2em);
+              }
+      }
+      figure + figure {
+          margin-top: 2.75em;
+      }
+      @media only screen and (max-width: 64.9ch) {
+          figure + figure {
+                  margin-top: 2em;
+              }
+      }
+      figure img,
+      figure video {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          width: auto;
+          margin: 0 auto;
+          outline: 1px solid #888;
+      }
+      figure img {
+          max-height: calc(100vh - 8em);
+      }
+      figcaption {
+          font-size: 0.9375em;
+          font-weight: bold;
+          line-height: 1.45;
+          margin: auto;
+          padding: 0.25em 0.5em calc(0.25em + 1px) 0.5em;
+      }
+      .caption-wrapper {
+          display: block;
+          outline: 1px solid #888;
+          margin: 1px 0 0 0;
+      }
+      @supports (width: -moz-fit-content) {
+          figcaption {
+                  width: -moz-fit-content;
+              }
+      }
+      @supports (width: fit-content) {
+          figcaption {
+                  width: fit-content;
+              }
+      }
+      @media only screen and (max-width: 64.9ch) {
+          figcaption {
+                  font-size: 0.875em;
+              }
+      }
+
+      /*  Layout fix for images outside of <figure>.
+              REMOVE once all images are properly within <figure>!
+                  */
+      #markdownBody :not(figure) img {
+          max-width: 100%;
+          height: auto;
+      }
+
+      /*************/
+      /* SIDENOTES */
+      /*************/
+
+      /*  Hide sidenote columns on narrow viewports.
+          */
+      @media only screen and (max-width: 130ch) {
+          #sidenote-column-left,
+          #sidenote-column-right {
+              display: none;
+          }
+      }
+      svg {
+        fill: currentColor;
+      }
+
+			#markdownBody > p:first-child::first-line,
+			#markdownBody #page-metadata + p::first-line {
+					font-feature-settings: 'smcp';
+			}
+    </style>
+    <style>
+
+    #ui-elements-container {
+     position:fixed;
+     top:0;
+     left:0;
+     width:100%;
+     height:100%;
+     z-index:10000;
+     pointer-events:none
+    }
+    #ui-elements-container>* {
+     pointer-events:auto
+    }
+      #mode-selector {
+        position: absolute;
+        right: 0;
+        display: flex;
+        background-color: var(--GW-mode-selector-background-color);
+        padding: 0.1em 0.25em 0.3em 0.25em;
+        border: 3px solid transparent;
+        opacity: 0.3;
+        transition:
+          opacity 2s ease;
+      }
+      #mode-selector.hidden {
+        opacity: 0;
+      }
+      #mode-selector:hover {
+        transition: none;
+        opacity: 1.0;
+        border: 3px double var(--GW-mode-selector-border-hover-color);
+      }
+      #mode-selector button {
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        background-color: transparent;
+        padding: 0.5em;
+        margin: 0 0 0 1.375em;
+        line-height: 1;
+        font-family: var(--GW-sans-serif-font-stack);
+        font-size: 0.75rem;
+        text-align: center;
+        color: var(--GW-mode-selector-button-text-color);
+        position: relative;
+        display: flex;
+      }
+      #mode-selector button::before {
+        width: 1.2em;
+        position: absolute;
+        left: -15px;
+        opacity: 0.35;
+        padding: 1px 0 0 0;
+      }
+      #mode-selector button.select-mode-auto::before {
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path></svg>');
+      }
+      #mode-selector button.select-mode-light::before {
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path></svg>');
+        opacity: 0.45;
+        width: 1.3em;
+        padding: 0;
+        left: -15px;
+      }
+      #mode-selector button.select-mode-dark {
+        margin-left: 1.125em;
+      }
+      #mode-selector button.select-mode-dark::before {
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path></svg>');
+        width: 1.15em;
+        left: -12px;
+      }
+      #mode-selector button:not(.selected):hover::before {
+        opacity: 1.0;
+      }
+      #mode-selector button:hover,
+      #mode-selector button.selected {
+        box-shadow:
+          0 2px 0 6px var(--GW-mode-selector-background-color) inset,
+          0 1px 0 6px currentColor inset;
+      }
+      #mode-selector button:not(:disabled):hover {
+        color: var(--GW-mode-selector-button-hover-text-color);
+        cursor: pointer;
+      }
+      #mode-selector button:not(:disabled):active {
+        transform: translateY(2px);
+        box-shadow:
+          0 0px 0 6px var(--GW-mode-selector-background-color) inset,
+          0 -1px 0 6px currentColor inset;
+      }
+      #mode-selector button.active:not(:hover)::after {
+        content: "";
+        position: absolute;
+        bottom: 0.25em;
+        left: 0;
+        right: 0;
+        border-bottom: 1px dotted currentColor;
+        width: calc(100% - 12px);
+        margin: auto;
+      }
+      @media only screen and (max-width: 1535px) {
+        #mode-selector {
+          flex-flow: column;
+          padding: 0.1em 0.1em 0.2em 0.15em;
+          align-items: flex-start;
+        }
+        #mode-selector button + button {
+          margin-top: 0.25em;
+        }
+        #mode-selector button.select-mode-light::before {
+          left: -16px;
+        }
+        #mode-selector button.select-mode-dark {
+          margin-left: 1.375em;
+        }
+        #mode-selector button.select-mode-dark::before {
+          left: -15px;
+        }
+      }
+      @media only screen and (max-width: 1279px) {
+        #mode-selector {
+          padding: 0.1em 0.1em 0.25em 0.15em;
+        }
+        #mode-selector button[class^='select-mode-'] {
+          color: transparent;
+          margin: 0;
+          padding: 0;
+          width: 2em;
+          height: 2em;
+          align-items: center;
+          box-shadow: none;
+          opacity: 0.55;
+        }
+        #mode-selector  button[class^='select-mode-'] + button {
+          margin-top: 0.5em;
+        }
+        #mode-selector button[class^='select-mode-']::before {
+          left: 12.5%;
+          width: 75%;
+          height: 75%;
+        }
+        #mode-selector button:not(:disabled):hover {
+          color: transparent;
+        }
+        #mode-selector button:hover,
+        #mode-selector button.selected {
+          opacity: 1.0;
+        }
+      }
     </style>
     <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script> 
   </head>
@@ -585,6 +2047,7 @@
        {% if site.show_downloads %}
        <div id="sidebar-links">
           <a class="site" href="{{site.url}}/about">About</a>
+          <a class="rss" href="/feed.xml" target="_blank">RSS</a>
        </div>
        {% endif %}
       </div>
@@ -595,6 +2058,7 @@
       </article>
       </main>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/helper.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -606,4 +2070,48 @@
     </script>
     {% endif %}
   </body>
+    <script>
+                /*	This code is part of darkmode.js by Said Achmiz.
+        See the file `darkmode.js` for license and more information.
+        */
+
+      /*	Dark mode: before anything else loads, check browser localStorage for dark 
+        mode preference and immediately toggle sets of CSS color variables/classes 
+        to avoid any 'flash of white' or delayed loading. Note: CSS falls back to 
+        the media-query browser/OS variable preference, so still works if JS is 
+        blocked! (The JS is only necessary for the theme switcher widget allowing 
+        'force light'/'force dark' options. If users block JS, set the dark mode 
+        preference, and are unhappy when they get dark mode, well, they made their 
+        bed and must lie in it.)
+        */
+
+      /*  Set specified color mode (auto, light, dark).
+          */
+      function setMode(modeOption) {
+          GWLog("setMode", "darkmode.js", 1);
+
+          // Inject the appropriate styles.
+          let darkModeStyles = document.querySelector("#inlined-dark-mode-styles, #dark-mode-styles");
+          if (darkModeStyles == null) return;
+          if (modeOption == 'auto') {
+              darkModeStyles.media = "all and (prefers-color-scheme: dark)";
+          } else if (modeOption == 'dark') {
+              darkModeStyles.media = "all";
+          } else {
+              darkModeStyles.media = "not all";
+          }
+
+          // Update selector state.
+          if (window.updateModeSelectorState)
+            updateModeSelectorState();
+      }
+
+      // Get saved mode setting (or default).
+      let currentMode = localStorage.getItem("selected-mode") || 'auto';
+
+      // Activate saved mode.
+      setMode(currentMode);
+
+    </script>
+    <script src="{{ "/assets/js/darkmode.js" | relative_url }}" defer></script>
 </html>

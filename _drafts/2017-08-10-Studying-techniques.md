@@ -8,22 +8,34 @@ Using productivity techniques is great, but if you leverage your own concentrati
 [^1]: Aliquam nec tincidunt ipsum. Etiam nec lacus tincidunt velit sodales vulputate. Praesent quam mi, consectetur vel aliquam eu, vulputate sit amet diam. Suspendisse tincidunt tellus quis leo vulputate, quis suscipit risus gravida. Aenean pulvinar tortor non leo viverra, id aliquet erat congue.
 [^2]: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at tempus sapien. Sed nec nunc a dui vehicula pellentesque non ut lacus. Praesent in lorem non risus posuere volutpat. Maecenas nec finibus eros, suscipit dictum dolor. Nam sit amet molestie sapien, sit amet ornare nisi. Cras dapibus ipsum dui, et semper mi tempor a. Aliquam quis luctus lorem, eget viverra ex. Donec sit amet neque eros. Mauris luctus augue ultrices, sagittis eros et, finibus mi. Quisque vitae euismod dolor.
 
+
+
 The most touted technique is to use the Pomodoro technique, which is effective, but not completely. So you must change it to reflect your own needs.
 # Changing your study sessions
 
-- First, do a study session and set a stopwatch at the start, and find out at which point (in minutes) you begin to daydream/procrastinate. Call that number x.
-- Round off x to the nearest multiple of thirty . Call this number y.
-- From y, subtract 1/5th of x. Call this number z.
+- First, do a study session and set a stopwatch at the start, and find out at which point (in minutes) you begin to daydream/procrastinate. Call that number $$x$$.
+- Round off $$x$$ to the nearest multiple of thirty . Call this number $$y$$.
+- From $$y$$, subtract ⅕th of $$x$$. Call this number $$z$$.
 
-Now, you have just created your own studying framework, in which you study for x minutes, take a break for z minutes and it nicely adds up to an easily measurable number y.
+Now, you have just created your own studying framework, in which you study for $$x$$ minutes, take a break for $$z$$ minutes and it nicely adds up to an easily measurable number $$y$$.
 
 *This is your own version of the Pomodoro technique personalized for your own attention span. Try to do this experiment every 2 months, so you can increase your attention span.*[^osama]
 
-[^osama]: 
+[^osama]:
     ```haskell
-    main :: IO()
-    main = putStrLn "nigger."
-    ``` 
+    -- Hello world example:
+    module Main where
+
+    data = ()
+    type = String
+    year = 2020 / 1.0 * 1
+
+    studio = 10 + 10.0 + 10e0 + 0o10 + 0x10 -- → 54
+
+    main :: IO ()
+    main = print "Hello World!"
+    ```
+
     > “When people see a strong horse and a weak horse, by nature, they will like the strong horse.”
     >
     > Osama bin Laden, [2001](https://www.npr.org/news/specials/response/investigation/011213.binladen.transcript.html "Transcript of Bin Laden Videotape Dec. 13, 2001")
@@ -67,7 +79,6 @@ If you can't write your notes in the Cornell system, or rewrite them, you can st
 # Changing your studying system
 
 Now, place these notes in your [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) basket, for later review.[^5] Not only will you complete your later revision faster, but you will have to study *less* than if you had normally done it, and *still understand more*, at just the expense of one experiment, a switch of a note taking system and summarizing your lectures.
-
 
 
 # Bringing it all together

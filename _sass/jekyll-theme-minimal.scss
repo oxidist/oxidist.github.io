@@ -3,32 +3,9 @@
 @import "links";
 
 :root {
-		--GW-sidenotes-max-width: 280px;
-
-    /*  Footnotes.
-        */
-    --GW-footnote-border-color: #aaa;
-    --GW-footnote-highlighted-border-color: #aaa;
-    --GW-footnotes-section-top-rule-color: #ccc;
-    --GW-footnote-backlink-border-color: #000;
-    --GW-footnote-backlink-border-hover-color: #999;
-    --GW-footnote-backlink-after-bordered-block-background-color: var(--GW-body-background-color);
-
-    /*  Footnote references.
-        */
-    --GW-footnote-ref-highlight-box-shadow-color: #aaa;
-    --GW-footnote-ref-highlight-background-color: rgba(255,255,255,0.75);
-
-    /*  Sidenotes.
-        */
-    --GW-sidenote-highlight-background-color: var(--GW-body-background-color);
-    --GW-sidenote-highlight-box-shadow-color: #aaa;
-    --GW-sidenote-border-color: #aaa;
-    --GW-sidenote-scrollbar-track-color: var(--GW-body-background-color);
-    --GW-sidenote-scrollbar-thumb-color: #aaa;
-    --GW-sidenote-scrollbar-thumb-hover-color: #999;
-    --GW-sidenote-self-link-border-color: #aaa;
+		--GW-sidenotes-max-width: 350px;
 }
+
 /*************/
 /*  LAYOUT  */
 /***********/
@@ -72,36 +49,36 @@ h6 code {
 /*=----------------=*/
 /*= Heading levels =*/
 /*=----------------=*/
+
 /* h1 defined in initial.css */
 section:not(.collapse) > h1:first-child {
     line-height: 1;
     margin: 1.75em 0 0.375em 0;
     text-align: right;
-    font-weight: 400;
+    font-weight: 600;
     box-shadow:
-        0 -2px 0 0 #fff inset,
-        0 -3px 0 0 #888 inset;
+        0 -2px 0 0 var(--GW-H1-box-shadow-background-color) inset,
+        0 -3px 0 0 var(--GW-H1-box-shadow-line-color) inset;
 }
-#markdownBody section:not(.collapse) > h1:first-child a {
+.markdownBody section:not(.collapse) > h1:first-child a {
     position: relative;
 }
-#markdownBody section:not(.collapse) > h1:first-child a::after {
+.markdownBody section:not(.collapse) > h1:first-child a::after {
     position: absolute;
     top: 0.15em;
 }
-@media only screen and (min-width: 65ch) {
+@media only screen and (min-width: 650px) {
     section:not(.collapse) > h1:first-child {
         margin: 1.75em 0 0.375em -0.75rem;
         font-size: 2em;
         overflow: hidden;
-        padding: 0 0 3px 0.75rem;
+        padding: 0 0 7px 1.25rem;
         box-shadow:
-            0 -5px 0 0 #fff inset,
-            0 -6px 0 0 #888 inset;
+            0 -5px 0 0 var(--GW-H1-box-shadow-background-color) inset,
+            0 -6px 0 0 var(--GW-H1-box-shadow-line-color) inset;
     }
-    #markdownBody section:not(.collapse) > h1:first-child a::after {
-        opacity: 0.4;
-        left: -0.375em;
+    .markdownBody section:not(.collapse) > h1:first-child a::after {
+        left: -0.75em;
     }
 }
 
@@ -112,10 +89,10 @@ h1 em:last-child {
 }
 
 h2 {
-    font-style:italic;
+    font-style: italic;
     font-size: 1.20em;
-    word-spacing:0.2em;
-    padding: 0 0.5em 0 0;
+    word-spacing: 0.2em;
+    padding: 0 0.5em 0px 0;
     line-height: 1.25;
 }
 h2::after {
@@ -126,24 +103,20 @@ h2::after {
     left: 0;
     bottom: 0.1em;
     pointer-events: none;
-    z-index: -1;
 }
-#markdownBody section:not(.collapse) > h2:first-child a {
-    padding-top: 20px;
-    padding-top: 20px;
-    padding-top: 20px;
+.markdownBody section:not(.collapse) > h2:first-child a {
     position: relative;
 }
-#markdownBody section:not(.collapse) > h2:first-child a::after {
+.markdownBody section:not(.collapse) > h2:first-child a::after {
     position: absolute;
     top: 0.1em;
     left: unset;
     right: -0.75em;
 }
-#markdownBody section.collapse > h2:first-child a::after {
+.markdownBody section.collapse > h2:first-child a::after {
     top: -0.2em;
 }
-@media only screen and (min-width: 65ch) {
+@media only screen and (min-width: 650px) {
     section:not(.collapse) > h2:first-child {
         overflow: hidden;
     }
@@ -151,7 +124,7 @@ h2::after {
 
 h3 {
     font-size: 1.125em;
-    font-style:italic;
+    font-style: italic;
 }
 h4 {
     text-transform: capitalize;
@@ -176,18 +149,15 @@ h2 + section > h3:first-child {
 /*= Section heading self-links =*/
 /*=----------------------------=*/
 
-article #markdownBody section > :first-child a {
+.markdownBody section > :first-child > a {
     background: none;
 }
-article #markdownBody section:not(.collapse) > h1:first-child a,
-article #markdownBody section:not(.collapse) > h2:first-child a {
+.markdownBody section:not(.collapse) > h1:first-child a,
+.markdownBody section:not(.collapse) > h2:first-child a {
     display: block;
 }
-#markdownBody section > :first-child a:hover {
-    color: #485555;
-}
-#markdownBody section > :first-child a::after {
-    content: "\00B6"; /* Pilcrow sign: Â¶ */
+section > :first-child a::after {
+    content: "\00B6"; /* Pilcrow sign: ¶ */
     font-size: 0.75em;
     position: relative;
     top: -0.2em;
@@ -195,6 +165,22 @@ article #markdownBody section:not(.collapse) > h2:first-child a {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0s ease 0.1s;
+}
+section > :first-child a:hover::after,
+section > :first-child a:active::after,
+section > :first-child a:focus::after,
+section.highlighted > :first-child a::after,
+section:target > :first-child a::after {
+    visibility: visible;
+}
+section > :first-child a:hover::after,
+section > :first-child a:active::after,
+section > :first-child a:focus::after,
+section.highlighted > :first-child a::after {
+    opacity: 0.8;
+}
+section:target > :first-child a::after {
+    opacity: 0.5;
 }
 #markdownBody section > :first-child a[href^='#']:hover::after,
 #markdownBody section > :first-child a[href^='#']:active::after,
@@ -207,6 +193,7 @@ article #markdownBody section:not(.collapse) > h2:first-child a {
 #markdownBody section:target > :first-child a[href^='#']::after {
     opacity: 0.5;
 }
+
 /****************/
 /*   LINKS     */
 /**************/
@@ -224,10 +211,9 @@ footer a:hover,
 /***************/
 
 /* main gray background is implemented in initial.css to avoid 'flash' on load */
-
-article > :not(#TOC) blockquote a:link,
-article > :not(#TOC) blockquote blockquote blockquote a:link,
-article > :not(#TOC) blockquote blockquote blockquote blockquote blockquote a:link {
+/*article > :not(#TOC,.epigraph) blockquote a:link,
+article > :not(#TOC,.epigraph) blockquote blockquote blockquote a:link,
+article > :not(#TOC,.epigraph) blockquote blockquote blockquote blockquote blockquote a:link {
     text-shadow:
          0.03em 0       var(--GW-blockquote-background-color),
         -0.03em 0       var(--GW-blockquote-background-color),
@@ -242,9 +228,9 @@ article > :not(#TOC) blockquote blockquote blockquote blockquote blockquote a:li
          0.15em 0       var(--GW-blockquote-background-color),
         -0.15em 0       var(--GW-blockquote-background-color);
 }
-article > :not(#TOC) blockquote blockquote a:link,
-article > :not(#TOC) blockquote blockquote blockquote blockquote a:link,
-article > :not(#TOC) blockquote blockquote blockquote blockquote blockquote blockquote a:link {
+article > :not(#TOC,.epigraph) blockquote blockquote a:link,
+article > :not(#TOC,.epigraph) blockquote blockquote blockquote blockquote a:link,
+article > :not(#TOC,.epigraph) blockquote blockquote blockquote blockquote blockquote blockquote a:link {
     text-shadow:
          0.03em 0       #e6e6e6,
         -0.03em 0       #e6e6e6,
@@ -258,7 +244,7 @@ article > :not(#TOC) blockquote blockquote blockquote blockquote blockquote bloc
         -0.12em 0       #e6e6e6,
          0.15em 0       #e6e6e6,
         -0.15em 0       #e6e6e6;
-}
+}*/
 
 blockquote blockquote {
     margin: 1em 1px;
@@ -329,6 +315,7 @@ blockquote table {
 //    overflow: hidden;
 }
 .epigraph blockquote {
+    --GW-blockquote-background-color: var(--GW-body-background-color);
     padding: 0;
     border: none;
     background-color: inherit;
@@ -368,6 +355,7 @@ blockquote table {
     position: absolute;
     font-size: 2.5em;
     opacity: 0.5;
+    color: var(--GW-epigraph-quotation-mark-color);
 }
 .epigraph blockquote::before {
     content: "\201C";
@@ -380,21 +368,6 @@ blockquote table {
     bottom: -1em;
 }
 
-article > :not(#markdown-toc) .epigraph blockquote a:link{
-    text-shadow:
-         0.03em 0       #fff,
-        -0.03em 0       #fff,
-         0      0.03em  #fff,
-         0     -0.03em  #fff,
-         0.06em 0       #fff,
-        -0.06em 0       #fff,
-         0.09em 0       #fff,
-        -0.09em 0       #fff,
-         0.12em 0       #fff,
-        -0.12em 0       #fff,
-         0.15em 0       #fff,
-        -0.15em 0       #fff;
-}
 
 @media only screen and (max-width: 64.9ch) {
     .epigraph {
@@ -440,46 +413,36 @@ article > :not(#markdown-toc) .epigraph blockquote a:link{
 /* TABLES */
 /**********/
 
-.tableWrapper {
-    margin: 2em 0 2.125em 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    box-sizing: border-box;
-}
-h1 + .tableWrapper,
-h2 + .tableWrapper,
-h3 + .tableWrapper,
-h4 + .tableWrapper,
-h5 + .tableWrapper,
-h6 + .tableWrapper {
+
+h1 + .table-wrapper,
+h2 + .table-wrapper,
+h3 + .table-wrapper,
+h4 + .table-wrapper,
+h5 + .table-wrapper,
+h6 + .table-wrapper {
     margin: 0 0 2.125em 0;
 }
 
 table {
-    margin: 0;
+    margin: 2em 0px;
     padding: 0;
     border-collapse: collapse;
     width: 100%;
-    font-size: 0.65em;
+    font-size: 0.75em;
     border-style: solid;
-    border-color: #000;
+    border-color: var(--GW-table-border-color);
     border-width: 2px 0;
-
-    /*  'tabular figures' to make numbers line up in tables:
-        https://practicaltypography.com/alternate-figures.html#tabular-and-proportional-figures
-        https://helpx.adobe.com/fonts/using/open-type-syntax.html#tnum
-        */
-    font-variant-numeric: tabular-nums;
 }
 
 /*=-------------------=*/
 /*= Full-width tables =*/
 /*=-------------------=*/
 
-.tableWrapper.full-width {
-    background-color: #fff;
-    z-index: 1;
-    position: relative;
+.table-wrapper.full-width .full-width-table-inner-wrapper {
+    background-color: var(--GW-table-full-width-background-color);
+}
+blockquote .table-wrapper.full-width {
+    background-color: transparent;
 }
 
 /*=-------------=*/
@@ -490,7 +453,7 @@ table caption {
     padding: 0.25em 0.75em;
     font-style: italic;
     font-size: 1.25em;
-    border-top: 2px solid #000;
+    border-top: 2px solid var(--GW-table-caption-border-color);
 }
 
 table th,
@@ -500,34 +463,46 @@ table td {
 }
 table th {
     font-weight: bold;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--GW-table-row-horizontal-border-color);
     text-align: left;
+    hyphens: none;
 }
 table td {
     vertical-align: top;
 }
 table th + th,
 table td + td {
-    border-left: 1px solid #fff;
+    border-left: 1px solid var(--GW-table-cell-vertical-border-color);
 }
 
-/*=--------------------------------------------------=*/
-/*= Horizontal scrollbar styling (Webkit/Blink only) =*/
-/*=--------------------------------------------------=*/
+table td > code {
+    word-break: normal;
+}
 
-.tableWrapper::-webkit-scrollbar {
+/*  Horizontal scroll bar styles (for WebKit/Chromium).
+    */
+.table-wrapper::-webkit-scrollbar {
     height: 16px;
 }
-.tableWrapper::-webkit-scrollbar-thumb {
+.table-wrapper::-webkit-scrollbar-thumb {
     background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMXd3d////ywAAAAABAAEAAACBgQShqgJBQA7');
     background-size: 2px;
     box-shadow:
-        0 2px 0 0   #fafafa inset,
-        0 0   0 1px #000 inset,
-        0 2px 0 1px #000 inset;
+        0 2px 0 0   var(--GW-table-scrollbar-track-color) inset,
+        0 0   0 1px var(--GW-table-scrollbar-border-color) inset,
+        0 2px 0 1px var(--GW-table-scrollbar-border-color) inset;
 }
-.tableWrapper::-webkit-scrollbar-thumb:hover {
+.table-wrapper::-webkit-scrollbar-thumb:hover {
     background-image: url('data:image/gif;base64,R0lGODlhBAAEAPAAMQAAAP///ywAAAAABAAEAAACBgQShqgJBQA7');
+}
+
+/*  Horizontal scroll bar styles (for Firefox).
+    */
+.table-wrapper {
+    scrollbar-color: var(--GW-table-scrollbar-thumb-color) var(--GW-table-scrollbar-track-color);
+}
+.table-wrapper:hover {
+    scrollbar-color: var(--GW-table-scrollbar-thumb-hover-color) var(--GW-table-scrollbar-track-color);
 }
 
 /*  Add little icons to tables handled by tablesorter.js
@@ -542,8 +517,12 @@ th.tablesorter-header {
     background-position: center left;
     padding-left: 20px;
 }
-th.header:hover {
-    background-color: #e2f0f2;
+
+th.tablesorter-header:hover {
+    background-color: var(--GW-table-column-heading-hover-background-color);
+}
+th.tablesorter-header:focus {
+    outline: none;
 }
 th.tablesorter-headerAsc {
     background-image: url('/assets/img/asc.gif');
@@ -555,34 +534,33 @@ th.tablesorter-headerAsc,
 th.tablesorter-headerDesc,
 th.tablesorter-headerAsc:hover,
 th.tablesorter-headerDesc:hover {
-    background-color: #8bd0ed;
-    color: #fff;
+    background-color: var(--GW-table-sorted-column-heading-background-color);
+    color: var(--GW-table-sorted-column-heading-text-color);
     text-shadow:
-       0.5px 0.5px 0 #000,
-       0 0 1px #000;
+       0.5px 0.5px 0 var(--GW-table-sorted-column-heading-text-shadow-color),
+       0 0 1px var(--GW-table-sorted-column-heading-text-shadow-color);
 }
 
 /*  zebra-stripe tables (CSS3); from Twitter's bootstrap package
     */
+
 :not(.small-table) > table tr:nth-child(odd) td {
-    background-color: #f6f6f6;
+    background-color: var(--GW-table-zebra-stripe-alternate-row-background-color);
+    --GW-link-underline-background-color: var(--GW-table-zebra-stripe-alternate-row-background-color);
 }
-#markdownBody table tr:hover {
-    outline: 1px dotted #000;
+.markdownBody table tbody tr:hover {
+    outline: 1px dotted var(--GW-table-row-hover-outline-color);
 }
 
 /*  Tables in blockquotes.
     */
-blockquote :not(.small-table) > table tr:nth-child(odd) td {
-    background-color: #fff;
+blockquote :not(.small-table) > table {
+    --GW-table-zebra-stripe-alternate-row-background-color: var(--GW-body-background-color);
 }
 blockquote table th + th,
 blockquote table td + td {
     border-left: 1px solid var(--GW-blockquote-background-color);
-
 }
-
-
 /*********/
 /* LISTS */
 /*********/
@@ -673,7 +651,6 @@ blockquote table td + td {
     right: calc(100% + 0.5em);
     text-align: right;
     font-feature-settings: 'onum';
-    color: #444;
 }
 
 #markdownBody ol ol {
@@ -768,7 +745,7 @@ a.footnote {
     font-weight: bold;
     font-family: 'IBM Plex Serif';
     line-height: 1;
-    border: 1px dotted #000;
+    border: 1px dotted var(--GW-footnote-backlink-border-color);
     display: inline-block;
     padding: 2px 5px 0 6px;
     text-indent: 0;
@@ -779,7 +756,7 @@ a.footnote {
     background-image: none;
 }
 #markdownBody .footnotes a.reversefootnote:hover {
-    border-color: #999;
+    border-color: var(--GW-footnote-backlink-border-hover-color);
 }
 
 .footnotes {
@@ -804,7 +781,7 @@ a.footnote {
     right: calc(100% + 0.5em);
     text-align: right;
     font-feature-settings: 'onum';
-    color: #444;
+    color: var(--GW-footnote-border-color);
 }
 
 .footnotes blockquote + p a.reversefootnote,
@@ -939,29 +916,103 @@ a.footnote {
 /* CODE BLOCKS */
 /***************/
 
+/*  Horizontal scroll bar styles (for WebKit/Blink).
+    */
+pre::-webkit-scrollbar {
+    height: 16px;
+    background-color: var(--GW-pre-element-scrollbar-track-color);
+}
+pre::-webkit-scrollbar-thumb {
+    background-color: var(--GW-pre-element-scrollbar-thumb-color);
+    box-shadow:
+        0 0 0 3px var(--GW-pre-element-scrollbar-track-color) inset;
+}
+pre::-webkit-scrollbar-thumb:hover {
+    background-color: var(--GW-pre-element-scrollbar-thumb-hover-color);
+}
+
+/*  Horizontal scroll bar styles (for Firefox).
+    */
+pre {
+    scrollbar-color: var(--GW-pre-element-scrollbar-thumb-color) var(--GW-pre-element-scrollbar-track-color);
+}
+pre:hover {
+    scrollbar-color: var(--GW-pre-element-scrollbar-thumb-hover-color) var(--GW-pre-element-scrollbar-track-color);
+}
+
 code {
     padding: 0 4px;
     /* Tufte CSS's monospace/sans suggestions, borrowing from Github: */
     font-family: "Liberation Mono", Consolas, Courier, monospace;
     font-size: 0.9em;
-    border: 1px solid #c8c8c8;
-    background-color: #fafafa;
+    border: 1px solid var(--GW-code-element-border-color);
+    background-color: var(--GW-code-element-background-color);
+    --GW-link-underline-background-color: var(--GW-code-element-background-color);
+    word-break: break-all;
+    hyphens: none;
+
 }
+
 pre {
-    overflow: auto;
     margin: 1.75em auto;
-    border: 1px solid #c8c8c8;
-    background-color: #fafafa;
+    border: 1px solid var(--GW-pre-element-border-color);
+    background-color: var(--GW-pre-element-background-color);
     cursor: text;
     max-height: calc(100vh - 8em);
+    overflow: auto;
 }
 pre code {
     display: block;
-    padding: 8px 14px;
+    padding: 0.4rem 0.7rem;
     margin: 0;
     border: none;
     background-color: transparent;
 }
+
+
+/*=------------------------------------------------------------------------------------------=*/
+/*= Source code highlighting for Pygments
+/*=------------------------------------------------------------------------------------------=*/
+
+/* Monochrome-ish code highlighting theme, loosely based on Pygments's algol_nu (CSS: https://github.com/lukelbd/proplot/blob/master/docs/_static/pygments/algol_nu.css demo: https://xyproto.github.io/splash/docs/longer/algol_nu.html ; Python: https://github.com/pycom/EricShort/blob/master/ThirdParty/Pygments/pygments/styles/algol.py ). */
+/* This skips the underlining and overuse of graying, and uses a bit of blue as an alternative, and retains red for warnings/errors. */
+
+.highlight span.n    { color: var(--GW-syntax-highlight-color-normal); } /* Normal */
+.highlight span.at { color: var(--GW-syntax-highlight-color-attribute); } /* Attribute */
+.highlight span.kt { color: var(--GW-syntax-highlight-color-data-type); font-weight: bold; font-style: italic  } /* DataType */
+.highlight span.nn { color: var(--GW-syntax-highlight-color-data-type); font-weight: bold; font-style: italic  } /* DataType */
+.highlight span.nv { color: var(--GW-syntax-highlight-color-variable); font-weight: bold; font-style: italic } /* Variable */
+.highlight span.ot { color: var(--GW-syntax-highlight-color-other); font-weight: bold; font-style: italic } /* Other */
+.highlight span.cp { color: var(--GW-syntax-highlight-color-preprocessor); font-weight: bold; font-style: italic } /* Preprocessor */
+.highlight span.ex { color: var(--GW-syntax-highlight-color-extension); font-style: italic } /* Extension */
+.highlight span.c { color: var(--GW-syntax-highlight-color-comment); } /* Comment */
+.highlight .ch { color: var(--GW-syntax-highlight-color-comment); font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: var(--GW-syntax-highlight-color-comment); font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: var(--GW-syntax-highlight-color-comment); font-weight: bold } /* Comment.Preproc */
+.highlight .cpf { color: var(--GW-syntax-highlight-color-comment); font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: var(--GW-syntax-highlight-color-comment); font-style: italic } /* Comment.Single */
+.highlight .cs { color: var(--GW-syntax-highlight-color-comment); font-weight: bold } /* Comment.Special */
+.highlight span.cf { color: var(--GW-syntax-highlight-color-control-flow); font-weight: bold; } /* ControlFlow */
+.highlight span.k { color: var(--GW-syntax-highlight-color-keyword); font-weight: bold; } /* Keyword */
+.highlight span.kr { color: var(--GW-syntax-highlight-color-keyword); font-weight: bold; } /* Keyword.Reserved */
+.highlight span.ow { color: var(--GW-syntax-highlight-color-operator); } /* Operator */
+.highlight span.sc { color: var(--GW-syntax-highlight-color-special-char); } /* SpecialChar */
+.highlight span.nb { color: var(--GW-syntax-highlight-color-built-in); font-weight: bold; } /* BuiltIn */
+.highlight span.nf { color: var(--GW-syntax-highlight-color-function); } /* Function */
+.highlight span.kc { color: var(--GW-syntax-highlight-color-constant); font-weight: bold; } /* Constant */
+.highlight span.mi { color: var(--GW-syntax-highlight-color-dec-val); font-weight: bold; } /* DecVal */
+.highlight span.mo { color: var(--GW-syntax-highlight-color-base-n); font-weight: bold; font-feature-settings: 'ss01'; } /* BaseN: "dsBaseN, values with a base other than 10." */
+.highlight span.mh { color: var(--GW-syntax-highlight-color-base-n); font-weight: bold; font-feature-settings: 'ss01'; } /* BaseN: "dsBaseN, values with a base other than 10." */
+.highlight span.mf { color: var(--GW-syntax-highlight-color-float);  font-weight: bold; font-feature-settings: 'ss01'; } /* Float */
+.highlight span.in { color: var(--GW-syntax-highlight-color-information); font-weight: bold; } /* Information */
+.highlight span.sc { color: var(--GW-syntax-highlight-color-char); font-style: italic; } /* Char */
+.highlight span.s { color: var(--GW-syntax-highlight-color-string); font-style: italic; font-feature-settings: 'ss09';} /* String */
+.highlight span.ss { color: var(--GW-syntax-highlight-color-special-string); font-weight: bold; font-style: italic } /* SpecialString: "dsSpecialString, SQL, regexes, HERE docs, LaTeX math mode, ..."x1 */
+.highlight span.vs { color: var(--GW-syntax-highlight-color-verbatim-string); font-style: italic; } /* VerbatimString: "dsVerbatimString, verbatim or raw strings like 'raw \backlash' in Perl, CoffeeScript, and shells, as well as r'\raw' in Python." */
+.highlight span.al { color: var(--GW-syntax-highlight-color-alert); text-decoration: double underline; font-weight: bold; } /* Alert */
+.highlight span.err { color: var(--GW-syntax-highlight-color-error); } /* Error */
+.highlight span.kn { color: var(--GW-syntax-highlight-color-import); font-weight: bold; font-style: italic } /* Import */
+
 
 small {
   font-size:0.6875em;

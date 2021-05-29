@@ -12,8 +12,9 @@ In this post I show how to increase the signal-to-noise ratio of [YouTube](https
 - Remove comment sections:
   - Install AdBlock ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/), [Chrome](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom)), and then click on any video.
   - Right click on the comment section, click "Block this ad", and move the slider to the right till it blocks the whole comment section. It should look like something like this:
+
   <figure>
-  <a href="http://i.imgur.com/FUcVnQR.png"><img src="http://i.imgur.com/FUcVnQR.png"></a>
+  <a href="/assets/img/adblock.png"><img class="invertible" src="/assets/img/adblock.png">A screenshot of AdBlock</a>
   </figure>
 
 - Block distracting channels:
