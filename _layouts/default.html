@@ -843,6 +843,9 @@
         #sidebar a.patreon {
           border-top: 1px dotted var(--GW-sidebar-horizontal-rule-color);
         }
+        #sidebar a.rss {
+          text-transform: lowercase;
+        }
         #sidebar a.new {
           box-shadow: 0 1.125em 0 0 #fff inset
         }
@@ -879,7 +882,7 @@
           margin: 0 0 .5em 0
         }
         #sidebar a {
-          border: 1px dotted #000;
+          border: 1px dotted var(--GW-sidebar-mobile-link-border-color);
           padding: 3px 10px;
           text-align: center;
           margin: 1px
@@ -913,6 +916,18 @@
         }
         #sidebar #logo img {
           width: 2.5rem
+        }
+
+        header {
+          overflow: auto
+        }
+
+        header h1 {
+          margin: .75em 0 !important;
+        }
+
+        #page-metadata {
+          margin: 0 0 2rem 0 !important;
         }
       }
 
@@ -1437,7 +1452,7 @@
        {% if site.show_downloads %}
        <div id="sidebar-links">
           <a class="site" href="{{site.url}}/about">About</a>
-          <a class="rss" href="/feed.xml" target="_blank">rss feed</a>
+          <a class="rss" href="/feed.xml" target="_blank">RSS Feed</a>
           <!-- <a class="links" href="{{site.url}}/books">Books</a> -->
        </div>
        {% endif %}

@@ -952,6 +952,9 @@
         #sidebar a.patreon {
           border-top: 1px dotted #aaa
         }
+        #sidebar a.rss {
+          text-transform: lowercase;
+        }
         #sidebar a.new {
           box-shadow: 0 1.125em 0 0 #fff inset
         }
@@ -988,7 +991,7 @@
           margin: 0 0 .5em 0
         }
         #sidebar a {
-          border: 1px dotted #000;
+          border: 1px dotted var(--GW-sidebar-mobile-link-border-color);
           padding: 3px 10px;
           text-align: center;
           margin: 1px
@@ -1549,7 +1552,7 @@
        {% if site.show_downloads %}
        <div id="sidebar-links">
           <a class="site" href="{{site.url}}/about">About</a>
-          <a class="rss" href="/feed.xml" target="_blank">rss feed</a>
+          <a class="rss" href="/feed.xml" target="_blank">RSS Feed</a>
        </div>
        {% endif %}
       </div>
