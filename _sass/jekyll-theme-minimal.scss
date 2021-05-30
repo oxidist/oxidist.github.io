@@ -785,7 +785,7 @@ a.footnote {
 
 .footnotes blockquote + p a.reversefootnote,
 .footnotes pre + p a.reversefootnote,
-.footnotes code + p a.reversefootnote {
+.footnotes .highlighter-rouge + p a.reversefootnote {
     position: absolute;
     right: 0.5em;
     top: unset;
@@ -793,13 +793,30 @@ a.footnote {
     background-color: var(--GW-footnote-backlink-after-bordered-block-background-color);
 }
 
+.footnotes figure + p a.reversefootnote {
+    position: absolute;
+    right: 2.7em;
+    top: unset;
+    bottom: -0.7em;
+    background-color: var(--GW-footnote-backlink-after-bordered-block-background-color);
+}
+
+.sidenote figure + p a.reversefootnote {
+    right: 0.5em;
+    bottom: 1em;
+}
+
 // To get the return to footnote link stuck into the blockquote edges properly
 
-.sidenote blockquote + p a.reversefootnote,
-.sidenote pre + p a.reversefootnote,
-.sidenote code + p a.reversefootnote {
+.sidenote blockquote + p a.reversefootnote {
     bottom: 1.3em;
 }
+
+// code blocks in sidenotes, see above
+.sidenote .highlighter-rouge + p a.reversefootnote {
+    bottom: 0.3em;
+}
+
 /*=--------------------------=*/
 /*= Floating footnote popups =*/
 /*=--------------------------=*/
@@ -1228,4 +1245,133 @@ footer {
 
 .sidenote .footnote-self-link {
     display: none;
+}
+
+/***********/
+/* FIGURES */
+/***********/
+
+figure {
+    margin: 2em auto 1.75em auto;
+    max-width: calc(100% - 5em);
+}
+@media only screen and (max-width: 649px) {
+    figure {
+        max-width: calc(100% - 2em);
+    }
+}
+figure + figure {
+    margin-top: 2.75em;
+}
+@media only screen and (max-width: 649px) {
+    figure + figure {
+        margin-top: 2em;
+    }
+}
+
+figure {
+    display: block;
+    margin: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+figure img {
+  //background-color: var(--GW-body-background-color);
+}
+
+figure img,
+figure video,
+figure audio {
+    outline: 1px solid var(--GW-figure-outline-color);
+}
+/* WARNING: work around Chrome layout bug */
+figure audio {
+    display: block;
+    margin: 0 auto;
+}
+
+/*  Figure captions.
+    */
+figcaption {
+    font-size: 0.9375em;
+    font-weight: bold;
+    line-height: 1.50;
+    margin: auto;
+    padding: 0.25em 0.5em calc(0.25em + 1px) 0.5em;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+figcaption strong {
+	font-weight: inherit;
+	font-variant-caps: small-caps;
+}
+@media only screen and (max-width: 649px) {
+    figcaption {
+        font-size: 0.875em;
+    }
+}
+
+.caption-wrapper {
+    display: block;
+    outline: 1px solid var(--GW-figure-caption-outline-color);
+    margin: 1px auto 0 auto;
+    width: 100%;
+}
+video + .caption-wrapper {
+    margin-top: 2px;
+}
+
+/*  Prevent lower border from being cut off.
+    */
+.columns li figure {
+    padding-bottom: 1px;
+}
+
+/* enable the various `![caption](/images/foo.jpg){.full-width}` uses; analogous to full-width tables */
+figure.full-width {
+    position: relative;
+    max-width: unset;
+}
+
+/* Floating figures. (Mostly for amusing asides/memes.) */
+@media only screen and (min-width: 650px) {
+    figure.float-right {
+        float: right;
+        max-width: calc(50% - 1.5em);
+        margin: 0 0 1em 1.5em;
+    }
+    figure.float-left {
+        float: left;
+        max-width: calc(50% - 1.5em);
+        margin: 0 1.5em 1em 0;
+    }
+    p ~ figure.float-right,
+    p ~ figure.float-left {
+        margin-top: 0.5em;
+    }
+}
+
+/* try to get edge-to-edge images on mobile to maximize horizontal space usage */
+@media only screen and (max-width: 649px) {
+    #markdownBody figure {
+        max-width: unset;
+    }
+}
+
+/*  Figures in sidenotes should take up the full width of the sidenote.
+    */
+.sidenote figure {
+    margin: 1.5em auto;
+    max-width: calc(100% - 2px);
+}
+
+/*  Image alt-text.
+    */
+img::before {
+    display: block;
+    font-family: var(--GW-sans-serif-font-stack);
+    padding: 0.5em 0.75em;
+    background-color: var(--GW-body-background-color);
+    text-align: left;
 }
