@@ -1,8 +1,8 @@
 :root {
     /*  General.
         */
-    --GW-body-background-color: #000;
-    --GW-body-text-color: #fff;
+    --GW-body-background-color: #333;
+    --GW-body-text-color: #fafafa;
     --GW-body-link-color: #e5e5e5;
     --GW-body-link-hover-color: #999;
 
