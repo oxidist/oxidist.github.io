@@ -33,7 +33,7 @@ Fiction selects only the structurally relevant players. You begin with the lacke
 
 # False solidity
 
-But there’s a deeper metaphysical question. What if our need for stories is a refusal to face the void directly? In Buddhist terms, *śūnyatā* is not nihilism but the absence of inherent structure. The world is not unstructured, but its structure is conditional, dependent, relational. So too with institutions, laws, crimes, and the stories we try to build out of them.
+But there’s a deeper metaphysical question. What if our need for stories is a refusal to face the void directly? In Buddhist terms, [*sunyata*](https://en.wikipedia.org/wiki/%C5%9A%C5%ABnyat%C4%81) is not nihilism but the absence of inherent structure. The world is not unstructured, but its structure is conditional, dependent, relational. So too with institutions, laws, crimes, and the stories we try to build out of them.
 
 Deleuze, in *The Logic of Sense*, suggests that narratives don’t explain events—they *are* events. To create a narrative is not to interpret reality, but to generate a surface across which sense can glide. The difference is that fiction gives you a smooth surface; real life offers you a mess of broken planes, half-connected strata, recursive structures with no master signifier. The only way to “read” it is to be the author yourself.
 
