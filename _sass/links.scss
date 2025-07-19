@@ -1,5 +1,4 @@
-/
-=-----------------------------------------=*/
+/*=-----------------------------------------=*/
 /*= Icons for certain link types: by target =*/
 /*=-----------------------------------------=*/
 
@@ -94,8 +93,8 @@
     content: "OB"; }
 
 /* LW logo is just a colored 'LW', so no point in converting */
-#markdownBody a[href*="lesswrong.com"]::after {
-     content: "LW"; }
+/*#markdownBody a[href*="lesswrong.com"]::after {*/
+     /*content: "LW"; }*/
 
 /* PB logo is confusing. A purple question mark...? */
 #markdownBody a[href*="predictionbook.com"]::after {
