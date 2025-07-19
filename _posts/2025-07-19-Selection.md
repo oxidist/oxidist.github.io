@@ -8,7 +8,7 @@ tags: culture
 I just finished watching Ghost in the Shell: Stand Alone Complex, which revolves around fraudulent corporate–government collusion. What struck me wasn’t the plot itself but how *compelling* it was. Fictional crimes like this often provoke more intrigue than real ones of similar scale. Not  for society at large (which responds more like a passive audience to live players[^1]), but for the individual spectator. Especially when the consequences aren’t apocalyptic, *nothing ever happens.*
 
 <figure markdown="1">
-![](images.jpeg){:.invertible}
+![](https://i.ibb.co/qMxZhj1y/yv7ekm250zuc1.jpg){:.invertible}
 <div class="caption-wrapper">
 <figcaption>just another day</figcaption>
 </div>
@@ -25,12 +25,11 @@ A particular pet theory of mine, or rather a hammer that has deformed the world 
 
 [^3]: As Yudkowsky writes in [Evaporative Cooling of Group Beliefs](https://www.lesswrong.com/posts/ZQG9cwKbct2LtmL3p/evaporative-cooling-of-group-beliefs): 
     > In Festinger, Riecken, and Schachter’s classic When Prophecy Fails, one of the cult members walked out the door immediately after the flying saucer failed to land. Who gets fed up and leaves first? An average cult member? Or a relatively skeptical member, who previously might have been acting as a voice of moderation, a brake on the more fanatic members?
-
     > After the members with the highest kinetic energy escape, the remaining discussions will be between the extreme fanatics on one end and the slightly less extreme fanatics on the other end, with the group consensus somewhere in the “middle.”
 
 [Patrick McKenzie](https://x.com/patio11) writes well about this in the context of bureaucratic institutions. He’s particularly good at dissolving the illusion of solidity around things like banks, government rules, or compliance structures. These systems look monolithic, but they’re just humans in coordination—scripts written by committees and executed imperfectly.[^2]
 
-Fiction selects only the structurally relevant players. You begin with the lackeys to set the mood, but by the midpoint you’re in quiet boardrooms overlooking the city. The Clueless middle managers that enact or hide the crimes are erased. In contrast, reality is all middle. There is no final act, no violin crescendo building to a plot climax, and no cut to black.
+Fiction selects only the structurally relevant players. You begin with the lackeys to set the mood, but by the midpoint you’re in quiet boardrooms overlooking the city. The [Clueless](https://www.ribbonfarm.com/2009/10/07/the-gervais-principle-or-the-office-according-to-the-office/) middle managers that enact or hide the crimes are erased. In contrast, reality is all middle. There is no final act, no violin crescendo building to a plot climax, and no cut to black.
 
 # False solidity
 
