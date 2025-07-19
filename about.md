@@ -14,3 +14,5 @@ date: 2020-06-28
 I snatch at images in mathematics, linguistics, philosophy, psychology, and computer science. 
 
 In the spirit of [Long Content](https://www.gwern.net/About#long-content), I intend to write evolving drafts on the topics mentioned above.
+
+I can be contacted at @[oxidist](https://twitter.com/oxidist) on Twitter.
