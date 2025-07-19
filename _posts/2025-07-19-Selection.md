@@ -8,7 +8,7 @@ tags: culture
 I just finished watching Ghost in the Shell: Stand Alone Complex, which revolves around fraudulent corporate–government collusion. What struck me wasn’t the plot itself but how *compelling* it was. Fictional crimes like this often provoke more intrigue than real ones of similar scale. Not  for society at large (which responds more like a passive audience to live players[^1]), but for the individual spectator. Especially when the consequences aren’t apocalyptic, *nothing ever happens.*
 
 <figure markdown="1">
-![](https://i.ibb.co/Z67WNpnM/nothing-ever-happens-2136-edition-v0-yv7ekm250zuc1.webp){}
+![](https://i.ibb.co/Z67WNpnM/nothing-ever-happens-2136-edition-v0-yv7ekm250zuc1.webp)
 <div class="caption-wrapper">
 <figcaption>back to poasting</figcaption>
 </div>
