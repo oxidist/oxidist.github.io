@@ -1,8 +1,8 @@
 ---
 layout: post
+comments: true
 title: "God, the Lapidarist"
 tags: fiction
-comments: true
 ---
 If there is an afterlife, I wish for it to be a curation of noumena. 
 
