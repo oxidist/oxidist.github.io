@@ -5,16 +5,17 @@ title: "lightsnake"
 tags: poetry
 ---
 <div style="p + p {text-indent: 0em;}">
-Defocusing my eyes, light refracting through tears, 
+<p>Defocusing my eyes, light refracting through tears,</p> 
 
-the vertical lines of the keyboard backlight become snake scales.
+<p>the vertical lines of the keyboard backlight become snake scales.</p>
 
-The staggered rows—sinuous-snake—
+<p>The staggered rows—sinuous-snake—</p>
 
-sidewind across my attention’s limbus.
+<p>sidewind across my attention’s limbus.</p>
 
-Looking through the window, not at it,
+<p>Looking through the window, not at it,</p>
 
-light through salty water trickles down to lips that taste the lightsnake.
+<p>light through salty water trickles down to lips that taste the lightsnake.</p>
 </div>
+
 ---
