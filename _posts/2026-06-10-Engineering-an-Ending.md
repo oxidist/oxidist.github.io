@@ -82,7 +82,7 @@ Malcolm McLean's containerisation did not persuade ports and shipping lines to i
 
 Two features of the case are usually omitted and should not be. Vietnam-era military logistics contracts subsidised containerisation's demonstration phase before commercial economics were proven, and the transition required negotiated — and bitterly contested — mechanisation agreements with longshore unions. Absorption of coordination costs was necessary but not sufficient; it was financed and politically protected through its vulnerable interval. This is Schelling's commitment logic returning in empirical form: the capacity to survive the loss-making interval is itself what makes the commitment credible. The political losers (longshore labour) had to be compensated, not simply outcompeted.
 
-<figure markdown="1" class="zoom-figure"><p>
+<figure markdown="1" class="zoom-figure">
 <svg viewBox="0 0 640 175" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;display:block;">
   <text x="320" y="20" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#1a1a1a">Containerisation: cost and throughput, break-bulk vs. container (c. 1956–1964)</text>
   <!-- Left panel label -->
@@ -112,7 +112,6 @@ Two features of the case are usually omitted and should not be. Vietnam-era mili
   <!-- Source -->
   <text x="320" y="152" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#aaa" font-style="italic">Source: Levinson, The Box (2006), pp. 187, 230. NYC docks; wages held constant for cost comparison.</text>
 </svg>
-</p>
 <div class="caption-wrapper">
 <figcaption>The cost advantage made the old equilibrium non-viable at any scale, not merely competitively inferior. At \$0.16 versus \$5.83 per ton, break-bulk ports could not adjust on price; the mode of handling had to be abandoned entirely.</figcaption>
 </div>
@@ -160,7 +159,7 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
 
 **Figure 2 — Case Map: Absorption Completeness vs. Bottleneck Control**
 
-<figure markdown="1" class="zoom-figure"><p>
+<figure markdown="1" class="zoom-figure">
 <div style="position:relative;">
 <svg id="casemap-svg" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
   <defs>
@@ -252,7 +251,6 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
   });
 })();
 </script>
-</p>
 <div class="caption-wrapper">
 <figcaption>Cases in the top-right quadrant achieve durable re-equilibration: costs are absorbed <em>and</em> the absorber holds residual control rights at a bottleneck (Teece, 1986; Grossman–Hart–Moore). Bottom-right cases absorbed real orphaned costs but held no bottleneck. Bottom-left cases (Rabbit, Humane) lacked both. <em>Hover each point for case details.</em></figcaption>
 </div>
@@ -260,7 +258,7 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
 
 **Figure 3 — The Re-Equilibration Cycle**
 
-<figure markdown="1" class="zoom-figure"><p>
+<figure markdown="1" class="zoom-figure">
 <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
   <defs>
     <marker id="cycarr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
@@ -289,8 +287,9 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
   <text x="95" y="158" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#8b3a2a">space created</text>
   <text x="340" y="298" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888" font-style="italic">e.g. App Store: distribution absorbed (stage 3) → 30% toll (stage 4) → antitrust / alternative stores (stage 5 → stage 1)</text>
 </svg>
-</p>
+<div class="caption-wrapper"
 <figcaption>Every successful absorption creates the conditions for the next one. The rent at stage 4 is the new orphaned cost at stage 1.</figcaption>
+</div>
 </figure>
 
 # Why Incumbents Don't Simply Copy

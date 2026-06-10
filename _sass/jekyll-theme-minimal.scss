@@ -1282,7 +1282,8 @@ figure img {
 
 figure img,
 figure video,
-figure audio {
+figure audio,
+figure svg {
     outline: 1px solid var(--GW-figure-outline-color);
 }
 /* WARNING: work around Chrome layout bug */
