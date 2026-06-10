@@ -162,9 +162,8 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
 
 **Figure 2 — Case Map: Absorption Completeness vs. Bottleneck Control**
 
-<figure markdown="1" class="zoom-figure">
-<div style="position:relative;">
-<svg id="casemap-svg" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
+<figure markdown="1">
+<svg id="casemap-svg" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <marker id="ax" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
       <polygon points="0 0, 8 3, 0 6" fill="#888"/>
@@ -225,7 +224,6 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
 <div id="cm-tooltip" style="display:none;position:absolute;background:#fff;border:1px solid #d4d0c8;border-radius:4px;padding:10px 14px;max-width:280px;font-family:Helvetica Neue,Arial,sans-serif;font-size:12px;line-height:1.5;color:#1a1a1a;box-shadow:0 2px 8px rgba(0,0,0,0.12);pointer-events:none;z-index:10;">
   <strong id="cm-tooltip-label"></strong>
   <p id="cm-tooltip-note" style="margin:4px 0 0;color:#4a4a4a;"></p>
-</div>
 </div>
 <script>
 (function(){
