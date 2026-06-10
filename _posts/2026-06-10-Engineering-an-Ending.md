@@ -82,7 +82,7 @@ Malcolm McLean's containerisation did not persuade ports and shipping lines to i
 
 Two features of the case are usually omitted and should not be. Vietnam-era military logistics contracts subsidised containerisation's demonstration phase before commercial economics were proven, and the transition required negotiated — and bitterly contested — mechanisation agreements with longshore unions. Absorption of coordination costs was necessary but not sufficient; it was financed and politically protected through its vulnerable interval. This is Schelling's commitment logic returning in empirical form: the capacity to survive the loss-making interval is itself what makes the commitment credible. The political losers (longshore labour) had to be compensated, not simply outcompeted.
 
-<figure markdown="1" class="zoom-figure">
+<figure markdown="1">
 <svg viewBox="0 0 390 252" xmlns="http://www.w3.org/2000/svg">
   <!-- Title -->
   <text x="195" y="16" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#1a1a1a">Containerisation: cost and throughput</text>
