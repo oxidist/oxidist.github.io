@@ -4,6 +4,44 @@ comments: true
 title: "Engineering an Ending"
 tags: economics
 ---
+
+<style>
+.zoom-figure { cursor: zoom-in; }
+#fig-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+#fig-overlay.open { display: flex; }
+#fig-overlay svg {
+  max-width: min(95vw, 900px);
+  max-height: 90vh;
+  width: 100%;
+  height: auto;
+  background: #fafafa;
+  border-radius: 4px;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+#fig-overlay-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+</style>
+
 *On equilibrium replacement, orphaned costs, and structural change*
 
 Three strands of twentieth-century social science converge on a shared descriptive insight about how change actually occurs in complex systems, even though they are rarely read together.
@@ -44,7 +82,7 @@ Malcolm McLean's containerisation did not persuade ports and shipping lines to i
 
 Two features of the case are usually omitted and should not be. Vietnam-era military logistics contracts subsidised containerisation's demonstration phase before commercial economics were proven, and the transition required negotiated — and bitterly contested — mechanisation agreements with longshore unions. Absorption of coordination costs was necessary but not sufficient; it was financed and politically protected through its vulnerable interval. This is Schelling's commitment logic returning in empirical form: the capacity to survive the loss-making interval is itself what makes the commitment credible. The political losers (longshore labour) had to be compensated, not simply outcompeted.
 
-<figure markdown="1">
+<figure markdown="1" class="zoom-figure">
 <svg viewBox="0 0 640 175" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;display:block;">
   <text x="320" y="20" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#1a1a1a">Containerisation: cost and throughput, break-bulk vs. container (c. 1956–1964)</text>
   <!-- Left panel label -->
@@ -121,7 +159,7 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
 
 **Figure 2 — Case Map: Absorption Completeness vs. Bottleneck Control**
 
-<figure markdown="1">
+<figure markdown="1" class="zoom-figure">
 <div style="position:relative;">
 <svg id="casemap-svg" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
   <defs>
@@ -220,7 +258,7 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
 
 **Figure 3 — The Re-Equilibration Cycle**
 
-<figure markdown="1">
+<figure markdown="1" class="zoom-figure">
 <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
   <defs>
     <marker id="cycarr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
@@ -317,5 +355,42 @@ Two scope conditions bound the claim. First, this is a theory of engineered tran
 [^17]: A small entrant can profitably deter an incumbent's price response by *credibly committing to stay small*. If the entrant caps its capacity at $$k$$ units, then the incumbent's profit from matching the entrant's low price across its entire customer base is $$\pi(\text{match}) = (p_e - c) \cdot (D(p_e) - k)$$, while ignoring the entrant yields $$\pi(\text{ignore}) = (p_I - c) \cdot (D(p_I) - k)$$. For small enough $$k$$, the incumbent prefers to cede the $$k$$ customers rather than cut price for everyone. Stripe's early strategy was precisely judo: by targeting developers and startups that the incumbent acquirers (Chase, Citibank) had no interest in serving, Stripe grew into the market without triggering a price war it could not survive. See Gelman, J. R., & Salop, S. C. (1983). [Judo economics: Capacity limitation and coupon competition.](https://doi.org/10.2307/3003535) *Bell Journal of Economics*, 14(2), 315–325.
 
 [^18]: Sutton, J. (1991). *Sunk Costs and Market Structure*. MIT Press.
+
+<div id="fig-overlay" role="dialog" aria-modal="true">
+  <button id="fig-overlay-close" aria-label="Close">&times;</button>
+</div>
+
+<script>
+(function(){
+  var overlay = document.getElementById('fig-overlay');
+  var closeBtn = document.getElementById('fig-overlay-close');
+  var cloned = null;
+
+  document.querySelectorAll('.zoom-figure').forEach(function(fig){
+    fig.addEventListener('click', function(e){
+      if (e.target.closest('.cm-dot')) return;
+      var svg = fig.querySelector('svg');
+      if (!svg) return;
+      if (cloned) cloned.remove();
+      cloned = svg.cloneNode(true);
+      cloned.removeAttribute('id');
+      cloned.style.cssText = '';
+      overlay.appendChild(cloned);
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function close(){
+    overlay.classList.remove('open');
+    if (cloned) { cloned.remove(); cloned = null; }
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', function(e){ if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+})();
+</script>
 
 [^19]: Segal's contracting-with-externalities result explains why the coalition defending an old equilibrium often fails to form even when it is collectively rational to do so. When a principal offers contracts to multiple agents and those contracts impose externalities on non-signatories, the agents face a prisoners' dilemma: each agent prefers to sign if others defect (since holding out alone leaves them worse off), so sequential individual rationality unravels collective resistance. The principal can exploit this by offering contracts one at a time. Segal and Whinston's naked exclusion paper extends the logic to exclusionary dealing: an incumbent can sign up buyers to exclusive deals at terms that are individually attractive but collectively disadvantage a more efficient entrant. In the absorber context, this is the mechanism behind sequential coalition-flipping — McLean offering ports preferential rates, Apple giving early developers 70% before the store had scale. Each early adoption raises the cost of staying with the old equilibrium for the next party in line, making defection from the old equilibrium sequentially dominant even if collective resistance would have been viable. See Segal, I. (1999). [Contracting with externalities.](https://doi.org/10.1162/003355399556016) *Quarterly Journal of Economics*, 114(2), 337–388.  See also Segal, I., & Whinston, M. D. (2000). [Naked exclusion.](https://doi.org/10.1257/aer.90.1.296) *American Economic Review*, 90(1), 296–309.
