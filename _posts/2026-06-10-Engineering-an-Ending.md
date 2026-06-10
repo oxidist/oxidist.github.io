@@ -83,34 +83,37 @@ Malcolm McLean's containerisation did not persuade ports and shipping lines to i
 Two features of the case are usually omitted and should not be. Vietnam-era military logistics contracts subsidised containerisation's demonstration phase before commercial economics were proven, and the transition required negotiated — and bitterly contested — mechanisation agreements with longshore unions. Absorption of coordination costs was necessary but not sufficient; it was financed and politically protected through its vulnerable interval. This is Schelling's commitment logic returning in empirical form: the capacity to survive the loss-making interval is itself what makes the commitment credible. The political losers (longshore labour) had to be compensated, not simply outcompeted.
 
 <figure markdown="1" class="zoom-figure">
-<svg viewBox="0 0 640 175" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;display:block;">
-  <text x="320" y="20" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#1a1a1a">Containerisation: cost and throughput, break-bulk vs. container (c. 1956–1964)</text>
-  <!-- Left panel label -->
-  <text x="155" y="42" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#666">Loading cost ($/ton)</text>
-  <!-- Break-bulk bar: $5.83, bar width proportional; max=6, panel width=240, so 5.83/6*220=213px -->
-  <rect x="30" y="52" width="213" height="22" rx="2" fill="#8b3a2a" opacity="0.78"/>
-  <text x="249" y="67" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">$5.83</text>
-  <text x="25" y="67" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Break-bulk</text>
-  <!-- Container bar: $0.16/6*220=5.9px, show at min 6px -->
-  <rect x="30" y="84" width="6" height="22" rx="2" fill="#2a4a6b" opacity="0.85"/>
-  <text x="42" y="99" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">$0.16</text>
-  <text x="25" y="99" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Container</text>
-  <text x="155" y="122" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">97% reduction</text>
+<svg viewBox="0 0 390 252" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;">
+  <!-- Title -->
+  <text x="195" y="16" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#1a1a1a">Containerisation: cost and throughput</text>
+  <text x="195" y="29" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#555">break-bulk vs. container (c. 1956–1964)</text>
+  <!-- Panel 1: Loading cost -->
+  <text x="195" y="46" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#666">Loading cost ($/ton)</text>
+  <!-- Break-bulk: $5.83 → 270px (full bar width) -->
+  <text x="74" y="66" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Break-bulk</text>
+  <rect x="80" y="53" width="270" height="20" rx="2" fill="#8b3a2a" opacity="0.78"/>
+  <text x="354" y="66" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">$5.83</text>
+  <!-- Container: $0.16 → 270*0.16/5.83 ≈ 8px (minimum visible) -->
+  <text x="74" y="94" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Container</text>
+  <rect x="80" y="81" width="8" height="20" rx="2" fill="#2a4a6b" opacity="0.85"/>
+  <text x="93" y="94" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">$0.16</text>
+  <text x="195" y="113" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#888">97% reduction</text>
   <!-- Divider -->
-  <line x1="310" y1="35" x2="310" y2="135" stroke="#d4d0c8" stroke-width="1"/>
-  <!-- Right panel label -->
-  <text x="475" y="42" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#666">Throughput (tons/gang-hour)</text>
-  <!-- Break-bulk: 1.7; max=30, panel width 220px; 1.7/30*220=12.5px -->
-  <rect x="330" y="52" width="13" height="22" rx="2" fill="#8b3a2a" opacity="0.78"/>
-  <text x="349" y="67" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">1.7</text>
-  <text x="325" y="67" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Break-bulk</text>
-  <!-- Container: 30/30*220=220px -->
-  <rect x="330" y="84" width="220" height="22" rx="2" fill="#2a4a6b" opacity="0.85"/>
-  <text x="556" y="99" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">30+</text>
-  <text x="325" y="99" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Container</text>
-  <text x="475" y="122" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">&gt;17× gain</text>
+  <line x1="15" y1="123" x2="375" y2="123" stroke="#d4d0c8" stroke-width="1"/>
+  <!-- Panel 2: Throughput -->
+  <text x="195" y="139" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#666">Throughput (tons/gang-hour)</text>
+  <!-- Break-bulk: 1.7 → 270*1.7/30 ≈ 15px -->
+  <text x="74" y="159" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Break-bulk</text>
+  <rect x="80" y="146" width="15" height="20" rx="2" fill="#8b3a2a" opacity="0.78"/>
+  <text x="100" y="159" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">1.7</text>
+  <!-- Container: 30+ → 270px (full bar width) -->
+  <text x="74" y="187" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Container</text>
+  <rect x="80" y="174" width="270" height="20" rx="2" fill="#2a4a6b" opacity="0.85"/>
+  <text x="354" y="187" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">30+</text>
+  <text x="195" y="206" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#888">&gt;17× gain</text>
   <!-- Source -->
-  <text x="320" y="152" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#aaa" font-style="italic">Source: Levinson, The Box (2006), pp. 187, 230. NYC docks; wages held constant for cost comparison.</text>
+  <text x="195" y="226" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="7.5" fill="#aaa" font-style="italic">Source: Levinson, The Box (2006), pp. 187, 230.</text>
+  <text x="195" y="238" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="7.5" fill="#aaa" font-style="italic">NYC docks; wages held constant for cost comparison.</text>
 </svg>
 <div class="caption-wrapper">
 <figcaption>The cost advantage made the old equilibrium non-viable at any scale, not merely competitively inferior. At \$0.16 versus \$5.83 per ton, break-bulk ports could not adjust on price; the mode of handling had to be abandoned entirely.</figcaption>
