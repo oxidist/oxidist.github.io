@@ -8,7 +8,7 @@ tags: economics
 
 Three strands of twentieth-century social science converge on a shared descriptive insight about how change actually occurs in complex systems, even though they are rarely read together.
 
-# I. Theoretical Foundations
+# Theoretical Foundations
 
 ### 1. Game Theory
 
@@ -36,7 +36,7 @@ Acemoglu and Robinson's political losers hypothesis identifies a further veto: i
 
 ---
 
-# II. Historical Examples
+# Historical Examples
 
 ### Containerisation
 
@@ -75,7 +75,7 @@ Two features of the case are usually omitted and should not be. Vietnam-era mili
   <text x="320" y="152" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#aaa" font-style="italic">Source: Levinson, The Box (2006), pp. 187, 230. NYC docks; wages held constant for cost comparison.</text>
 </svg>
 <div class="caption-wrapper">
-<figcaption>The cost advantage made the old equilibrium non-viable at any scale, not merely competitively inferior. At $0.16 versus $5.83 per ton, break-bulk ports could not adjust on price; the mode of handling had to be abandoned entirely.</figcaption>
+<figcaption>The cost advantage made the old equilibrium non-viable at any scale, not merely competitively inferior. At \$0.16 versus \$5.83 per ton, break-bulk ports could not adjust on price; the mode of handling had to be abandoned entirely.</figcaption>
 </div>
 </figure>
 
@@ -249,12 +249,10 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
   <text x="95" y="158" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#8b3a2a">space created</text>
   <text x="340" y="298" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888" font-style="italic">e.g. App Store: distribution absorbed (stage 3) → 30% toll (stage 4) → antitrust / alternative stores (stage 5 → stage 1)</text>
 </svg>
-<div class="caption-wrapper">
-<figcaption>The cycle is driven by the Williamson–Klein–Crawford–Alchian mechanism: once counterparties make relationship-specific investments in the new configuration (iOS development skill, Stripe integrations), the absorber's ex ante competitive position becomes an ex post bilateral monopoly. The rent at stage 4 is the new orphaned cost at stage 1.</figcaption>
-</div>
+<figcaption>Every successful absorption creates the conditions for the next one. The rent at stage 4 is the new orphaned cost at stage 1.</figcaption>
 </figure>
 
-# III. Why Incumbents Don't Simply Copy
+# Why Incumbents Don't Simply Copy
 
 The pattern as stated leaves a gap: if absorbing orphaned costs is so advantageous, incumbents should absorb them first, or imitate quickly. Adidas did eventually outsource manufacturing; the question is why the window stayed open long enough for Nike to matter. Three asymmetries do the work.
 
@@ -264,13 +262,13 @@ Gelman and Salop's judo economics adds a fourth asymmetry: an entrant's credible
 
 The strategy is therefore not merely absorbing the right cost, but absorbing it where these asymmetries protect the interval during which the old equilibrium's non-viability becomes apparent to all participants.
 
-# IV. The Operational Mechanism: Segal's Divide-and-Conquer
+# The Operational Mechanism: Segal's Divide-and-Conquer
 
 The framework's cases share an operational pattern that Segal's contracting-with-externalities analysis formalises.[^19] An absorber facing many parties whose payoffs depend on each other's participation can profitably tip a system from one equilibrium to another by exploiting the externalities among them — including via sequenced, discriminatory offers that make each party's acceptance individually rational even when collective resistance would succeed.
 
 This explains why early participants in new platforms typically receive subsidised terms: McLean gave ports preferential rates; Apple gave early iOS developers the full 70% revenue split before the store had scale; Stripe gave startups free integration support. Each defection from the old equilibrium raises the cost of staying, making the next defection easier to secure. The coalition that "should" defend the old equilibrium fails to form because sequential individual rationality undermines collective action. This is the operational layer between diagnostic precision and re-equilibration: it is how the absorber flips the system rather than simply waiting for it to tip.
 
-# V. Conclusion
+# Conclusion
 
 Across these cases, the same pattern recurs. Stable situations persist because coordination costs, decision authority, or risk are diffused such that no actor is compelled to resolve underlying inefficiencies. Structural change arises when an actor stands in the negative space where these costs are orphaned and configures themselves to absorb those specific costs in a way that makes continuation of the prior equilibrium non-viable. The prior arrangement ceases to reproduce itself.
 
@@ -288,9 +286,9 @@ Two scope conditions bound the claim. First, this is a theory of engineered tran
 
 [^2]: Schelling, T. C. (1960). *The Strategy of Conflict*. Harvard University Press.
 
-[^3]: Myerson, R. B., & Satterthwaite, M. A. (1983). Efficient mechanisms for bilateral trading. *Journal of Economic Theory*, 29(2), 265–281. [DOI](https://doi.org/10.1016/0022-0531(83)90048-0)
+[^3]: Myerson, R. B., & Satterthwaite, M. A. (1983). Efficient mechanisms for bilateral trading. *Journal of Economic Theory*, 29(2), 265–281. [DOI](https://doi.org/10.1016/0022-0531(83)90048-0) — The theorem proves that if a buyer's value $$v_b$$ and a seller's cost $$c_s$$ are private information drawn from overlapping distributions, there is no mechanism that is simultaneously (i) incentive-compatible, (ii) individually rational, and (iii) budget-balanced, that guarantees trade whenever $$v_b > c_s$$. Even when a deal is mutually beneficial, bilateral bargaining under private information will sometimes fail to produce it — not because the parties are irrational or negotiating badly, but as a mathematical impossibility. The implication for this essay: orphaned coordination costs are not market failures waiting for a better contract. They are structurally unresolvable through bilateral bargaining alone. An absorber who internalises the residual entirely substitutes ownership for a bargaining problem that has no bargaining solution.
 
-[^4]: Lipsey, R. G., & Lancaster, K. (1956). The general theory of second best. *Review of Economic Studies*, 24(1), 11–32. [DOI](https://doi.org/10.2307/2296233)
+[^4]: Lipsey, R. G., & Lancaster, K. (1956). The general theory of second best. *Review of Economic Studies*, 24(1), 11–32. [DOI](https://doi.org/10.2307/2296233) — In a system with $$n$$ first-best Pareto conditions, if one condition is violated and cannot be restored, the constrained optimum generally requires violating some of the remaining $$n-1$$ conditions too. Partial reform — removing distortion $$A$$ while distortion $$B$$ persists — is not guaranteed to improve welfare and may reduce it. The direction of the welfare change depends on the specific second-order cross-effects, which are not in general knowable in advance. This is the formal basis for the anti-incrementalism argument in the text: it is not merely that piecemeal reform is slow, but that its direction is unreliable. Only removing the binding constraint changes the problem itself.
 
 [^5]: Coase, R. H. (1937). The nature of the firm. *Economica*, 4(16), 386–405. [DOI](https://doi.org/10.1111/j.1468-0335.1937.tb00002.x)
 
@@ -298,9 +296,9 @@ Two scope conditions bound the claim. First, this is a theory of engineered tran
 
 [^7]: Grossman, S. J., & Hart, O. D. (1986). The costs and benefits of ownership: A theory of vertical and lateral integration. *Journal of Political Economy*, 94(4), 691–719. [DOI](https://doi.org/10.1086/261404)
 
-[^8]: Hart, O., & Moore, J. (1990). Property rights and the nature of the firm. *Journal of Political Economy*, 98(6), 1119–1158. [DOI](https://doi.org/10.1086/261729)
+[^8]: Hart, O., & Moore, J. (1990). Property rights and the nature of the firm. *Journal of Political Economy*, 98(6), 1119–1158. [DOI](https://doi.org/10.1086/261729) — The GHM framework (Grossman–Hart 1986, Hart–Moore 1990) starts from the observation that contracts are always incomplete: some contingencies cannot be specified, verified, or enforced. When a gap arises and the parties must renegotiate, whoever holds *residual control rights* — formal authority over decisions not covered by the contract — captures a disproportionate share of the surplus. This shapes investment incentives ex ante: a party who anticipates being held up in renegotiation underinvests in relationship-specific assets. Ownership matters because it is the institutional form for holding residual control. Applied here: "configuring to absorb costs" is acquiring residual control over the assets where unabsorbed costs live. An absorber who holds only contractual rights (Rabbit's API access) is exposed to hold-up by whoever holds the actual residual control (the AI model providers). The GHM result makes the distinction between Apple's integration and Rabbit's integration structurally precise, not merely descriptive.
 
-[^9]: Holmström, B. (1982). Moral hazard in teams. *Bell Journal of Economics*, 13(2), 324–340. [DOI](https://doi.org/10.2307/3003320)
+[^9]: Holmström, B. (1982). Moral hazard in teams. *Bell Journal of Economics*, 13(2), 324–340. [DOI](https://doi.org/10.2307/3003320) — In team production, suppose $$n$$ agents each choose effort $$e_i$$, joint output is $$q(e_1, \ldots, e_n)$$, and each agent must receive at least their outside option. If incentive schemes must be budget-balanced — the sum of payments equals output — then no scheme achieves first-best effort from every agent simultaneously. The intuition: each agent free-rides, since their marginal contribution is diluted across the team. Holmström's solution is a *budget-breaker*: a principal who stands outside the team, collects output, pays each agent a scheme contingent on total output, and absorbs the residual (positive or negative). With a budget-breaker present, first-best is achievable because the constraint $$\sum s_i(q) = q$$ is dropped — the principal can run a deficit or surplus. The absorber in this essay is precisely a budget-breaker: PayPal absorbs fraud losses that no budget-balanced merchant–buyer–network contract could allocate; the LBO sponsor absorbs agency costs that dispersed shareholders cannot coordinate to resolve. The absorber must take losses onto their own balance sheet — a clearing mechanism cannot do it.
 
 [^10]: Hirschman, A. O. (1970). *Exit, Voice, and Loyalty*. Harvard University Press.
 
@@ -312,12 +310,12 @@ Two scope conditions bound the claim. First, this is a theory of engineered tran
 
 [^14]: Kaplan, S. N., & Strömberg, P. (2009). Leveraged buyouts and private equity. *Journal of Economic Perspectives*, 23(1), 121–146. [DOI](https://doi.org/10.1257/jep.23.1.121) For the wealth-transfer critique, see Shleifer, A., & Summers, L. H. (1988). Breach of trust in hostile takeovers. In A. Auerbach (Ed.), *Corporate Takeovers: Causes and Consequences*. University of Chicago Press. [NBER](https://www.nber.org/papers/w2342)
 
-[^15]: Teece, D. J. (1986). Profiting from technological innovation. *Research Policy*, 15(6), 285–305. [DOI](https://doi.org/10.1016/0048-7333(86)90027-2)
+[^15]: Teece, D. J. (1986). Profiting from technological innovation. *Research Policy*, 15(6), 285–305. [DOI](https://doi.org/10.1016/0048-7333(86)90027-2) — Teece's observation is that the returns from innovation often do not accrue to the innovator, but to whoever controls the *complementary assets* required to commercialise it: manufacturing, distribution, after-sales service, regulatory relationships. If those assets are tightly held and not easily replicated, their owners can hold up the innovator at the commercialisation stage and capture most of the surplus. The innovator wins only when the complementary assets are either generic (freely available) or owned by the innovator themselves. Applied here: an absorber who clears an orphaned cost but does not control the bottleneck complementary assets (the layer through which the new configuration must pass) will find that the rents from their absorption are captured by whoever does control that layer. Rabbit absorbed AI interaction complexity but did not own the model layer or the device layer — the complementary assets were held by others, and on hostile terms.
 
 [^16]: Arrow, K. J. (1962). Economic welfare and the allocation of resources for invention. In R. Nelson (Ed.), *The Rate and Direction of Inventive Activity*. Princeton University Press. [NBER](https://www.nber.org/chapters/c2144)
 
-[^17]: Gelman, J. R., & Salop, S. C. (1983). Judo economics: Capacity limitation and coupon competition. *Bell Journal of Economics*, 14(2), 315–325. [DOI](https://doi.org/10.2307/3003535)
+[^17]: Gelman, J. R., & Salop, S. C. (1983). Judo economics: Capacity limitation and coupon competition. *Bell Journal of Economics*, 14(2), 315–325. [DOI](https://doi.org/10.2307/3003535) — The paper shows that a small entrant can profitably deter an incumbent's price response by *credibly committing to stay small*. If the entrant caps its capacity at $$k$$ units, then the incumbent's profit from matching the entrant's low price across its entire customer base is $$\pi(\text{match}) = (p_e - c) \cdot (D(p_e) - k)$$, while ignoring the entrant yields $$\pi(\text{ignore}) = (p_I - c) \cdot (D(p_I) - k)$$. For small enough $$k$$, the incumbent prefers to cede the $$k$$ customers rather than cut price for everyone. The entrant uses the incumbent's own market power as a shield — the bigger and more profitable the incumbent, the more it costs them to respond. Stripe's early strategy was precisely judo: by targeting developers and startups that the incumbent acquirers (Chase, Citibank) had no interest in serving, Stripe grew into the market without triggering a price war it could not survive.
 
 [^18]: Sutton, J. (1991). *Sunk Costs and Market Structure*. MIT Press.
 
-[^19]: Segal, I. (1999). Contracting with externalities. *Quarterly Journal of Economics*, 114(2), 337–388. [DOI](https://doi.org/10.1162/003355399556120) See also Segal, I., & Whinston, M. D. (2000). Naked exclusion. *American Economic Review*, 90(1), 296–309. [DOI](https://doi.org/10.1257/aer.90.1.296)
+[^19]: Segal, I. (1999). Contracting with externalities. *Quarterly Journal of Economics*, 114(2), 337–388. [DOI](https://doi.org/10.1162/003355399556120) See also Segal, I., & Whinston, M. D. (2000). Naked exclusion. *American Economic Review*, 90(1), 296–309. [DOI](https://doi.org/10.1257/aer.90.1.296) — Segal's contracting-with-externalities result explains why the coalition defending an old equilibrium often fails to form even when it is collectively rational to do so. When a principal offers contracts to multiple agents and those contracts impose externalities on non-signatories, the agents face a prisoners' dilemma: each agent prefers to sign if others defect (since holding out alone leaves them worse off), so sequential individual rationality unravels collective resistance. The principal can exploit this by offering contracts one at a time. Segal and Whinston's naked exclusion paper extends the logic to exclusionary dealing: an incumbent can sign up buyers to exclusive deals at terms that are individually attractive but collectively disadvantage a more efficient entrant. In the absorber context, this is the mechanism behind sequential coalition-flipping — McLean offering ports preferential rates, Apple giving early developers 70% before the store had scale. Each early adoption raises the cost of staying with the old equilibrium for the next party in line, making defection from the old equilibrium sequentially dominant even if collective resistance would have been viable.
