@@ -8,46 +8,6 @@ tags: economics
 
 Three strands of twentieth-century social science converge on a shared descriptive insight about how change actually occurs in complex systems, even though they are rarely read together.
 
-**Figure 1 — The Absorption Mechanism**
-
-<figure markdown="1">
-<svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;display:block;">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a4a6b"/>
-    </marker>
-    <marker id="arr-warn" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#8b3a2a"/>
-    </marker>
-  </defs>
-  <rect x="10" y="70" width="150" height="80" rx="4" fill="#f0ede6" stroke="#d4d0c8" stroke-width="1.5"/>
-  <text x="85" y="103" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#1a1a1a">Old Equilibrium</text>
-  <text x="85" y="120" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">Coordination costs</text>
-  <text x="85" y="134" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">diffused / orphaned</text>
-  <line x1="160" y1="110" x2="220" y2="110" stroke="#2a4a6b" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="190" y="104" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">Nash</text>
-  <text x="190" y="116" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">persistence</text>
-  <rect x="222" y="50" width="160" height="120" rx="4" fill="#e8eef4" stroke="#2a4a6b" stroke-width="2"/>
-  <text x="302" y="88" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#2a4a6b">Absorber</text>
-  <text x="302" y="106" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#2a4a6b">Internalises orphaned</text>
-  <text x="302" y="120" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#2a4a6b">costs onto own</text>
-  <text x="302" y="134" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#2a4a6b">balance sheet</text>
-  <text x="302" y="155" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-style="italic" fill="#888">(Holmström budget-breaker)</text>
-  <line x1="382" y1="110" x2="442" y2="110" stroke="#2a4a6b" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="412" y="104" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">old eq.</text>
-  <text x="412" y="116" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">non-viable</text>
-  <rect x="444" y="70" width="150" height="80" rx="4" fill="#f0ede6" stroke="#d4d0c8" stroke-width="1.5"/>
-  <text x="519" y="103" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#1a1a1a">New Equilibrium</text>
-  <text x="519" y="120" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">Costs absorbed;</text>
-  <text x="519" y="134" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">prior config. dominated</text>
-  <path d="M 594 150 Q 660 200 660 30 Q 660 10 302 10 Q 100 10 60 60" fill="none" stroke="#8b3a2a" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-warn)"/>
-  <text x="420" y="22" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#8b3a2a">absorption ossifies into rent → new orphaned cost</text>
-</svg>
-<div class="caption-wrapper">
-<figcaption>The absorber acts as Holmström's budget-breaker, standing outside the team and taking the residual loss. The dashed red arc shows the cyclical dynamic: successful absorption creates the negative space for the next round.</figcaption>
-</div>
-</figure>
-
 # I. Theoretical Foundations
 
 ### 1. Game Theory
@@ -76,61 +36,6 @@ Acemoglu and Robinson's political losers hypothesis identifies a further veto: i
 
 ---
 
-**Figure 2 — Case Map: Absorption Completeness vs. Bottleneck Control**
-
-<figure markdown="1">
-<svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
-  <defs>
-    <marker id="ax" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#888"/>
-    </marker>
-  </defs>
-  <line x1="80" y1="340" x2="640" y2="340" stroke="#888" stroke-width="1.5" marker-end="url(#ax)"/>
-  <line x1="80" y1="340" x2="80" y2="30" stroke="#888" stroke-width="1.5" marker-end="url(#ax)"/>
-  <text x="360" y="375" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#4a4a4a">Absorption completeness (cost actually internalised)</text>
-  <text x="22" y="190" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#4a4a4a" transform="rotate(-90,22,190)">Bottleneck control (residual rights held)</text>
-  <rect x="80" y="185" width="275" height="155" fill="#fdf3f1" opacity="0.7"/>
-  <rect x="355" y="185" width="285" height="155" fill="#f0ede6" opacity="0.5"/>
-  <rect x="80" y="30" width="275" height="155" fill="#f0ede6" opacity="0.5"/>
-  <rect x="355" y="30" width="285" height="155" fill="#eef4ec" opacity="0.7"/>
-  <text x="217" y="270" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8b3a2a" font-style="italic">Absorbs costs, loses rents</text>
-  <text x="497" y="270" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a" font-style="italic">Transition state</text>
-  <text x="217" y="112" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a" font-style="italic">Controls chokepoint,</text>
-  <text x="217" y="124" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a" font-style="italic">limited re-equilibration</text>
-  <text x="497" y="112" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#2a6b3a" font-style="italic">Durable re-equilibration</text>
-  <line x1="355" y1="30" x2="355" y2="340" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="80" y1="185" x2="640" y2="185" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="4,4"/>
-  <circle cx="580" cy="60" r="7" fill="#2a4a6b" opacity="0.85"/>
-  <text x="592" y="56" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">Stripe</text>
-  <circle cx="540" cy="80" r="7" fill="#2a4a6b" opacity="0.85"/>
-  <text x="552" y="76" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">Apple App Store</text>
-  <circle cx="510" cy="110" r="7" fill="#2a4a6b" opacity="0.85"/>
-  <text x="522" y="106" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">Containerisation</text>
-  <circle cx="490" cy="140" r="7" fill="#2a4a6b" opacity="0.85"/>
-  <text x="502" y="136" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">PayPal</text>
-  <circle cx="460" cy="100" r="7" fill="#2a4a6b" opacity="0.85"/>
-  <text x="472" y="96" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">Nike</text>
-  <circle cx="400" cy="155" r="7" fill="#2a4a6b" opacity="0.75"/>
-  <text x="412" y="151" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">LBOs</text>
-  <text x="412" y="163" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">(contested)</text>
-  <circle cx="390" cy="280" r="7" fill="#8b3a2a" opacity="0.85"/>
-  <text x="402" y="276" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">Webvan</text>
-  <circle cx="350" cy="300" r="7" fill="#8b3a2a" opacity="0.85"/>
-  <text x="362" y="296" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">Iridium</text>
-  <circle cx="420" cy="295" r="7" fill="#8b3a2a" opacity="0.85"/>
-  <text x="432" y="291" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">Better Place</text>
-  <circle cx="140" cy="295" r="7" fill="#8b3a2a" opacity="0.85"/>
-  <text x="152" y="291" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">Rabbit / Humane</text>
-  <text x="80" y="355" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">Low</text>
-  <text x="630" y="355" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">High</text>
-  <text x="65" y="344" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">Low</text>
-  <text x="65" y="36" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">High</text>
-</svg>
-<div class="caption-wrapper">
-<figcaption>Cases in the top-right quadrant achieve durable re-equilibration: costs are absorbed <em>and</em> the absorber holds residual control rights at a bottleneck (Teece, 1986; Grossman–Hart–Moore). Bottom-right cases (Webvan, Iridium, Better Place) absorbed real orphaned costs but held no bottleneck — absorption was uneconomic at prevailing technology and demand. Bottom-left cases (Rabbit, Humane) lacked both absorption and leverage.</figcaption>
-</div>
-</figure>
-
 # II. Historical Examples
 
 ### Containerisation
@@ -138,6 +43,41 @@ Acemoglu and Robinson's political losers hypothesis identifies a further veto: i
 Malcolm McLean's containerisation did not persuade ports and shipping lines to improve break-bulk handling; it created an end-to-end logistics configuration whose cost and speed advantages rendered the prior system obsolete. McLean internalised coordination across modes of transport — truck, rail, ship — that had previously been managed through fragmented handoffs, theft risk, and manual loading. Ports that maintained break-bulk operations could not match the throughput and cost structure once shippers could move sealed containers seamlessly across the supply chain.
 
 Two features of the case are usually omitted and should not be. Vietnam-era military logistics contracts subsidised containerisation's demonstration phase before commercial economics were proven, and the transition required negotiated — and bitterly contested — mechanisation agreements with longshore unions. Absorption of coordination costs was necessary but not sufficient; it was financed and politically protected through its vulnerable interval. This is Schelling's commitment logic returning in empirical form: the capacity to survive the loss-making interval is itself what makes the commitment credible. The political losers (longshore labour) had to be compensated, not simply outcompeted.[^2][^12]
+
+<figure markdown="1">
+<svg viewBox="0 0 640 175" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;display:block;">
+  <text x="320" y="20" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#1a1a1a">Containerisation: cost and throughput, break-bulk vs. container (c. 1956–1964)</text>
+  <!-- Left panel label -->
+  <text x="155" y="42" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#666">Loading cost ($/ton)</text>
+  <!-- Break-bulk bar: $5.83, bar width proportional; max=6, panel width=240, so 5.83/6*220=213px -->
+  <rect x="30" y="52" width="213" height="22" rx="2" fill="#8b3a2a" opacity="0.78"/>
+  <text x="249" y="67" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">$5.83</text>
+  <text x="25" y="67" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Break-bulk</text>
+  <!-- Container bar: $0.16/6*220=5.9px, show at min 6px -->
+  <rect x="30" y="84" width="6" height="22" rx="2" fill="#2a4a6b" opacity="0.85"/>
+  <text x="42" y="99" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">$0.16</text>
+  <text x="25" y="99" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Container</text>
+  <text x="155" y="122" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">97% reduction</text>
+  <!-- Divider -->
+  <line x1="310" y1="35" x2="310" y2="135" stroke="#d4d0c8" stroke-width="1"/>
+  <!-- Right panel label -->
+  <text x="475" y="42" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#666">Throughput (tons/gang-hour)</text>
+  <!-- Break-bulk: 1.7; max=30, panel width 220px; 1.7/30*220=12.5px -->
+  <rect x="330" y="52" width="13" height="22" rx="2" fill="#8b3a2a" opacity="0.78"/>
+  <text x="349" y="67" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">1.7</text>
+  <text x="325" y="67" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Break-bulk</text>
+  <!-- Container: 30/30*220=220px -->
+  <rect x="330" y="84" width="220" height="22" rx="2" fill="#2a4a6b" opacity="0.85"/>
+  <text x="556" y="99" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">30+</text>
+  <text x="325" y="99" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Container</text>
+  <text x="475" y="122" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">&gt;17× gain</text>
+  <!-- Source -->
+  <text x="320" y="152" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#aaa" font-style="italic">Source: Levinson, The Box (2006), pp. 187, 230. NYC docks; wages held constant for cost comparison.</text>
+</svg>
+<div class="caption-wrapper">
+<figcaption>The cost advantage made the old equilibrium non-viable at any scale, not merely competitively inferior. At $0.16 versus $5.83 per ton, break-bulk ports could not adjust on price; the mode of handling had to be abandoned entirely.</figcaption>
+</div>
+</figure>
 
 ### Nike
 
@@ -165,54 +105,6 @@ Stripe extended PayPal's pattern into the modern era by absorbing the coordinati
 
 Stripe illustrates Teece's complementary assets test clearly: absorption succeeded because it positioned the company at a bottleneck complementary asset — the integration layer — that it controls.[^15] Unlike Webvan, which absorbed grocery logistics but owned no bottleneck, Stripe absorbed compliance complexity *and* became the chokepoint. This is the ex ante profitability test the framework requires.
 
-**Figure 3 — Three Asymmetries Protecting the Absorption Window**
-
-<figure markdown="1">
-<svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
-  <defs>
-    <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a4a6b"/>
-    </marker>
-  </defs>
-  <rect x="20" y="30" width="195" height="200" rx="4" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.2"/>
-  <text x="117" y="58" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#2a4a6b">1 · Motivation</text>
-  <text x="117" y="76" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#1a1a1a">(Arrow replacement effect)</text>
-  <line x1="40" y1="84" x2="195" y2="84" stroke="#2a4a6b" stroke-width="0.8" opacity="0.4"/>
-  <text x="117" y="103" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">Absorbing the orphaned</text>
-  <text x="117" y="118" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">cost cannibalises the</text>
-  <text x="117" y="133" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">incumbent's existing</text>
-  <text x="117" y="148" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">margin structure.</text>
-  <text x="117" y="170" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">Expected value of</text>
-  <text x="117" y="185" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">absorption is lower</text>
-  <text x="117" y="200" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">for the incumbent.</text>
-  <rect x="243" y="30" width="195" height="200" rx="4" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.2"/>
-  <text x="340" y="58" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#2a4a6b">2 · Architecture</text>
-  <text x="340" y="76" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#1a1a1a">(internal Nash equilibrium)</text>
-  <line x1="263" y1="84" x2="418" y2="84" stroke="#2a4a6b" stroke-width="0.8" opacity="0.4"/>
-  <text x="340" y="103" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">The incumbent's own</text>
-  <text x="340" y="118" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">organisation is an</text>
-  <text x="340" y="133" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">equilibrium. Imitation</text>
-  <text x="340" y="148" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">requires terminating</text>
-  <text x="340" y="163" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">an internal equilibrium —</text>
-  <text x="340" y="178" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">exactly as hard as the</text>
-  <text x="340" y="193" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">theory predicts.</text>
-  <rect x="466" y="30" width="195" height="200" rx="4" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.2"/>
-  <text x="563" y="58" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#2a4a6b">3 · Time</text>
-  <text x="563" y="76" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#1a1a1a">(Farrell–Saloner lock-in)</text>
-  <line x1="486" y1="84" x2="641" y2="84" stroke="#2a4a6b" stroke-width="0.8" opacity="0.4"/>
-  <text x="563" y="103" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">By the moment imitation</text>
-  <text x="563" y="118" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">becomes obviously</text>
-  <text x="563" y="133" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">necessary, the absorber</text>
-  <text x="563" y="148" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">often holds network or</text>
-  <text x="563" y="163" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">scale positions that</text>
-  <text x="563" y="178" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">make late absorption</text>
-  <text x="563" y="193" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a">non-equivalent.</text>
-</svg>
-<div class="caption-wrapper">
-<figcaption>The strategy is therefore not merely absorbing the right cost, but absorbing it where these three asymmetries protect the absorption interval. Gelman and Salop's judo economics adds a fourth: an entrant's credible commitment to staying small can deter incumbent retaliation during this window.</figcaption>
-</div>
-</figure>
-
 ### Rabbit and Humane — Failure Mode I
 
 Rabbit and Humane attempted to layer AI interfaces atop existing app ecosystems without internalising any coordination problem those apps faced. They required Uber, Spotify, and other services to maintain GUI-compatible interfaces for their benefit, but possessed no mechanism to compel this cooperation — no platform authority like Apple's, no absorption of costs that would make compliance inevitable, no dominance on any axis that mattered to the apps themselves. They operated entirely in narrative space (compelling demos, appealing design language) while lacking constraint-space leverage. The apps could simply refuse or ignore them, and continuation of the existing equilibrium remained viable.
@@ -227,7 +119,106 @@ The lesson is that costs are sometimes orphaned for a reason: the value released
 
 Diagnostic precision must therefore extend beyond identifying the orphaned cost to *pricing it* — asking whether absorption is subsidised by something (declining technology costs, a captive demand base, state contracts, network tipping dynamics) until the configuration becomes self-funding. Teece's complementary assets test[^15] is the ex ante filter: does absorbing this cost position you at a bottleneck you can control? If not, absorption destroys value rather than creating it.
 
-**Figure 4 — The Re-Equilibration Cycle**
+**Figure 2 — Case Map: Absorption Completeness vs. Bottleneck Control**
+
+<figure markdown="1">
+<div style="position:relative;">
+<svg id="casemap-svg" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
+  <defs>
+    <marker id="ax" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#888"/>
+    </marker>
+  </defs>
+  <line x1="80" y1="340" x2="640" y2="340" stroke="#888" stroke-width="1.5" marker-end="url(#ax)"/>
+  <line x1="80" y1="340" x2="80" y2="30" stroke="#888" stroke-width="1.5" marker-end="url(#ax)"/>
+  <text x="360" y="378" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#4a4a4a">Absorption completeness (cost actually internalised)</text>
+  <text x="22" y="190" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#4a4a4a" transform="rotate(-90,22,190)">Bottleneck control (residual rights held)</text>
+  <rect x="80" y="185" width="275" height="155" fill="#fdf3f1" opacity="0.7"/>
+  <rect x="355" y="185" width="285" height="155" fill="#f0ede6" opacity="0.5"/>
+  <rect x="80" y="30" width="275" height="155" fill="#f0ede6" opacity="0.5"/>
+  <rect x="355" y="30" width="285" height="155" fill="#eef4ec" opacity="0.7"/>
+  <text x="217" y="270" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8b3a2a" font-style="italic">Absorbs costs, loses rents</text>
+  <text x="497" y="270" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a" font-style="italic">Transition state</text>
+  <text x="217" y="112" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a" font-style="italic">Controls chokepoint,</text>
+  <text x="217" y="124" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#4a4a4a" font-style="italic">limited re-equilibration</text>
+  <text x="497" y="112" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#2a6b3a" font-style="italic">Durable re-equilibration</text>
+  <line x1="355" y1="30" x2="355" y2="340" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="185" x2="640" y2="185" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- Interactive dots — data-label and data-note drive the tooltip -->
+  <circle class="cm-dot" cx="580" cy="60" r="9" fill="#2a4a6b" opacity="0.85" style="cursor:pointer;"
+    data-label="Stripe"
+    data-note="Absorbed global payments complexity (compliance, multi-currency, fraud) and holds the integration-layer bottleneck. Classic Teece complementary asset position."/>
+  <circle class="cm-dot" cx="540" cy="80" r="9" fill="#2a4a6b" opacity="0.85" style="cursor:pointer;"
+    data-label="Apple App Store"
+    data-note="Absorbed distribution, billing, trust enforcement, and sandboxing. Holds iOS distribution as a mandatory chokepoint — residual control rights over every app on platform."/>
+  <circle class="cm-dot" cx="510" cy="110" r="9" fill="#2a4a6b" opacity="0.85" style="cursor:pointer;"
+    data-label="Containerisation"
+    data-note="McLean absorbed cross-modal coordination costs (theft, fragmented handoffs, loading). Controlled container standards and integrated port/ship/truck infrastructure."/>
+  <circle class="cm-dot" cx="490" cy="140" r="9" fill="#2a4a6b" opacity="0.85" style="cursor:pointer;"
+    data-label="PayPal"
+    data-note="Absorbed fraud risk and settlement complexity for online merchants. Became the network chokepoint; alternatives that skipped fraud absorption were dominated for most buyers."/>
+  <circle class="cm-dot" cx="460" cy="100" r="9" fill="#2a4a6b" opacity="0.85" style="cursor:pointer;"
+    data-label="Nike"
+    data-note="Absorbed design-to-manufacturing coordination by de-verticalising. Relocated the bottleneck to the brand-athlete interface, which it alone controlled. Baldwin–Clark modularity."/>
+  <circle class="cm-dot" cx="400" cy="155" r="9" fill="#2a4a6b" opacity="0.75" style="cursor:pointer;"
+    data-label="LBOs (contested)"
+    data-note="Early buyouts absorbed agency costs from dispersed ownership. Later evidence suggests many transferred wealth from bondholders/employees rather than resolving coordination problems — hence bottom-right position is contested."/>
+  <circle class="cm-dot" cx="390" cy="280" r="9" fill="#8b3a2a" opacity="0.85" style="cursor:pointer;"
+    data-label="Webvan"
+    data-note="Absorbed grocery fulfilment coordination but owned no bottleneck. Competitors could replicate the logistics model; the value released by absorption was smaller than the cost at prevailing demand density."/>
+  <circle class="cm-dot" cx="350" cy="300" r="9" fill="#8b3a2a" opacity="0.85" style="cursor:pointer;"
+    data-label="Iridium"
+    data-note="Absorbed global telephony coordination (satellite coverage) but terrestrial cellular destroyed its cost structure before satellite economics matured. No chokepoint survived the technology shift."/>
+  <circle class="cm-dot" cx="420" cy="295" r="9" fill="#8b3a2a" opacity="0.85" style="cursor:pointer;"
+    data-label="Better Place"
+    data-note="Absorbed battery-ownership and charging-coordination costs for EVs. Required simultaneous buy-in from automakers, regulators, and consumers — no single bottleneck to anchor."/>
+  <circle class="cm-dot" cx="140" cy="295" r="9" fill="#8b3a2a" opacity="0.85" style="cursor:pointer;"
+    data-label="Rabbit / Humane"
+    data-note="Lacked both absorption and leverage. Required Uber, Spotify, etc. to maintain GUI-compatible interfaces with no mechanism to compel compliance. Operated entirely in narrative space."/>
+  <text x="80" y="358" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">Low</text>
+  <text x="630" y="358" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">High</text>
+  <text x="65" y="344" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">Low</text>
+  <text x="65" y="36" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">High</text>
+</svg>
+<!-- Tooltip -->
+<div id="cm-tooltip" style="display:none;position:absolute;background:#fff;border:1px solid #d4d0c8;border-radius:4px;padding:10px 14px;max-width:280px;font-family:Helvetica Neue,Arial,sans-serif;font-size:12px;line-height:1.5;color:#1a1a1a;box-shadow:0 2px 8px rgba(0,0,0,0.12);pointer-events:none;z-index:10;">
+  <strong id="cm-tooltip-label"></strong>
+  <p id="cm-tooltip-note" style="margin:4px 0 0;color:#4a4a4a;"></p>
+</div>
+</div>
+<script>
+(function(){
+  var svg = document.getElementById('casemap-svg');
+  var tip = document.getElementById('cm-tooltip');
+  var tipLabel = document.getElementById('cm-tooltip-label');
+  var tipNote = document.getElementById('cm-tooltip-note');
+  var dots = svg.querySelectorAll('.cm-dot');
+  dots.forEach(function(dot){
+    dot.addEventListener('mouseenter', function(e){
+      tipLabel.textContent = dot.getAttribute('data-label');
+      tipNote.textContent = dot.getAttribute('data-note');
+      tip.style.display = 'block';
+    });
+    dot.addEventListener('mousemove', function(e){
+      var rect = svg.parentElement.getBoundingClientRect();
+      var x = e.clientX - rect.left + 14;
+      var y = e.clientY - rect.top - 10;
+      if (x + 300 > rect.width) x = e.clientX - rect.left - 294;
+      tip.style.left = x + 'px';
+      tip.style.top = y + 'px';
+    });
+    dot.addEventListener('mouseleave', function(){
+      tip.style.display = 'none';
+    });
+  });
+})();
+</script>
+<div class="caption-wrapper">
+<figcaption>Cases in the top-right quadrant achieve durable re-equilibration: costs are absorbed <em>and</em> the absorber holds residual control rights at a bottleneck (Teece, 1986; Grossman–Hart–Moore). Bottom-right cases absorbed real orphaned costs but held no bottleneck. Bottom-left cases (Rabbit, Humane) lacked both. <em>Hover each point for case details.</em></figcaption>
+</div>
+</figure>
+
+**Figure 3 — The Re-Equilibration Cycle**
 
 <figure markdown="1">
 <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
@@ -293,40 +284,40 @@ Two scope conditions bound the claim. First, this is a theory of engineered tran
 
 ---
 
-[^1]: Nash, J. F. (1951). Non-cooperative games. *Annals of Mathematics*, 54(2), 286–295.
+[^1]: Nash, J. F. (1951). Non-cooperative games. *Annals of Mathematics*, 54(2), 286–295. [JSTOR](https://www.jstor.org/stable/1969529)
 
 [^2]: Schelling, T. C. (1960). *The Strategy of Conflict*. Harvard University Press.
 
-[^3]: Myerson, R. B., & Satterthwaite, M. A. (1983). Efficient mechanisms for bilateral trading. *Journal of Economic Theory*, 29(2), 265–281.
+[^3]: Myerson, R. B., & Satterthwaite, M. A. (1983). Efficient mechanisms for bilateral trading. *Journal of Economic Theory*, 29(2), 265–281. [DOI](https://doi.org/10.1016/0022-0531(83)90048-0)
 
-[^4]: Lipsey, R. G., & Lancaster, K. (1956). The general theory of second best. *Review of Economic Studies*, 24(1), 11–32.
+[^4]: Lipsey, R. G., & Lancaster, K. (1956). The general theory of second best. *Review of Economic Studies*, 24(1), 11–32. [DOI](https://doi.org/10.2307/2296233)
 
-[^5]: Coase, R. H. (1937). The nature of the firm. *Economica*, 4(16), 386–405.
+[^5]: Coase, R. H. (1937). The nature of the firm. *Economica*, 4(16), 386–405. [DOI](https://doi.org/10.1111/j.1468-0335.1937.tb00002.x)
 
 [^6]: Williamson, O. E. (1985). *The Economic Institutions of Capitalism*. Free Press.
 
-[^7]: Grossman, S. J., & Hart, O. D. (1986). The costs and benefits of ownership: A theory of vertical and lateral integration. *Journal of Political Economy*, 94(4), 691–719.
+[^7]: Grossman, S. J., & Hart, O. D. (1986). The costs and benefits of ownership: A theory of vertical and lateral integration. *Journal of Political Economy*, 94(4), 691–719. [DOI](https://doi.org/10.1086/261404)
 
-[^8]: Hart, O., & Moore, J. (1990). Property rights and the nature of the firm. *Journal of Political Economy*, 98(6), 1119–1158.
+[^8]: Hart, O., & Moore, J. (1990). Property rights and the nature of the firm. *Journal of Political Economy*, 98(6), 1119–1158. [DOI](https://doi.org/10.1086/261729)
 
-[^9]: Holmström, B. (1982). Moral hazard in teams. *Bell Journal of Economics*, 13(2), 324–340.
+[^9]: Holmström, B. (1982). Moral hazard in teams. *Bell Journal of Economics*, 13(2), 324–340. [DOI](https://doi.org/10.2307/3003320)
 
 [^10]: Hirschman, A. O. (1970). *Exit, Voice, and Loyalty*. Harvard University Press.
 
 [^11]: Scott, J. C. (1998). *Seeing Like a State*. Yale University Press.
 
-[^12]: Acemoglu, D., & Robinson, J. A. (2000). Why did the West extend the franchise? *Quarterly Journal of Economics*, 115(4), 1167–1199. See also: Acemoglu, D., & Robinson, J. A. (2006). *Economic Origins of Dictatorship and Democracy*. Cambridge University Press.
+[^12]: Acemoglu, D., & Robinson, J. A. (2000). Why did the West extend the franchise? *Quarterly Journal of Economics*, 115(4), 1167–1199. [DOI](https://doi.org/10.1162/003355300554836) See also: Acemoglu, D., & Robinson, J. A. (2006). *Economic Origins of Dictatorship and Democracy*. Cambridge University Press.
 
-[^13]: Baldwin, C. Y., & Clark, K. B. (2000). *Design Rules: The Power of Modularity*. MIT Press. Jacobides, M. G., Knudsen, T., & Augier, M. (2006). Benefiting from innovation. *Research Policy*, 35(8), 1200–1221.
+[^13]: Baldwin, C. Y., & Clark, K. B. (2000). *Design Rules: The Power of Modularity*. MIT Press. Jacobides, M. G., Knudsen, T., & Augier, M. (2006). Benefiting from innovation. *Research Policy*, 35(8), 1200–1221. [DOI](https://doi.org/10.1016/j.respol.2006.09.005)
 
-[^14]: Kaplan, S. N., & Strömberg, P. (2009). Leveraged buyouts and private equity. *Journal of Economic Perspectives*, 23(1), 121–146. For the wealth-transfer critique, see Shleifer, A., & Summers, L. H. (1988). Breach of trust in hostile takeovers. In A. Auerbach (Ed.), *Corporate Takeovers: Causes and Consequences*. University of Chicago Press.
+[^14]: Kaplan, S. N., & Strömberg, P. (2009). Leveraged buyouts and private equity. *Journal of Economic Perspectives*, 23(1), 121–146. [DOI](https://doi.org/10.1257/jep.23.1.121) For the wealth-transfer critique, see Shleifer, A., & Summers, L. H. (1988). Breach of trust in hostile takeovers. In A. Auerbach (Ed.), *Corporate Takeovers: Causes and Consequences*. University of Chicago Press. [NBER](https://www.nber.org/papers/w2342)
 
-[^15]: Teece, D. J. (1986). Profiting from technological innovation. *Research Policy*, 15(6), 285–305.
+[^15]: Teece, D. J. (1986). Profiting from technological innovation. *Research Policy*, 15(6), 285–305. [DOI](https://doi.org/10.1016/0048-7333(86)90027-2)
 
-[^16]: Arrow, K. J. (1962). Economic welfare and the allocation of resources for invention. In R. Nelson (Ed.), *The Rate and Direction of Inventive Activity*. Princeton University Press.
+[^16]: Arrow, K. J. (1962). Economic welfare and the allocation of resources for invention. In R. Nelson (Ed.), *The Rate and Direction of Inventive Activity*. Princeton University Press. [NBER](https://www.nber.org/chapters/c2144)
 
-[^17]: Gelman, J. R., & Salop, S. C. (1983). Judo economics: Capacity limitation and coupon competition. *Bell Journal of Economics*, 14(2), 315–325.
+[^17]: Gelman, J. R., & Salop, S. C. (1983). Judo economics: Capacity limitation and coupon competition. *Bell Journal of Economics*, 14(2), 315–325. [DOI](https://doi.org/10.2307/3003535)
 
 [^18]: Sutton, J. (1991). *Sunk Costs and Market Structure*. MIT Press.
 
-[^19]: Segal, I. (1999). Contracting with externalities. *Quarterly Journal of Economics*, 114(2), 337–388. See also Segal, I., & Whinston, M. D. (2000). Naked exclusion. *American Economic Review*, 90(1), 296–309.
+[^19]: Segal, I. (1999). Contracting with externalities. *Quarterly Journal of Economics*, 114(2), 337–388. [DOI](https://doi.org/10.1162/003355399556120) See also Segal, I., & Whinston, M. D. (2000). Naked exclusion. *American Economic Review*, 90(1), 296–309. [DOI](https://doi.org/10.1257/aer.90.1.296)
