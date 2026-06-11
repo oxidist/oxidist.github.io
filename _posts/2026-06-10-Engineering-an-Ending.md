@@ -93,7 +93,15 @@ Acemoglu and Robinson's political losers hypothesis identifies a further veto: i
 
 ### Containerisation
 
-Malcolm McLean did not persuade ports and shipping lines to improve break-bulk handling; he created an end-to-end logistics configuration whose cost and speed advantages rendered the prior system obsolete. McLean internalised coordination across modes of transport — truck, rail, ship — that had previously been managed through fragmented handoffs, theft risk, and manual loading. Ports that maintained break-bulk operations could not match the throughput and cost structure once shippers could move sealed containers seamlessly across the supply chain.
+Malcolm McLean did not persuade ports and shipping lines to improve break-bulk handling; he created an end-to-end logistics configuration whose cost and speed advantages rendered the prior system obsolete. McLean internalised coordination across modes of transport — truck, rail, ship — that had previously been managed through fragmented handoffs, theft risk, and manual loading.[^docks] Ports that maintained break-bulk operations could not match the throughput and cost structure once shippers could move sealed containers seamlessly across the supply chain.
+
+[^docks]:
+    <figure markdown="1">
+       ![](https://www.oldtreasurybuilding.org.au/wp-content/uploads/2022/01/metal-barrels-733x1024.jpg) 
+    <div class="caption-wrapper">
+    <figcaption>Metal barrels on Victoria Dock, Melbourne, 1938</figcaption>
+    </div>
+    </figure>
 
 Rather than being a story of McLean's lone genius, it was Vietnam-era military logistics contracts that subsidised containerisation before commercial economics were proven, and the transition required bitterly contested mechanisation agreements with longshore unions. Absorption of coordination costs was necessary but not sufficient; it was financed and politically protected through its vulnerable interval. This is Schelling's commitment logic returning in empirical form: the capacity to survive the loss-making interval is itself what makes the commitment credible. The political losers (longshore labour) had to be compensated, not simply outcompeted.
 
@@ -153,7 +161,15 @@ The LBO record also marks a boundary of the theory: subsequent evidence suggests
 
 ### Apple App Store
 
-Apple's App Store did not reform software distribution through negotiation with carriers or developers; it internalised distribution, billing, trust enforcement, and sandboxing into a single controlled interface. Developers wanting access to iOS users had one path, on Apple's terms. The coordination costs that carriers and fragmented distribution channels had left unresolved — payment processing, malware prevention, update management — became absorbed into Apple's platform infrastructure, making alternative configurations non-competitive for most use cases.
+Apple's App Store did not reform software distribution through negotiation with carriers or developers; it internalised distribution, billing, trust enforcement, and sandboxing into a single controlled interface. Developers wanting access to iOS users had one path, on Apple's terms[^toll]. The coordination costs that carriers and fragmented distribution channels had left unresolved — payment processing, malware prevention, update management — became absorbed into Apple's platform infrastructure, making alternative configurations non-competitive for most use cases.
+
+[^toll]: Apple takes 30% of revenues from apps on the App store.
+    <figure markdown="1">
+       ![](https://files.catbox.moe/4s70gy.webp) 
+    <div class="caption-wrapper">
+    <figcaption>Medieval engraving of a toll bridge</figcaption>
+    </div>
+    </figure>
 
 ### Stripe
 
