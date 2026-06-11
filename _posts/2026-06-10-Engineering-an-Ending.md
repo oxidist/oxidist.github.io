@@ -301,6 +301,103 @@ The pattern as stated leaves a gap: if absorbing orphaned costs is so advantageo
 
 First, *motivation*: absorbing the orphaned cost typically cannibalises the incumbent's existing margin structure, so the expected value of absorption is lower for the incumbent than for the entrant — Arrow's replacement effect applied to organisational strategy.[^16] Second, *architecture*: the incumbent's organisation is itself an equilibrium — internal coordination, career incentives, and asset bases settled around the old boundary — so imitation requires terminating an internal equilibrium, which is exactly as hard as the theory predicts. Third, *time*: by the moment imitation becomes obviously necessary, the absorber often holds network or scale positions that make late absorption non-equivalent. Adidas adopting the Nike model in 1995 is categorically different from Nike deploying it in 1975.
 
+**Figure 4 — The Incumbent Window**
+
+<figure markdown="1">
+<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;">
+  <defs>
+    <marker id="warr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#888"/>
+    </marker>
+    <!-- Gradient for absorber curve fill -->
+    <linearGradient id="absGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a4a6b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#2a4a6b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── Axes ── -->
+  <line x1="60" y1="290" x2="660" y2="290" stroke="#888" stroke-width="1.4" marker-end="url(#warr)"/>
+  <line x1="60" y1="290" x2="60" y2="30" stroke="#888" stroke-width="1.4" marker-end="url(#warr)"/>
+  <text x="360" y="315" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#555">Time</text>
+  <text x="18" y="165" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#555" transform="rotate(-90,18,165)">Magnitude</text>
+
+  <!-- ── Window shading ── -->
+  <!-- Window = between vertical lines at x=190 and x=490 -->
+  <rect x="190" y="35" width="300" height="255" fill="#fffbe6" opacity="0.7"/>
+  <line x1="190" y1="35" x2="190" y2="290" stroke="#c8a000" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="490" y1="35" x2="490" y2="290" stroke="#c8a000" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="340" y="50" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" font-weight="700" fill="#a07800">Incumbent window</text>
+  <text x="340" y="62" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#a07800">gap between threat growth and incumbent motivation</text>
+
+  <!-- ── Curve 1: Absorber advantage (cost position improving / network compounding) ── -->
+  <!-- Starts low-left, accelerates right (logistic-ish) -->
+  <!-- Points: (60,275) (120,270) (190,258) (280,220) (380,155) (460,100) (540,72) (620,62) -->
+  <path d="M60,275 C100,273 155,265 190,258 C230,248 270,225 320,185 C370,145 420,105 470,84 C510,68 560,62 620,58"
+        fill="none" stroke="#2a4a6b" stroke-width="2.2"/>
+  <text x="630" y="56" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="700" fill="#2a4a6b">Absorber</text>
+  <text x="630" y="68" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#2a4a6b">advantage</text>
+
+  <!-- ── Curve 2: Incumbent motivation to respond (lags threat, Arrow replacement effect) ── -->
+  <!-- Flat, then rises slowly, then steep after window closes -->
+  <!-- (60,280) (190,278) (340,268) (490,230) (570,170) (620,130) -->
+  <path d="M60,280 C120,280 170,279 230,277 C290,274 370,268 430,255 C470,246 490,230 530,195 C570,160 600,140 640,120"
+        fill="none" stroke="#8b3a2a" stroke-width="2.2" stroke-dasharray="7,4"/>
+  <text x="645" y="118" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="700" fill="#8b3a2a">Incumbent</text>
+  <text x="645" y="130" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#8b3a2a">motivation</text>
+  <text x="645" y="142" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#8b3a2a">to respond</text>
+
+  <!-- ── Curve 3: "Imitation obviously necessary" threshold ── -->
+  <!-- Horizontal reference line with label -->
+  <line x1="60" y1="155" x2="490" y2="155" stroke="#555" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <text x="495" y="152" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#555">imitation</text>
+  <text x="495" y="163" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#555">obviously</text>
+  <text x="495" y="174" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#555">necessary</text>
+
+  <!-- Arrow showing absorber crosses threshold BEFORE incumbent motivation rises enough -->
+  <circle cx="390" cy="155" r="4" fill="#2a4a6b"/>
+  <line x1="390" y1="151" x2="390" y2="110" stroke="#2a4a6b" stroke-width="0.9" marker-end="url(#warr)"/>
+  <text x="395" y="108" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#2a4a6b">absorber at scale</text>
+  <text x="395" y="119" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#2a4a6b">before incumbent acts</text>
+
+  <!-- ── Judo economics inset box ── -->
+  <rect x="68" y="40" width="110" height="70" rx="3" fill="#f5f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="123" y="55" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" font-weight="700" fill="#555">Judo dynamic</text>
+  <text x="123" y="67" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#4a4a4a">Staying small keeps</text>
+  <text x="123" y="78" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#4a4a4a">fight-or-ignore calc</text>
+  <text x="123" y="89" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#4a4a4a">in absorber's favour</text>
+  <text x="123" y="102" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#8b3a2a">optimal: grow slowly</text>
+  <!-- Arrow from inset into early part of window -->
+  <line x1="178" y1="75" x2="200" y2="240" stroke="#888" stroke-width="0.8" marker-end="url(#warr)"/>
+
+  <!-- ── Case labels on x-axis ── -->
+  <!-- Nike: longer window (architecture = dismantling org identity) -->
+  <line x1="195" y1="290" x2="195" y2="295" stroke="#c8a000" stroke-width="1"/>
+  <text x="195" y="304" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#a07800">Nike</text>
+  <text x="195" y="314" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#a07800">enters</text>
+
+  <!-- Adidas closes window late (longer because outsourcing = dismantling org identity) -->
+  <line x1="540" y1="290" x2="540" y2="295" stroke="#8b3a2a" stroke-width="1"/>
+  <text x="540" y="304" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#8b3a2a">Adidas</text>
+  <text x="540" y="314" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#8b3a2a">finally outsources</text>
+  <!-- Brace showing Nike's window -->
+  <line x1="195" y1="322" x2="540" y2="322" stroke="#a07800" stroke-width="1"/>
+  <line x1="195" y1="318" x2="195" y2="326" stroke="#a07800" stroke-width="1"/>
+  <line x1="540" y1="318" x2="540" y2="326" stroke="#a07800" stroke-width="1"/>
+  <text x="367" y="336" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#a07800">Nike/Adidas window (~20 yrs): outsourcing = dismantling org identity</text>
+
+  <!-- Containerisation: shorter window annotation -->
+  <text x="340" y="350" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#555" font-style="italic">Containerisation window was shorter: incumbents could switch modes, but military contracts and union agreements compressed the interval.</text>
+
+  <!-- ── Axis tick labels ── -->
+  <text x="55" y="294" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">Low</text>
+  <text x="55" y="40" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888">High</text>
+</svg>
+<div class="caption-wrapper">
+<figcaption>The incumbent window is the gap between two closing processes: the absorber's advantage compounding and the incumbent's motivation to respond rising. Arrow's replacement effect keeps the red curve flat early — imitation cannibalises the incumbent's own margin, so the expected value of response is low while the absorber is still small. The window closes when imitation becomes obviously necessary, but by then the absorber often holds scale or network positions that make late imitation non-equivalent. Window duration varies by how much imitation requires the incumbent to terminate their <em>own</em> internal equilibrium — Adidas's window stayed open longest because outsourcing manufacturing meant dismantling their organisational identity.</figcaption>
+</div>
+</figure>
+
 Gelman and Salop's judo economics adds a fourth asymmetry: an entrant's credible commitment to staying small can deter incumbent retaliation during the absorption window, because the incumbent's expected gain from fighting exceeds the expected loss only if the entrant threatens to be large.[^17] Sutton's endogenous sunk costs explain the durability after tipping: once absorption succeeds, escalating sunk investment in the absorbed function makes concentration self-reinforcing.[^18]
 
 The strategy is therefore not merely absorbing the right cost, but absorbing it where these asymmetries protect the interval during which the old equilibrium's non-viability becomes apparent to all participants.
@@ -310,6 +407,122 @@ The strategy is therefore not merely absorbing the right cost, but absorbing it 
 The framework's cases share an operational pattern that Segal's contracting-with-externalities analysis formalises.[^19] An absorber facing many parties whose payoffs depend on each other's participation can profitably tip a system from one equilibrium to another by exploiting the externalities among them — including via sequenced, discriminatory offers that make each party's acceptance individually rational even when collective resistance would succeed.
 
 This explains why early participants in new platforms typically receive subsidised terms: McLean gave ports preferential rates; Apple gave early iOS developers the full 70% revenue split before the store had scale; Stripe gave startups free integration support. Each defection from the old equilibrium raises the cost of staying, making the next defection easier to secure. The coalition that "should" defend the old equilibrium fails to form because sequential individual rationality undermines collective action. This is the operational layer between diagnostic precision and re-equilibration: it is how the absorber flips the system rather than simply waiting for it to tip.
+
+**Figure 5 — Segal Mechanism: Simultaneous vs. Sequential Offers**
+
+<figure markdown="1">
+<svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;">
+  <defs>
+    <marker id="sarr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- ── Panel titles ── -->
+  <text x="175" y="18" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#1a1a1a">Simultaneous offers</text>
+  <text x="175" y="30" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#666">Coalition resistance viable</text>
+  <text x="525" y="18" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#1a1a1a">Sequential offers</text>
+  <text x="525" y="30" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#666">Each party faces a fait accompli</text>
+
+  <!-- ── Divider ── -->
+  <line x1="350" y1="8" x2="350" y2="310" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="5,4"/>
+
+  <!-- ════════════════════════════════
+       LEFT PANEL — simultaneous
+       Payoff matrix: Party A rows, others cols
+       ════════════════════════════════ -->
+
+  <!-- Matrix border -->
+  <rect x="30" y="45" width="290" height="180" rx="3" fill="#fafafa" stroke="#d4d0c8" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <text x="195" y="62" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#555" font-style="italic">Others hold out</text>
+  <text x="280" y="62" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#555" font-style="italic">Others accept</text>
+  <line x1="140" y1="65" x2="310" y2="65" stroke="#d4d0c8" stroke-width="0.8"/>
+  <line x1="235" y1="45" x2="235" y2="225" stroke="#d4d0c8" stroke-width="0.8"/>
+
+  <!-- Row headers -->
+  <text x="85" y="106" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#555" font-style="italic">A holds out</text>
+  <text x="85" y="168" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#555" font-style="italic">A accepts</text>
+  <line x1="30" y1="135" x2="320" y2="135" stroke="#d4d0c8" stroke-width="0.8"/>
+  <line x1="140" y1="45" x2="140" y2="225" stroke="#d4d0c8" stroke-width="0.8"/>
+
+  <!-- Cell: A holds out / Others hold out — BEST collective outcome -->
+  <rect x="141" y="66" width="93" height="68" fill="#eef4ec" rx="1"/>
+  <text x="187" y="93" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#2a6b3a">+8</text>
+  <text x="187" y="107" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#2a6b3a">old eq. holds</text>
+  <text x="187" y="118" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#2a6b3a">coalition wins</text>
+
+  <!-- Cell: A holds out / Others accept — A is isolated -->
+  <rect x="236" y="66" width="93" height="68" fill="#fdf3f1" rx="1"/>
+  <text x="282" y="93" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#8b3a2a">−4</text>
+  <text x="282" y="107" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#8b3a2a">A isolated,</text>
+  <text x="282" y="118" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#8b3a2a">non-pivotal</text>
+
+  <!-- Cell: A accepts / Others hold out -->
+  <rect x="141" y="136" width="93" height="68" fill="#f5f5f0" rx="1"/>
+  <text x="187" y="163" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#555">+3</text>
+  <text x="187" y="177" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#555">early subsidy,</text>
+  <text x="187" y="188" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#555">new eq. fragile</text>
+
+  <!-- Cell: A accepts / Others accept — new equilibrium -->
+  <rect x="236" y="136" width="93" height="68" fill="#e8eef4" rx="1"/>
+  <text x="282" y="163" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#2a4a6b">+5</text>
+  <text x="282" y="177" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#2a4a6b">new eq. stable</text>
+  <text x="282" y="188" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#2a4a6b">absorber wins</text>
+
+  <!-- Pivotality annotation -->
+  <text x="175" y="241" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#555">Pivotality threshold: resistance pays only if</text>
+  <text x="175" y="253" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#555">≥ k others also hold out. With simultaneous</text>
+  <text x="175" y="265" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#555">offers, coordinating on top-left is feasible.</text>
+  <rect x="141" y="66" width="93" height="68" fill="none" stroke="#2a6b3a" stroke-width="1.5" rx="1" stroke-dasharray="3,2"/>
+  <text x="187" y="78" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="7.5" fill="#2a6b3a">← focal point</text>
+
+  <!-- ════════════════════════════════
+       RIGHT PANEL — sequential
+       ════════════════════════════════ -->
+
+  <!-- Party sequence: 3 parties, each sees prior acceptances -->
+  <!-- Party 1 -->
+  <rect x="380" y="45" width="130" height="58" rx="3" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.2"/>
+  <text x="445" y="63" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" font-weight="700" fill="#2a4a6b">Party 1 offered first</text>
+  <text x="445" y="76" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#4a4a4a">Sees: no prior acceptances</text>
+  <text x="445" y="89" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#2a6b3a">Subsidy: full. Accepts.</text>
+  <text x="445" y="100" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="7.5" fill="#888" font-style="italic">e.g. McLean preferential port rate</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="445" y1="103" x2="445" y2="128" stroke="#555" stroke-width="1.2" marker-end="url(#sarr)"/>
+  <text x="460" y="120" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#888">1 accepted</text>
+
+  <!-- Party 2 -->
+  <rect x="380" y="130" width="130" height="58" rx="3" fill="#eef0f8" stroke="#2a4a6b" stroke-width="1.2"/>
+  <text x="445" y="148" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" font-weight="700" fill="#2a4a6b">Party 2 offered second</text>
+  <text x="445" y="161" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#4a4a4a">Sees: 1 prior acceptance</text>
+  <text x="445" y="174" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#2a6b3a">Holding out is now costly. Accepts.</text>
+  <text x="445" y="185" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="7.5" fill="#888" font-style="italic">e.g. Apple 70% split, early devs</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="445" y1="188" x2="445" y2="213" stroke="#555" stroke-width="1.2" marker-end="url(#sarr)"/>
+  <text x="460" y="205" font-family="Helvetica Neue,Arial,sans-serif" font-size="8" fill="#888">1+2 accepted</text>
+
+  <!-- Party n -->
+  <rect x="380" y="215" width="130" height="58" rx="3" fill="#f5f5f0" stroke="#555" stroke-width="1"/>
+  <text x="445" y="233" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" font-weight="700" fill="#555">Party n offered last</text>
+  <text x="445" y="246" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#4a4a4a">Sees: fait accompli</text>
+  <text x="445" y="259" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#8b3a2a">Holding out is individually irrational.</text>
+  <text x="445" y="270" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="7.5" fill="#888" font-style="italic">coalition never forms</text>
+
+  <!-- Key insight box -->
+  <rect x="370" y="283" width="310" height="22" rx="2" fill="#f0ede6" stroke="#d4d0c8" stroke-width="0.8"/>
+  <text x="525" y="298" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">Each acceptance raises the cost of holding out for the next party.</text>
+
+  <!-- Bottom note left -->
+  <text x="175" y="298" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="8.5" fill="#888" font-style="italic">Payoffs illustrative; structure from Segal (1999)</text>
+</svg>
+<div class="caption-wrapper">
+<figcaption>With simultaneous offers, the coalition can coordinate on the top-left cell (+8) — the Pareto-dominant outcome. With sequential offers, the principal converts a coordination game into a series of individual decisions. Each party's pivotality falls as prior acceptances accumulate; resistance becomes individually irrational even when it would have succeeded collectively. This is why early subsidies (McLean's port rates, Apple's 70% split) are structural, not generous.</figcaption>
+</div>
+</figure>
 
 # Conclusion
 
