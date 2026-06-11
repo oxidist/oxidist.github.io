@@ -56,7 +56,7 @@ In non-cooperative settings, locally stable [equilibria](https://en.wikipedia.or
     <figure markdown="1">
        ![](https://files.catbox.moe/528gjy.jpg) 
     <div class="caption-wrapper">
-    <figcaption>The <a href="https://en.wikipedia.org/wiki/Ulysses_pact">oldest</a> commitment device</figcaption>
+    <figcaption>The <a href="https://en.wikipedia.org/wiki/Ulysses_pact">oldest commitment device</a></figcaption>
     </div>
     </figure>
 
@@ -175,7 +175,7 @@ The lesson is that costs are sometimes orphaned for a reason: the value released
 
 Diagnostic precision must therefore extend beyond identifying the orphaned cost to *correctly pricing it* — asking whether absorption is subsidised by something (declining technology costs, a captive demand base, state contracts, network tipping dynamics) until the configuration becomes self-funding. Teece's complementary assets test is the ex ante filter: does absorbing this cost position you at a bottleneck you can control? If not, absorption destroys value rather than creating it.
 
-**Figure 2 — Case Map: Absorption Completeness vs. Bottleneck Control**
+**Case Map: Absorption Completeness vs. Bottleneck Control**
 
 <figure markdown="1" class="zoom-figure">
 <div style="position:relative;">
@@ -274,42 +274,6 @@ Diagnostic precision must therefore extend beyond identifying the orphaned cost 
 </div>
 </figure>
 
-**Figure 3 — The Re-Equilibration Cycle**
-
-<figure markdown="1" class="zoom-figure">
-<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
-  <defs>
-    <marker id="cycarr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a4a6b"/>
-    </marker>
-  </defs>
-  <path d="M 380 65 Q 530 80 570 130" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
-  <path d="M 585 175 Q 590 240 510 255" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
-  <path d="M 455 268 Q 340 285 230 265" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
-  <path d="M 175 252 Q 100 230 100 175" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
-  <path d="M 110 125 Q 150 60 295 52" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
-  <ellipse cx="340" cy="48" rx="90" ry="32" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.5"/>
-  <text x="340" y="44" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">1. Orphaned costs</text>
-  <text x="340" y="58" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">diffused, unresolved</text>
-  <ellipse cx="590" cy="152" rx="80" ry="30" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.5"/>
-  <text x="590" y="148" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">2. Absorber</text>
-  <text x="590" y="162" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">takes residual loss</text>
-  <ellipse cx="490" cy="263" rx="90" ry="30" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.5"/>
-  <text x="490" y="259" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">3. Re-equilibration</text>
-  <text x="490" y="273" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">old config. dominated</text>
-  <ellipse cx="195" cy="263" rx="90" ry="30" fill="#fdf3f1" stroke="#8b3a2a" stroke-width="1.5"/>
-  <text x="195" y="259" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">4. Ossification</text>
-  <text x="195" y="273" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#8b3a2a">absorption → rent</text>
-  <ellipse cx="95" cy="148" rx="80" ry="30" fill="#fdf3f1" stroke="#8b3a2a" stroke-width="1.5"/>
-  <text x="95" y="144" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">5. New negative</text>
-  <text x="95" y="158" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#8b3a2a">space created</text>
-  <text x="340" y="298" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888" font-style="italic">e.g. App Store: distribution absorbed (stage 3) → 30% toll (stage 4) → antitrust / alternative stores (stage 5 → stage 1)</text>
-</svg>
-<div class="caption-wrapper">
-<figcaption>Every successful absorption creates the conditions for the next one. The rent at stage 4 is the new orphaned cost at stage 1.</figcaption>
-</div>
-</figure>
-
 # Why Incumbents Don't Simply Copy
 
 The pattern as stated leaves a gap: if absorbing orphaned costs is so advantageous, incumbents should absorb them first, or imitate quickly. Adidas did eventually outsource manufacturing; the question is why the window stayed open long enough for Nike to matter. Three asymmetries do the work.
@@ -402,10 +366,6 @@ The strategy is therefore not merely absorbing the right cost, but absorbing it 
 
 The framework's cases share an operational pattern that Segal's contracting-with-externalities analysis formalises.[^19] An absorber facing many parties whose payoffs depend on each other's participation can profitably tip a system from one equilibrium to another by exploiting the externalities among them — including via sequenced, discriminatory offers that make each party's acceptance individually rational even when collective resistance would succeed.
 
-This explains why early participants in new platforms typically receive subsidised terms: McLean gave ports preferential rates; Apple gave early iOS developers the full 70% revenue split before the store had scale; Stripe gave startups free integration support. Each defection from the old equilibrium raises the cost of staying, making the next defection easier to secure. The coalition that "should" defend the old equilibrium fails to form because sequential individual rationality undermines collective action. This is the operational layer between diagnostic precision and re-equilibration: it is how the absorber flips the system rather than simply waiting for it to tip.
-
-**Figure 4a — Why Simultaneous Offers Allow Coalition Resistance**
-
 <figure markdown="1" class="zoom-figure">
 <svg viewBox="0 0 380 280" xmlns="http://www.w3.org/2000/svg">
   <!-- Title -->
@@ -463,7 +423,7 @@ This explains why early participants in new platforms typically receive subsidis
 </div>
 </figure>
 
-**Figure 4b — How Sequential Offers Break Coalition Resistance**
+This explains why early participants in new platforms typically receive subsidised terms: McLean gave ports preferential rates; Apple gave early iOS developers the full 70% revenue split before the store had scale; Stripe gave startups free integration support. Each defection from the old equilibrium raises the cost of staying, making the next defection easier to secure. The coalition that "should" defend the old equilibrium fails to form because sequential individual rationality undermines collective action. This is the operational layer between diagnostic precision and re-equilibration: it is how the absorber flips the system rather than simply waiting for it to tip.
 
 <figure markdown="1" class="zoom-figure">
 <svg viewBox="0 0 380 310" xmlns="http://www.w3.org/2000/svg">
@@ -517,6 +477,41 @@ This explains why early participants in new platforms typically receive subsidis
 # Conclusion
 
 Absorbed coordination costs tend to ossify into toll positions: the absorber becomes the incumbent, the absorption becomes a rent, and the rent becomes a new orphaned cost borne diffusely by participants who individually cannot resolve it. Apple's App Store, having absorbed distribution, billing, and trust enforcement, is now itself the target of regulatory and competitive attempts at forced re-equilibration. Every successful absorption eventually creates the negative space for the next one.
+
+<figure markdown="1" class="zoom-figure">
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
+  <defs>
+    <marker id="cycarr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2a4a6b"/>
+    </marker>
+  </defs>
+  <path d="M 380 65 Q 530 80 570 130" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
+  <path d="M 585 175 Q 590 240 510 255" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
+  <path d="M 455 268 Q 340 285 230 265" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
+  <path d="M 175 252 Q 100 230 100 175" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
+  <path d="M 110 125 Q 150 60 295 52" fill="none" stroke="#2a4a6b" stroke-width="1.8" marker-end="url(#cycarr)"/>
+  <ellipse cx="340" cy="48" rx="90" ry="32" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.5"/>
+  <text x="340" y="44" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">1. Orphaned costs</text>
+  <text x="340" y="58" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">diffused, unresolved</text>
+  <ellipse cx="590" cy="152" rx="80" ry="30" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.5"/>
+  <text x="590" y="148" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">2. Absorber</text>
+  <text x="590" y="162" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">takes residual loss</text>
+  <ellipse cx="490" cy="263" rx="90" ry="30" fill="#e8eef4" stroke="#2a4a6b" stroke-width="1.5"/>
+  <text x="490" y="259" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#2a4a6b">3. Re-equilibration</text>
+  <text x="490" y="273" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#4a4a4a">old config. dominated</text>
+  <ellipse cx="195" cy="263" rx="90" ry="30" fill="#fdf3f1" stroke="#8b3a2a" stroke-width="1.5"/>
+  <text x="195" y="259" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">4. Ossification</text>
+  <text x="195" y="273" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#8b3a2a">absorption → rent</text>
+  <ellipse cx="95" cy="148" rx="80" ry="30" fill="#fdf3f1" stroke="#8b3a2a" stroke-width="1.5"/>
+  <text x="95" y="144" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" font-weight="700" fill="#8b3a2a">5. New negative</text>
+  <text x="95" y="158" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#8b3a2a">space created</text>
+  <text x="340" y="298" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" fill="#888" font-style="italic">e.g. App Store: distribution absorbed (stage 3) → 30% toll (stage 4) → antitrust / alternative stores (stage 5 → stage 1)</text>
+</svg>
+<div class="caption-wrapper">
+<figcaption>Every successful absorption creates the conditions for the next one. The rent at stage 4 is the new orphaned cost at stage 1.</figcaption>
+</div>
+</figure>
+
 
 Lastly, this is only a theory of engineered transitions, not of all change: equilibria also collapse from exogenous shocks, demographic drift, and technological obsolescence with no strategic absorber present. Second, absorption need not be performed by a single firm — standards bodies and open protocols (TCP/IP, container dimensions themselves, ISO standards) represent distributed absorption, where a coalition internalises a coordination cost no member could carry alone. What is invariant is not the organisational form of the absorber but the mechanism: someone, or some configuration, must come to stand where the costs were orphaned, in a way the old arrangement cannot survive.
 
