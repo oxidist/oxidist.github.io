@@ -389,8 +389,8 @@ This explains why early participants in new platforms typically receive subsidis
 
 **Figure 4a — Why Simultaneous Offers Allow Coalition Resistance**
 
-<figure markdown="1">
-<svg viewBox="0 0 380 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;display:block;margin:0 auto;">
+<figure markdown="1" class="zoom-figure">
+<svg viewBox="0 0 380 280" xmlns="http://www.w3.org/2000/svg">
   <!-- Title -->
   <text x="190" y="18" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#1a1a1a">Simultaneous offers</text>
   <text x="190" y="31" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#666">Coalition resistance viable — focal point exists</text>
@@ -448,8 +448,8 @@ This explains why early participants in new platforms typically receive subsidis
 
 **Figure 4b — How Sequential Offers Break Coalition Resistance**
 
-<figure markdown="1">
-<svg viewBox="0 0 380 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;display:block;margin:0 auto;">
+<figure markdown="1" class="zoom-figure">
+<svg viewBox="0 0 380 310" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <marker id="sarr2" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
       <polygon points="0 0, 7 2.5, 0 5" fill="#555"/>
