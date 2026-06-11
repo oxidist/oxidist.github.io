@@ -50,7 +50,7 @@ Three strands of twentieth-century social science converge on a shared descripti
 
 ### 1. Game Theory
 
-In non-cooperative settings, locally stable equilibria persist despite being Pareto-suboptimal because no actor can unilaterally improve their payoff by deviating. Once best-response dynamics have settled, incremental improvement efforts tend to be absorbed back into the equilibrium rather than displacing it; escape generally requires changing the game's structure rather than play within it.[^1] Thomas C. Schelling extended this insight beyond equilibrium analysis to show how [commitment](https://en.wikipedia.org/wiki/Commitment_device), irreversibility, and the strategic removal of one's own options can force discrete outcomes without persuasion.[^2] [^odysseus] Power, in this sense, operates by altering the feasible set rather than by improving payoffs within it.
+In non-cooperative settings, locally stable [equilibria](https://en.wikipedia.org/wiki/Nash_equilibrium) persist despite being Pareto-suboptimal because no actor can unilaterally improve their payoff by deviating. Once best-response dynamics have settled, incremental improvement efforts tend to be absorbed back into the equilibrium rather than displacing it; escape generally requires changing the game's structure rather than play within it. Thomas C. Schelling extended this insight beyond equilibrium analysis to show how [commitment](https://en.wikipedia.org/wiki/Commitment_device), irreversibility, and the strategic removal of one's own options can force discrete outcomes without persuasion.[^2] [^odysseus] Power, in this sense, operates by altering the feasible set rather than by improving payoffs within it.
 
 [^odysseus]:
     <figure markdown="1">
@@ -67,7 +67,7 @@ Lipsey and Lancaster's general [theory of the second best](https://en.wikipedia.
 
 ### 2. Institutional Economics
 
-Ronald Coase and later Oliver Williamson argued that organizational forms emerge to minimize transaction and coordination costs.[^5][^6] Activities remain in markets until the costs of contracting, monitoring, or bargaining exceed the costs of hierarchical control, at which point boundaries shift. 
+Ronald Coase and later Oliver Williamson argued that organizational forms emerge to minimize [transaction and coordination costs](https://en.wikipedia.org/wiki/The_Nature_of_the_Firm). Activities remain in markets until the costs of contracting, monitoring, or bargaining exceed the costs of hierarchical control, at which point boundaries shift. 
 
 Grossman, Hart, and Moore's incomplete contracts theory sharpens this: because contracts cannot specify every contingency, whoever holds *residual control rights* captures the surplus in renegotiation, which in turn shapes everyone's ex ante investment.[^7][^8] <!-- This is the exact theoretical distinction between Apple's App Intents and Rabbit: Apple holds residual control rights over iOS distribution and can therefore mandate intent exposure; Rabbit held only a contractual hope. --> "Configuring to absorb costs" is, in GHM terms, acquiring residual control over the assets where unabsorbed costs live. Absorption without the adjacent residual control rights merely subsidises other parties' hold-up.
 
@@ -524,17 +524,12 @@ Lastly, this is only a theory of engineered transitions, not of all change: equi
 
 ---
 
-[^1]: Nash, J. F. (1951). [Non-cooperative games.](https://www.jstor.org/stable/1969529) *Annals of Mathematics*, 54(2), 286–295.
 
 [^2]: Schelling, T. C. (1960). *The Strategy of Conflict*. Harvard University Press.
 
 [^3]: If a buyer's value $$v_b$$ and a seller's cost $$c_s$$ are private information drawn from overlapping distributions, there is no mechanism that is simultaneously (i) incentive-compatible, (ii) individually rational, and (iii) budget-balanced, that guarantees trade whenever $$v_b > c_s$$. Even when a deal is mutually beneficial, bilateral bargaining under private information will sometimes fail to produce it. An absorber who internalises the residual entirely substitutes ownership for a bargaining problem that has no bargaining solution. See Myerson, R. B., & Satterthwaite, M. A. (1983). [Efficient mechanisms for bilateral trading.](https://doi.org/10.1016/0022-0531(83)90048-0) *Journal of Economic Theory*, 29(2), 265–281.
 
 [^4]: In a system with $$n$$ first-best Pareto conditions, if one condition is violated and cannot be restored, the constrained optimum generally requires violating some of the remaining $$n-1$$ conditions too. Partial reform — removing distortion $$A$$ while distortion $$B$$ persists — is not guaranteed to improve welfare and may reduce it. The direction of the welfare change depends on the specific second-order cross-effects, which are not in general knowable in advance. See Lipsey, R. G., & Lancaster, K. (1956). [The general theory of second best.](https://doi.org/10.2307/2296233) *Review of Economic Studies*, 24(1), 11–32.
-
-[^5]: Coase, R. H. (1937). [The nature of the firm.](https://doi.org/10.1111/j.1468-0335.1937.tb00002.x) *Economica*, 4(16), 386–405.
-
-[^6]: Williamson, O. E. (1985). *The Economic Institutions of Capitalism*. Free Press.
 
 [^7]: Grossman, S. J., & Hart, O. D. (1986). [The costs and benefits of ownership: A theory of vertical and lateral integration.](https://doi.org/10.1086/261404) *Journal of Political Economy*, 94(4), 691–719.
 
