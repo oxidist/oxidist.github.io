@@ -301,7 +301,6 @@ The pattern as stated leaves a gap: if absorbing orphaned costs is so advantageo
 
 First, *motivation*: absorbing the orphaned cost typically cannibalises the incumbent's existing margin structure, so the expected value of absorption is lower for the incumbent than for the entrant — Arrow's replacement effect applied to organisational strategy.[^16] Second, *architecture*: the incumbent's organisation is itself an equilibrium — internal coordination, career incentives, and asset bases settled around the old boundary — so imitation requires terminating an internal equilibrium, which is exactly as hard as the theory predicts. Third, *time*: by the moment imitation becomes obviously necessary, the absorber often holds network or scale positions that make late absorption non-equivalent. Adidas adopting the Nike model in 1995 is categorically different from Nike deploying it in 1975.
 
-**Figure 4 — The Incumbent Window**
 
 <!--<figure markdown="1" class="zoom-figure">
 <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;">
