@@ -50,23 +50,38 @@ Three strands of twentieth-century social science converge on a shared descripti
 
 ### 1. Game Theory
 
-In non-cooperative settings, locally stable equilibria persist despite being Pareto-suboptimal because no actor can unilaterally improve their payoff by deviating. Once best-response dynamics have settled, incremental improvement efforts tend to be absorbed back into the equilibrium rather than displacing it; escape generally requires changing the game's structure rather than play within it.[^1] Thomas C. Schelling extended this insight beyond equilibrium analysis to show how commitment, irreversibility, and the strategic removal of one's own options can force discrete outcomes without persuasion.[^2] Power, in this sense, operates by altering the feasible set rather than by improving payoffs within it.
+In non-cooperative settings, locally stable equilibria persist despite being Pareto-suboptimal because no actor can unilaterally improve their payoff by deviating. Once best-response dynamics have settled, incremental improvement efforts tend to be absorbed back into the equilibrium rather than displacing it; escape generally requires changing the game's structure rather than play within it.[^1] Thomas C. Schelling extended this insight beyond equilibrium analysis to show how [commitment](https://en.wikipedia.org/wiki/Commitment_device), irreversibility, and the strategic removal of one's own options can force discrete outcomes without persuasion.[^2] [^odysseus] Power, in this sense, operates by altering the feasible set rather than by improving payoffs within it.
 
-Underlying this persistence is a deeper result. Myerson and Satterthwaite (1983) proved that under private information, no bilateral bargaining mechanism can guarantee efficient trade — some gains from trade *must* go unrealised, regardless of how sophisticated the contracting arrangement.[^3] <!-- This upgrades "negative space" from an empirical observation to a structural necessity: coordination costs are not orphaned because nobody noticed them, but because bargaining provably cannot resolve them. The absorber is not fixing a market failure that better negotiation could fix; they are substituting an ownership structure for a bargaining problem that has no bargaining solution. -->
+[^odysseus]:
+    <figure markdown="1">
+       ![](https://files.catbox.moe/528gjy.jpg) 
+    <div class="caption-wrapper">
+    <figcaption>The <a href="https://en.wikipedia.org/wiki/Ulysses_pact">oldest</a> commitment device</figcaption>
+    </div>
+    </figure>
 
-Lipsey and Lancaster's general theory of the second best (1956) supplies a further formal warrant for the anti-incrementalism stance: in a system with multiple distortions, removing one distortion piecemeal can reduce welfare.[^4] Incremental improvement within a constrained equilibrium is sometimes implicitly thought of as a slow but sure method, when that is in fact not the case. 
+
+Underlying this persistence is a deeper result. Myerson and Satterthwaite proved that under private information, no bilateral bargaining mechanism can guarantee efficient trade — some gains from trade *must* go unrealised, regardless of how sophisticated the contracting arrangement.[^3] <!-- This upgrades "negative space" from an empirical observation to a structural necessity: coordination costs are not orphaned because nobody noticed them, but because bargaining provably cannot resolve them. The absorber is not fixing a market failure that better negotiation could fix; they are substituting an ownership structure for a bargaining problem that has no bargaining solution. -->
+
+Lipsey and Lancaster's general [theory of the second best](https://en.wikipedia.org/wiki/Theory_of_the_second_best) supplies a further formal warrant for the anti-incrementalism stance: in a system with multiple distortions, removing one distortion piecemeal can _reduce_ welfare.[^4] Incremental improvement within a constrained equilibrium is sometimes implicitly thought of as a slow but sure method, when that is in fact not the case. 
 
 ### 2. Institutional Economics
 
-Ronald Coase and later Oliver Williamson argued that organizational forms emerge to minimize transaction and coordination costs.[^5][^6] Activities remain in markets until the costs of contracting, monitoring, or bargaining exceed the costs of hierarchical control, at which point boundaries shift. Structural change therefore appears as discontinuous reorganization of governance regimes.
+Ronald Coase and later Oliver Williamson argued that organizational forms emerge to minimize transaction and coordination costs.[^5][^6] Activities remain in markets until the costs of contracting, monitoring, or bargaining exceed the costs of hierarchical control, at which point boundaries shift. 
 
 Grossman, Hart, and Moore's incomplete contracts theory sharpens this: because contracts cannot specify every contingency, whoever holds *residual control rights* captures the surplus in renegotiation, which in turn shapes everyone's ex ante investment.[^7][^8] <!-- This is the exact theoretical distinction between Apple's App Intents and Rabbit: Apple holds residual control rights over iOS distribution and can therefore mandate intent exposure; Rabbit held only a contractual hope. --> "Configuring to absorb costs" is, in GHM terms, acquiring residual control over the assets where unabsorbed costs live. Absorption without the adjacent residual control rights merely subsidises other parties' hold-up.
 
-Holmström's budget-breaker result (1982) formalises the absorber's constitutive role: in team production with joint output, no budget-balanced incentive scheme achieves efficiency.[^9] A principal who stands *outside* the team and absorbs the residual is required. <!-- PayPal absorbing fraud risk is a budget-breaker for the merchant–buyer–network team; the LBO sponsor is a budget-breaker for the manager–shareholder team. The absorber must take losses onto their own balance sheet — mediation alone cannot do it. -->
+Holmström's budget-breaker result formalises the absorber's constitutive role: in team production with joint output, no budget-balanced incentive scheme achieves efficiency.[^9] A principal who stands *outside* the team and absorbs the residual is required. <!-- PayPal absorbing fraud risk is a budget-breaker for the merchant–buyer–network team; the LBO sponsor is a budget-breaker for the manager–shareholder team. The absorber must take losses onto their own balance sheet — mediation alone cannot do it. -->
 
 ### 3. Political Economy and Sociology
 
 Albert Hirschman distinguished between voice and exit as mechanisms of response to dissatisfaction, emphasising that systems often metabolize voice indefinitely while remaining vulnerable to exit-like pressures that threaten continuity.[^10] James Scott showed that large administrative systems rely on simplified representations of reality and tend to eliminate actors that introduce persistent illegibility.[^11] From this perspective, change occurs when an arrangement exceeds the system's tolerance for ambiguity — not when arguments about improvement become more compelling.
+
+[^11]: 
+    Scott, J. C. (1998). *Seeing Like a State*. Yale University Press. 
+
+    But also see Venkatesh Rao's excellent post, [A Big Little Idea Called Legibility](https://ribbonfarm.com/2010/07/26/a-big-little-idea-called-legibility/). The following is an excerpt from it and a good gloss of the ideas within the book:
+    > The book is about the 2-3 century long process by which modern states reorganized the societies they governed, to make them more legible to the apparatus of governance. The state is not actually interested in the rich functional structure and complex behavior of the very organic entities that it governs (and indeed, is part of, rather than "above"). It merely views them as resources that must be organized in order to yield optimal returns according to a centralized, narrow, and strictly utilitarian logic.
 
 Read prescriptively, this strand identifies a constraint on the *absorber* rather than only the system: an absorber must remain legible and tolerable to the surrounding institutional environment long enough to reach the scale at which the old equilibrium becomes non-viable. Configurations that exceed regulatory or institutional tolerance too early are eliminated before re-equilibration completes — absorption races against expulsion. This is Schelling's commitment logic returning in empirical form: survival through the vulnerable interval is itself a strategic variable.
 
@@ -529,7 +544,6 @@ Lastly, this is only a theory of engineered transitions, not of all change: equi
 
 [^10]: Hirschman, A. O. (1970). *Exit, Voice, and Loyalty*. Harvard University Press.
 
-[^11]: Scott, J. C. (1998). *Seeing Like a State*. Yale University Press.
 
 [^12]: Acemoglu, D., & Robinson, J. A. (2000). [Why did the West extend the franchise?](https://doi.org/10.1162/003355300554836) *Quarterly Journal of Economics*, 115(4), 1167–1199. See also: Acemoglu, D., & Robinson, J. A. (2006). *Economic Origins of Dictatorship and Democracy*. Cambridge University Press.
 
