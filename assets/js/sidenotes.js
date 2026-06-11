@@ -205,6 +205,11 @@ function ridiculousWorkaroundsForBrowsersFromBizarroWorld() {
 		updateFootnoteEventListeners();
 		GW.sidenotes.footnotesObserver.disconnect();
 		updateFootnoteReferenceLinks();
+		if (GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
+			setupFootnotesCollapse();
+		} else {
+			teardownFootnotesCollapse();
+		}
 	});
 }
 
@@ -693,6 +698,39 @@ function updateSidenotePositions() {
 	GW.sidenotes.sidenoteColumnRight.style.visibility = "";
 }
 
+/*	Wrap the .footnotes section in a collapsed <details> element so it is
+	hidden by default in sidenote mode (viewport > 130ch). The footnote
+	content is already visible as sidenotes, so the list at the bottom is
+	redundant and can be collapsed.
+	*/
+function setupFootnotesCollapse() {
+	GWLog("setupFootnotesCollapse");
+
+	let footnotes = document.querySelector("#markdownBody .footnotes");
+	if (!footnotes || document.querySelector("#footnotes-details")) return;
+
+	let details = document.createElement("details");
+	details.id = "footnotes-details";
+	let summary = document.createElement("summary");
+	summary.textContent = "Footnotes";
+	details.appendChild(summary);
+	footnotes.parentElement.insertBefore(details, footnotes);
+	details.appendChild(footnotes);
+}
+
+/*	Unwrap the .footnotes section from the <details> element when switching
+	back to footnote mode (viewport ≤ 130ch).
+	*/
+function teardownFootnotesCollapse() {
+	GWLog("teardownFootnotesCollapse");
+
+	let details = document.querySelector("#footnotes-details");
+	if (!details) return;
+	let footnotes = details.querySelector(".footnotes");
+	if (footnotes) details.parentElement.insertBefore(footnotes, details);
+	details.remove();
+}
+
 /*	Constructs the HTML structure, and associated listeners and auxiliaries,
 	of the sidenotes.
 	*/
@@ -857,10 +895,14 @@ function sidenotesSetup() {
 	if (document.readyState == "complete") {
 		updateFootnoteEventListeners();
 		updateFootnoteReferenceLinks();
+		if (GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false)
+			setupFootnotesCollapse();
 	} else {
 		window.addEventListener("load", () => {
 			updateFootnoteEventListeners();
 			updateFootnoteReferenceLinks();
+			if (GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false)
+				setupFootnotesCollapse();
 		});
 	}
 	/*	In case footnotes.js loads later, make sure event listeners are set in

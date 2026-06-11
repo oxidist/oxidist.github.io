@@ -761,6 +761,26 @@ a.footnote {
 .footnotes {
     font-variant-numeric:tabular-nums;
 }
+
+#footnotes-details {
+    margin-top: 2em;
+}
+#footnotes-details > summary {
+    cursor: pointer;
+    font-size: 0.85em;
+    color: var(--GW-footnote-border-color);
+    list-style: none;
+    user-select: none;
+}
+#footnotes-details > summary::before {
+    content: "▸ ";
+}
+#footnotes-details[open] > summary::before {
+    content: "▾ ";
+}
+#footnotes-details > summary::-webkit-details-marker {
+    display: none;
+}
 .footnotes ol li {
     position: relative;
 }
