@@ -696,6 +696,7 @@ a.footnote {
     top: 0.05em;
     padding: 0 0.05em;
     font-feature-settings: 'lnum';
+    // font-variant-numeric: oldstyle-nums;
     font-weight: 600;
     z-index: 1;
 }

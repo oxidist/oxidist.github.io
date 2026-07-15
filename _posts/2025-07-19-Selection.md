@@ -7,18 +7,19 @@ tags: culture
 # Introduction
 I just finished watching Ghost in the Shell: Stand Alone Complex, which revolves around fraudulent corporate–government collusion. What struck me wasn’t the plot itself but how *compelling* it was. Fictional crimes like this often provoke more intrigue than real ones of similar scale. Not  for society at large (which responds more like a passive audience to live players[^1]), but for the individual spectator. Especially when the consequences aren’t apocalyptic, *nothing ever happens.*
 
-<figure markdown="1">
-![](https://i.ibb.co/Z67WNpnM/nothing-ever-happens-2136-edition-v0-yv7ekm250zuc1.webp)
-<div class="caption-wrapper">
-<figcaption>back to poasting</figcaption>
-</div>
-</figure>
-
 So the obvious question is: why does the real thing so often fail to evoke the same depth of response?
 
-An interesting real-world actor in this space was Hindenburg Research, a group of activist short-sellers. They uncovered several major financial frauds—most famously, against Adani: large-scale stock manipulation, shell companies, and regulatory capture [(link)](https://hindenburgresearch.com/adani/). These are crimes that span continents and billions of dollars, and yet, unless you were embedded in financial discourse in 2023, they barely registered.
+An interesting real-world actor in this space was Hindenburg Research, a group of activist short-sellers. They uncovered several major financial frauds—most famously, [against Adani](https://hindenburgresearch.com/adani/): large-scale stock manipulation, shell companies, and regulatory capture. These are crimes that span continents and billions of dollars, and yet, unless you were embedded in financial discourse in 2023, they barely registered.
 
-My current answer is that the difference isn’t in the scale or even the drama, but in the *narrative infrastructure*. Reality is raw data. The viewer must impose narrative *structure* onto events—identify Chekhov’s guns, construct causal chains, resolve ambiguities. In fiction, meaning accumulates by design. In the real world, it’s something like inverse archaeology: you have to excavate meaning forward, without knowing what you’re looking for.
+My current answer is that the difference isn’t in the scale or even the drama, but in the *narrative infrastructure*. Reality is raw data. The viewer must impose narrative *structure* onto events[^scroll]—identify Chekhov’s guns, construct causal chains, resolve ambiguities. In fiction, meaning accumulates by design. In the real world, it’s something like inverse archaeology: you have to excavate meaning forward, without knowing what you’re looking for.
+
+[^scroll]:
+    <figure markdown="1">
+    ![](https://upload.wikimedia.org/wikipedia/commons/f/f3/Strigel_1506-detail.jpg)
+    <div class="caption-wrapper">
+    <figcaption><a href="https://en.wikipedia.org/wiki/Speech_scroll">Speech scrolls</a> were a common solution to the problem of denoting speech in a static image</figcaption>
+    </div>
+    </figure>
 
 # Group-level selection
 A pet theory of mine, or rather a hammer that has deformed the world into a panoply of nails, is the idea of group self-selection. People self-sort in all things[^3], including their baseline literacy in finance, governance and institutional infrastructure. What appears empty or dull to most, reads to more sophisticated audiences as a dense, structured narrative. A short-seller report from Hindenburg on Adani or Super Micro can be more electrifying than fiction if *and only if* you’re familiar with the terms of art.
